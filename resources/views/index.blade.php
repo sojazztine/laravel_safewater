@@ -2,22 +2,22 @@
     <div class="flex justify-between mt-5 md:w-[80%] w-[60%] mx-auto items-center md:pt-20  ">
 
         <div class="col ">
-            <h1 class="text-[#016262] font-bold text-6xl ">SAVING THE  WORLD</h1>
-            <h3 class="text-[#016262]  text-3xl ">one plastic sachet at a time.</h3>
+            <h1 class="text-[#016262] font-bold text-5xl ">SAVING THE  WORLD</h1>
+            <h3 class="text-[#016262]  text-xl ">one plastic sachet at a time.</h3>
 
             <div class="flex w-20 justify-between pl-2 mt-6">
-                <a href="{{ route('login')}}" class="bg-[#016262] rounded-full px-12 py-3 text-xl mr-5 text-white  hover:text-[#016262] hover:bg-[#f9fff5] hover:border-[#016262] border transition delay-30 duration-300 ease-in-out">Login</a>
-                <a href="{{ route('register')}}" class="bg-[#51A5BE] rounded-full px-12 py-3 text-xl text-white hover:text-[#51A5BE] hover:bg-[#f9fff5] hover:border-[#51A5BE] border transition delay-30 duration-300 ease-in-out">Register</a>
+                <a href="{{ route('login')}}" class="bg-[#016262] rounded-full px-8 py-1 text-xl mr-5 text-white  hover:text-[#016262] hover:bg-[#f9fff5] hover:border-[#016262] border transition delay-30 duration-300 ease-in-out">Login</a>
+                <a href="{{ route('register')}}" class="bg-[#51A5BE] rounded-full px-8 py-1 text-xl text-white hover:text-[#51A5BE] hover:bg-[#f9fff5] hover:border-[#51A5BE] border transition delay-30 duration-300 ease-in-out">Register</a>
             </div>
         </div>
 
         <div class="col">
             <div class="flex gap-[1vw] ">
                 <div class="rounded-tl-4xl">
-                    <img src="img/bulb.png" alt="restore-picture" width="400" class="rounded-tl-[150px] rounded-bl-3xl md:w-100 hidden lg:block  ">
+                    <img src="img/bulb.png" alt="restore-picture" width="300" class="rounded-tl-[150px] rounded-bl-3xl md:w-100 hidden lg:block  ">
                 </div>
                 <div class="rounded-tr-4xl">
-                    <img src="img/bulb.png" alt="restore-picture" width="400" class="rounded-tr-[150px] rounded-br-3xl md:w-100 hidden lg:block ">
+                    <img src="img/bulb.png" alt="restore-picture" width="300" class="rounded-tr-[150px] rounded-br-3xl md:w-100 hidden lg:block ">
                 </div>
             </div>
         </div>
@@ -32,24 +32,27 @@
             </div>
     </div>
 
-    <div class="mt-40  ">
-        <div class="flex justify-center mb-10">
+    <div class="mt-[200px]">
+        <div class="flex justify-center mb-[10px]">
             <h1 class="text-bolder text-2xl text-[#016262]">
                 Our partners
             </h1>
         </div>
+    <marquee width="100%" direction="right" scrollamount="12" >
+            <div class="flex items-center flex-wrap justify-center md:gap-[3vw] overflow-hidden  ">
+                <img src="img/partners/scholasticas.png" alt="Scholasticas Image" >
+                <img src="img/partners/pccr.png" alt="PCCR Image" >
+                <img src="img/partners/studentCounsil.png" alt="Student Counsil Image" >
+                <img src="img/partners/nuFairview.png" alt="NU Fairview Image" >
+                <img src="img/partners/xavierSchool.png" alt="Xavier School Image" >
+                <img src="img/partners/coaAteneo.png" alt="COA Ateneo" >
 
-        <div class="flex items-center flex-wrap justify-center md:gap-[3vw] overflow-hidden ">
-            <img src="img/partners/scholasticas.png" alt="Scholasticas Image" >
-            <img src="img/partners/pccr.png" alt="PCCR Image" >
-            <img src="img/partners/studentCounsil.png" alt="Student Counsil Image" >
-            <img src="img/partners/nuFairview.png" alt="NU Fairview Image" >
-            <img src="img/partners/xavierSchool.png" alt="Xavier School Image" >
-            <img src="img/partners/coaAteneo.png" alt="COA Ateneo" >
-        </div>
+            </div>
+    </marquee>
+
     </div>
 
-    <div class="flex justify-between items-center mt-60 w-[92%] mx-auto">
+    <div class="flex justify-between items-center mt-40 w-[92%] mx-auto">
         <div>
             <h1 class="text-4xl text-[#016262] mb-8 font-bold lg:w-100">Be part of the change you want to see in our environment!</h1>
             <p class="text-[#016262] text-2xl lg:w-[600px] leading-8 font-medium">Since the pollution problem is everybody’s problem, We believe that our goal of solving the problem of plastic pollution will be a lot easier to achieve through a collective effort.</p>

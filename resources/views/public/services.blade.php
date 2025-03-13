@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-public-layout>
     <div class="flex flex-col justify-center items-center text-center mt-20">
         <h1 class="text-5xl font-bold mb-20 text-[#016262]">Lorem Ipsum</h1>
         <p class="text-xl font-medium lg:w-[70  0px] mb-10 text-wrap text-[#016262]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
