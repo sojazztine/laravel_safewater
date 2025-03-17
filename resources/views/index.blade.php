@@ -8,7 +8,7 @@
         background-repeat: no-repeat;
     }
     50% { 
-        background-image: url('{{ asset('img/img6.png') }}'); 
+        background-image: url('{{ asset('img/bg2.png') }}'); 
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

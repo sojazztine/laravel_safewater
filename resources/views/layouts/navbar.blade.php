@@ -59,7 +59,7 @@
 
 <!-- Go to Top Button -->
 <button id="scrollTopBtn"
-    class="hidden fixed bottom-5 right-5 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg transition-all duration-300 hover:bg-blue-700">
+    class="hidden fixed bottom-5 right-5 bg-[#016262] text-white px-4 py-2 rounded-full shadow-lg transition-all duration-300 hover:bg-[#17B67D]">
     ↑ Top
 </button>
 
