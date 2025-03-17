@@ -1,5 +1,5 @@
 
-<nav class="font-[Inter]">
+<nav class="font-[Inter] py-3">
     <div class="flex justify-between pt-3 w-[92%] mx-auto items-center">
         <div>
          <a href="/"><img src="img/restore-logo.png" alt="" class="max-w-full h-auto cursor-pointer"></a>
