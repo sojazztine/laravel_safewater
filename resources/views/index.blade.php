@@ -32,10 +32,10 @@
         <h1 class="text-[#016262] font-bold text-7xl drop-shadow-[3px_3px_1px_#FFFFFF]">SAVING THE WORLD</h1>
         <h3 class="text-white text-xl">one plastic sachet at a time.</h3>
 
-        <div class="flex w-20 justify-between pl-2 mt-6">
+        <!-- <div class="flex w-20 justify-between pl-2 mt-6">
             <a href="{{ route('login')}}" class="bg-[#016262] rounded-full px-8 py-1 text-xl mr-5 text-white hover:text-[#016262] hover:bg-[#f9fff5] hover:border-[#016262] border transition duration-300 ease-in-out">Login</a>
             <a href="{{ route('register')}}" class="bg-[#51A5BE] rounded-full px-8 py-1 text-xl text-white hover:text-[#51A5BE] hover:bg-[#f9fff5] hover:border-[#51A5BE] border transition duration-300 ease-in-out">Register</a>
-        </div>
+        </div> -->
     </div>
 
     <!-- Image Section -->
@@ -66,6 +66,7 @@
 
 
 
+<!-- The Circular Journey -->
 <div class="flex items-center justify-center my-4 mt-[100px]">
     <div class="w-1/4 border-t-2 border-[#016262]"></div>
     <span class="px-4 text-[#016262] font-bold text-4xl">The Circular Journey</span>
@@ -114,7 +115,7 @@
 
 
 
-
+<!-- SACHETS COUNTER -->
     <div class="flex w-[90%] mx-auto  justify-center mt-[90px]">
         <div class="pe-40">
             <h1 class="text-[#016262] text-4xl font-semibold lg:w-[470px] leading-14 mb-5">
@@ -147,7 +148,7 @@
 
 
 
-
+<!-- SMART ECOBIN -->
 <div class="flex justify-center items-center mt-[80px] ">
     <div class="flex items-center justify-center border-t-2 border-b-2 border-[#51A5BE] w-[80%] mx-auto">
             <div class="hidden md:block">
@@ -175,7 +176,7 @@
 
 
 
-
+<!-- SEB MALLS -->
             <div class="flex items-center justify-center self-start mb-10 flex-wrap lg:flex-row flex-col w-[90%] mx-auto">
 
                 <div class="border-r-2 border-[#51A5BE] flex flex-col items-center justify-center p-10">
@@ -231,7 +232,7 @@
 
 
 
-
+<!-- PARTNERS -->
     <div class="mt-[150px]">
         <div class="flex justify-center mb-[10px]">
             <h1 class="text-bolder text-2xl text-[#016262]">
