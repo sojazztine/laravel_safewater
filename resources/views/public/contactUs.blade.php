@@ -70,7 +70,7 @@
 
         <div class="p-10">
             <img src="../img/Soft Bottom.png" alt="" class="mb-10">
-            <h1 class="text-xl mb-8 font-bold">Linkendin</h1>
+            <h1 class="text-xl mb-8 font-bold">LinkedIn</h1>
             <h1 class="w-[75%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunta.</h1>
         </div>
     </div>
