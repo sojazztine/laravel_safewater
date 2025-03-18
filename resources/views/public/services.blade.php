@@ -1,21 +1,29 @@
 <x-public-layout>
     <div class="flex flex-col justify-center items-center text-center mt-20">
-        <h1 class="text-5xl font-bold mb-20 text-[#016262]">Lorem Ipsum</h1>
-        <p class="text-xl font-medium lg:w-[70  0px] mb-10 text-wrap text-[#016262]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h1 class="text-5xl font-bold mb-20 text-[#016262]">Smarter Choices,  Smarter Solutions</h1>
+        <p class="text-xl font-medium lg:w-[70  0px] mb-10 text-wrap text-[#016262]">We believe that a plastic sachet can be part of something much greater than a landfill. Since plastic can stick around for hundreds of years, we repurpose plastic waste into objects, furniture, and works of art that are innately beautiful and sturdy enough to withstand the entropy that entails the passage of time</p>
         <div class="flex gap-[2vw]">
             <a href="" class="text-xl px-[45px] py-2 rounded-full bg-[#016262] border hover:bg-[#f9fff5] hover:border-[#016262] hover:text-[#016262] text-white transition delay-30 duration-300 ease-in-out">View Malls</a>
             <a href="" class="text-xl px-[45px] py-2 rounded-full bg-[#51A5BE] border hover:bg-[#f9fff5] hover:border-[#51A5BE] hover:text-[#51A5BE] text-white transition delay-30 duration-300 ease-in-out">Register Here</a>
         </div>
     </div>
 
-    <div class="flex justify-center w-[90%] mx-auto mt-[50px] mb-[200px]">
+    <div class="flex justify-center w-[90%] mx-auto mt-[50px] mb-[100px]">
         <img src="../img/bulb.png"  alt="" class="rounded-tl-[200px] rounded-tr-3xl rounded-br-[200px] rounded-bl-3xl w-[5500px] h-[550px] object-cover ">
     </div>
 
-    <div class="md:ml-[50px]  mb-[50px]">
-        <h1 class="text-4xl font-extrabold text-[#016262] ">Restore Boards to Wonder</h1>
-        <p class="text-2xl font-bold md:w-[450px] mt-8 leading-11 text-[#016262] ">Breathing new life into plastic waste with logical pragmatism and boundless creativity</p>
-      </div>
+    <div class="w-full flex justify-center  mb-20">
+    <div class="flex w-[80%] justify-center">
+        <div class="">
+            <h1 class="text-4xl font-extrabold text-[#016262]">Restore Boards: A Plethora Of Possibilities</h1>
+            <p class="text-2xl  md:w-[450px] mt-8 leading-11 text-[#016262] ">Breathing new life into plastic waste with logical pragmatism and boundless creativity</p>
+        </div>
+
+        <div class="w-[50%]">
+            <h1 class="text-2xl text-[#016262] w-[75%]">Since plastic can stick around for hundreds of years, we repurpose plastic waste into objects, furniture, and works of art that are innately beautiful and sturdy enough to withstand the entropy that entails the passage of time.</h1>
+        </div>
+    </div>
+    </div>
 
       <div class="md:flex flex-row gap-5 justify-center mb-[200px] hidden ">
         <div class="flex flex-col gap-5">
@@ -51,26 +59,27 @@
         <div class="hidden lg:block">
             <img src="../img/img-services/restoreImg.png" alt="" class="w-[1000px]">
         </div>
-        <div>
-            <h1 class="text-6xl font-bold leading-20 lg:w-150 mb-10 text-[#016262]">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
-            <p class="text-2xl font-medium mb-20 text-[#016262]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p>
+        <div class="w-[75%]">
+            <h1 class="text-6xl font-bold leading-20 lg:w-150 mb-10 text-[#016262]">Sustainability Is A Team Sport.</h1>
+            <p class="text-2xl font-medium mb-20 text-[#016262]">Environmental reform can only be brought about by a collective effort across different demographics of people who hope to see the same future for our environment. 
+                                                                    <br><br>We recognize the value of collaborating with communities, institutions, and organizations to efficiently manage waste and to revitalize our environment, and we devote plenty of our time and resources towards interacting and collaborating with communities as part of our commitment to society and the environment.</p>
 
             <div class="flex items-center gap-[3vw] mb-8">
                 <img src="../img/img-services/heart.png" alt="">
-                <p class="text-xl font-medium  text-[#016262]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p>
+                <p class="text-xl font-medium  text-[#016262]">We partner up with schools and universities to instill eco-conscious values in the next generation of people. </p>
             </div>
             <div class="flex items-center gap-[3vw] mb-8">
                 <img src="../img/img-services/globe.png" alt="">
-                <p class="text-xl font-medium  text-[#016262]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p>
+                <p class="text-xl font-medium  text-[#016262]">Our Analog Collection efforts reach beyond the cities, aided by communities of people who share the same values. </p>
             </div>
             <div class="flex items-center gap-[3vw] mb-8">
                 <img src="../img/img-services/case.png" alt="">
-                <p class="text-xl font-medium  text-[#016262]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p>
+                <p class="text-xl font-medium  text-[#016262]">We partner up with Companies to augment their CSR and ESG initiatives </p>
             </div>
         </div>
       </div>
 
-      <div class=" bg-[#016262] mt-[30px] mb-[150px] ">
+      <div class=" bg-[#016262] mt-[30px] mb-[150px] pb-20">
         <div class="ml-20 pt-20">
             <h1 class="text-5xl text-bold text-[#EBFCFC]">
                     Testimonials
@@ -87,7 +96,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunta.
             </p>
         </div>
-        <div class="mt-10 flex justify-center flex-wrap gap-[3vw] p-3">
+        <div class="mt-10 flex justify-center gap-[3vw] p-3">
             <div class="w-80 h-90 rounded-xl bg-[#EBFCFC] p-5">
 
                     <img src="img/testimonial/robby.png" alt="" class="border-4 w-15 rounded-full border-[#17B67D]  border-solid ">
@@ -150,7 +159,7 @@
     </div>
 
     <div class="flex flex-col items-center">
-     <h1 class="text-5xl font-bold mb-20  text-[#016262]">Lorem Ipsum</h1>
+     <h1 class="text-5xl font-bold mb-10  text-[#016262]">FAQ</h1>
      <p class="text-2xl font-medium mb-20 lg:w-[800px] text-center text-[#016262]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<p>
     </div>
 
