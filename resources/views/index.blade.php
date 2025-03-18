@@ -212,15 +212,18 @@
 
 
     
-
-    <div class="flex justify-between items-center mt-40 w-[92%] mx-auto">
-        <div>
-            <h1 class="text-4xl text-[#016262] mb-8 font-bold lg:w-100">Be part of the change you want to see in our environment!</h1>
+    <!-- JOIN THE MOVEMENT -->
+    <div class="flex items-center mt-40 w-[92%] mx-auto">
+        <div class="flex justify-center">
+        <div class="w-[75%]">
+            <h1 class="text-4xl text-[#016262] mb-8 font-bold w-[50%]">Be part of the change you want to see in our environment!</h1>
             <p class="text-[#016262] text-2xl lg:w-[600px] leading-8 font-medium">Since the pollution problem is everybody’s problem, We believe that our goal of solving the problem of plastic pollution will be a lot easier to achieve through a collective effort.</p>
             <p class="mt-5 mb-20 text-[#016262] text-2xl lg:w-145 leading-8 font-medium">We are stronger when we are together.</p>
 
             <a href="" class=" text-white bg-[#016262] py-3 px-12 rounded-full text-xl hover:border-[#016262] hover:text-[#016262] hover:bg-[#f9fff5] border border-transparent transition delay-30 duration-300 ease-in-out  ">Join the Movement</a>
         </div>
+        </div>
+
         <div class="hidden lg:block">
             <img src="img/img-index/presenting.png" alt="Presenting Image">
         </div>
@@ -277,7 +280,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunta.
                 </p>
             </div>
-            <div class="mt-10 flex justify-center gap-[3vw] p-3">
+            <div class="mt-10 flex flex-wrap justify-center gap-[3vw] p-3">
 
                 <div class="w-80 h-90 rounded-xl bg-[#EBFCFC] p-5">
                     <img src="img/testimonial/robby.png" alt="" class="border-4 w-15 rounded-full border-[#17B67D]  border-solid ">

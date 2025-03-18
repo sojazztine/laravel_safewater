@@ -79,7 +79,7 @@
         </div>
       </div>
 
-      <div class=" bg-[#016262] mt-[30px] mb-[150px] pb-20">
+      <div class=" bg-[#016262] mt-[30px] mb-[150px] pb-10">
         <div class="ml-20 pt-20">
             <h1 class="text-5xl text-bold text-[#EBFCFC]">
                     Testimonials
@@ -96,7 +96,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunta.
             </p>
         </div>
-        <div class="mt-10 flex justify-center gap-[3vw] p-3">
+        <div class="mt-10 flex flex-wrap  justify-center gap-[3vw] p-3">
             <div class="w-80 h-90 rounded-xl bg-[#EBFCFC] p-5">
 
                     <img src="img/testimonial/robby.png" alt="" class="border-4 w-15 rounded-full border-[#17B67D]  border-solid ">
