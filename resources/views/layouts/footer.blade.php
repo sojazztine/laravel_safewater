@@ -34,7 +34,7 @@
     </div>
 
     <div class="flex justify-center pb-10">
-        <div class="border-t-2 w-[85%] flex justify-end">
+        <div class="border-t w-[85%] flex justify-end">
             <h1 class="mt-3 text-white">© 2025 Restore Solutions PH. All rights reserved.</h1>
         </div>
     </div>
