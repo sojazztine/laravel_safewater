@@ -48,29 +48,29 @@
     <div class="flex md:flex-row flex-col m-10 mb-20 justify-center border-b-2  text-[#016262]">
 
         <div class="p-10 md:border-r-2">
-            <img src="../img/Rain Cloud.png" alt="" class="mb-10">
-            <h1 class="text-xl mb-8 font-bold">Lorem ipsum dolor</h1>
+            <img src="../img/socialMediaImage/fb.png" alt="" class="mb-10">
+            <h1 class="text-xl mb-8 font-bold">Facebook</h1>
             <h1 class="w-[75%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunta.</h1>
         </div>
 
 
         <div class="p-10 md:border-r-2">
-            <img src="../img/Waste Sorting.png" alt="" class="mb-10">
-            <h1 class="text-xl mb-8 font-bold">Lorem ipsum dolor</h1>
+            <img src="../img/socialMediaImage/ig.png" alt="" class="mb-10">
+            <h1 class="text-xl mb-8 font-bold">Instagram</h1>
             <h1 class="w-[75%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunta.</h1>
         </div>
 
 
         <div class="p-10 md:border-r-2">
-            <img src="../img/Sunflower.png" alt="" class="mb-10">
-            <h1 class="text-xl mb-8 font-bold">Lorem ipsum dolor</h1>
+            <img src="../img/socialMediaImage/tiktok.png" alt="" class="mb-10">
+            <h1 class="text-xl mb-8 font-bold">Tiktok</h1>
             <h1 class="w-[75%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunta.</h1>
         </div>
 
 
         <div class="p-10">
-            <img src="../img/Soft Bottom.png" alt="" class="mb-10">
-            <h1 class="text-xl mb-8 font-bold">Lorem ipsum dolor</h1>
+            <img src="../img/socialMediaImage/linkedin.png" alt="" class="mb-10">
+            <h1 class="text-xl mb-8 font-bold">LinkedIn</h1>
             <h1 class="w-[75%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunta.</h1>
         </div>
     </div>
