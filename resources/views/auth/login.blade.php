@@ -2,8 +2,13 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form method="POST" action="{{ route('login') }}">
+    <form class="border rounded-xl shadow-xl px-16 pb-16 pt-10" method="POST" action="{{ route('login') }}">
         @csrf
+
+        <div class="mb-10 flex flex-col justify-center items-center">
+            <h1 class="text-4xl font-semibold text-gray-700 mb-2">Log in</h1>
+            <p class="text-gray-700 text-md">Please Enter your Account details</p>
+        </div>
 
         <!-- Email Address -->
         <div>

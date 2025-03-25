@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ImageController;
+use App\Http\Controllers\QuillContentController;
 
 Route::get('/', function () {
     return view('index');
@@ -46,3 +48,16 @@ Route::put('/posts/{id}', [PostController::class, 'update'])->name('posts.update
 Route::delete('/posts/{id}', [PostController::class, 'delete'])->name('posts.delete');
 
 require __DIR__.'/auth.php';
+
+
+Route::get('/images', [ImageController::class, 'index'])->name('images.index');
+Route::post('/images', [ImageController::class, 'store'])->name('images.store');
+
+
+
+
+Route::get('/quill', [QuillContentController::class, 'index'])->name('quill.index');
+Route::get('/quill/create', [QuillContentController::class, 'create'])->name('quill.create');
+Route::post('/quill/store', [QuillContentController::class, 'store'])->name('quill.store');
+Route::get('/quill/{id}', [QuillContentController::class, 'show'])->name('quill.show');
+Route::delete('/quill/{id}', [QuillContentController::class, 'destroy'])->name('quill.destroy');
