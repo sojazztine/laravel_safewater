@@ -18,11 +18,17 @@ class PostController extends Controller
     }
 
     public function store(Request $request){
+
+
+        // dd('Request Data:', $request->all());
+
+
         $validated  = $request->validate([
             'title' => ['required'],
             'description' => ['required'],
             'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
-            'publisher' => ['required']
+            'publisher' => ['required'],
+            'content' => ['required']
         ]);
         $imagePath = 'images/post';
 
@@ -33,6 +39,7 @@ class PostController extends Controller
         $imageName = time().'.'.$request->image->extension();
         $request->image->move(public_path($imagePath), $imageName);
         $validated['image'] = $imageName;
+
 
         Post::create($validated);
         return redirect(route('posts.index'))->with('success', 'Post created successfully!');

@@ -14,15 +14,15 @@
                     <!-- Content inside each post card (kept vertical) -->
                     <div class="flex flex-col items-center">
                         <img src="images/post/{{ $post->image }}" alt="" class="w-[504px] h-[260px] rounded-[30px] object-cover">
-                        <h1 class="mt-10 text-2xl font-bold">{{ $post->title }}</h1>
-                        <p class="w-120 text-lg mt-5 hover:underline">
+                        <h1 class="mt-10 text-2xl font-bold" style="overflow-wrap:anywhere;">{{ $post->title }}</h1>
+                        <p class="w-120 text-lg mt-5 hover:underline" style="overflow-wrap:anywhere;">
                             {{ $post->description }}
                         </p>
                     </div>
 
                     <!-- Publisher and date (horizontal) -->
                     <div class="flex flex-col   mt-5 justify-between">
-                        <h5 class="text-xl font-bold">{{ $post->publisher }}</h5>
+                        <h5 class="text-xl font-bold" style="overflow-wrap:anywhere;">{{ $post->publisher }} </h5>
                         <p class="font-bold">December 24, 2025</p>
                     </div>
                 </div>

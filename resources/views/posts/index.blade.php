@@ -51,9 +51,9 @@
             @foreach ($posts as $post )
             <tr>
                 <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ $post-> id}}</td>
-                <td>{{ $post->title }}</td>
-                <td>{{ $post->description }}</td>
-                <td>{{ $post->publisher }}</td>
+                <td style="overflow-wrap:anywhere;">{{ $post->title }}</td>
+                <td style="overflow-wrap:anywhere;">{{ $post->description }}</td>
+                <td style="overflow-wrap:anywhere;">{{ $post->publisher }}</td>
                 <td>{{ $post->created_at }}</td>
                 <td>
                     <div class="flex">
