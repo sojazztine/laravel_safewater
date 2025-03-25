@@ -12,20 +12,23 @@
                 <div class="flex flex-col border border-transparent mt-20 w-[500px] p-5 rounded-[30px] hover:bg-[#e6e6e5] hover:border-[#e6e6e5] cursor-pointer">
 
                     <!-- Content inside each post card (kept vertical) -->
-                    <div class="flex flex-col items-center">
-                        <img src="images/post/{{ $post->image }}" alt="" class="w-[504px] h-[260px] rounded-[30px] object-cover">
-                        <h1 class="mt-10 text-2xl font-bold" style="overflow-wrap:anywhere;">{{ $post->title }}</h1>
-                        <p class="w-120 text-lg mt-5 hover:underline" style="overflow-wrap:anywhere;">
-                            {{ $post->description }}
-                        </p>
-                    </div>
+                    <a href="{{ route('posts.show', $post->id) }}">
+                        <div class="flex flex-col items-center">
+                            <img src="images/post/{{ $post->image }}" alt="" class="w-[504px] h-[260px] rounded-[30px] object-cover">
+                            <h1 class="mt-10 text-2xl font-bold" style="overflow-wrap:anywhere;">{{ $post->title }}</h1>
+                            <p class="w-120 text-lg mt-5 hover:underline" style="overflow-wrap:anywhere;">
+                                {{ $post->description }}
+                            </p>
+                        </div>
 
-                    <!-- Publisher and date (horizontal) -->
-                    <div class="flex flex-col   mt-5 justify-between">
-                        <h5 class="text-xl font-bold" style="overflow-wrap:anywhere;">{{ $post->publisher }} </h5>
-                        <p class="font-bold">December 24, 2025</p>
+                        <!-- Publisher and date (horizontal) -->
+                        <div class="flex flex-col   mt-5 justify-between">
+                            <h5 class="text-xl font-bold" style="overflow-wrap:anywhere;">{{ $post->publisher }} </h5>
+                            <p class="font-bold">December 24, 2025</p>
+                        </div>
                     </div>
-                </div>
+                    </a>
+
             @endforeach
         </div>
     </div>
