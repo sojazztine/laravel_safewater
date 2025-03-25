@@ -1,6 +1,6 @@
 <x-public-layout>
-      <!-- FRONT PAGE -->
-      <div class="flex flex-col justify-center items-center mt-[200px] mb-[200px] max-md:p-10 max-md:mt-20 max-md:mb-0" >
+    <!-- FRONT PAGE -->
+    <div class="flex flex-col justify-center items-center mt-[200px] mb-[200px] max-md:p-10 max-md:mt-20 max-md:mb-0">
         <h1 class="mb-12 text-6xl text-center font-bold w-full md:w-9/12 max-md:text-4xl text-[#016262]">
             At Restore Solutions PH, we operate with an iterative, pragmatic, and ecocentric approach towards making sustainability a standard in our contemporary society.
         </h1>
@@ -9,45 +9,45 @@
         </p>
     </div>
 
-        <!-- CONTENT -->
-        <div class="flex flex-col md:flex-row   w-[90%] mx-auto mb-[200px] gap-4 md:gap-10  items-center justify-center">
-            <!-- Left Column -->
-            <div class="md:w-5/12 ">
-                <!-- Logo -->
-                <img src="../img/logo2.png" alt="logo" class="w-[200px] md:w-[300px] h-auto mx-auto md:ms-7 ">
+    <!-- CONTENT -->
+    <div class="flex flex-col md:flex-row   w-[90%] mx-auto mb-[200px] gap-4 md:gap-10  items-center justify-center">
+        <!-- Left Column -->
+        <div class="md:w-5/12 ">
+            <!-- Logo -->
+            <img src="../img/logo2.png" alt="logo" class="w-[200px] md:w-[300px] h-auto mx-auto md:ms-7 ">
 
-                <!-- Text Content -->
-                <div class="space-y-6 md:space-y-10  m-4 md:m-7 text-[#016262] ">
-                    <h1 class="text-xl md:text-2xl font-bold mt-[100px]">
-                        Restore, <span class="font-normal">by Safewater Technologies, Inc.,</span> is a flexible plastic waste upcycler
-                        based in Bulacan. The company transforms flexible plastic waste into plastic <b>Restore boards and furniture.</b>
-                    </h1>
-                    <h1 class="text-xl md:text-2xl font-bold text-[#016262]">
-                        Restore aims to take sustainability beyond waste management, striving to offer innovative solutions that
-                        promote environmental stewardship and drive positive change.
-                    </h1>
-                </div>
-            </div>
-
-            <!-- Right Column - Images -->
-            <div class="flex flex-col gap-2">
-                <div class="grid grid-cols-2 gap-2 justify-center">
-                    <img src="../img/img1.png" alt="Image 1" class="w-full md:w-[29rem] h-[15rem] rounded-tl-3xl">
-                    <img src="../img/img2.png" alt="Image 2" class="w-full md:w-[19rem] h-[15rem] rounded-tr-3xl">
-                </div>
-                <div class="grid grid-cols-2 gap-2 justify-center">
-                    <img src="../img/img3.png" alt="Image 3" class="w-full md:w-[20rem] h-[15rem]">
-                    <img src="../img/img4.png" alt="Image 4" class="w-full md:w-[25rem] h-[15rem]">
-                </div>
-                <div class="grid grid-cols-3 gap-2 justify-center">
-                    <img src="../img/img5.png" alt="Image 5" class="w-full md:w-[20rem] h-[15rem] rounded-bl-3xl">
-                    <img src="../img/img6.png" alt="Image 6" class="w-full md:w-[23rem] h-[15rem]">
-                    <img src="../img/img7.png" alt="Image 7" class="w-full md:w-[15rem] h-[15rem] rounded-br-3xl">
-                </div>
+            <!-- Text Content -->
+            <div class="space-y-6 md:space-y-10  m-4 md:m-7 text-[#016262] ">
+                <h1 class="text-xl md:text-2xl font-bold mt-[100px]">
+                    Restore, <span class="font-normal">by Safewater Technologies, Inc.,</span> is a flexible plastic waste upcycler
+                    based in Bulacan. The company transforms flexible plastic waste into plastic <b>Restore boards and furniture.</b>
+                </h1>
+                <h1 class="text-xl md:text-2xl font-bold text-[#016262]">
+                    Restore aims to take sustainability beyond waste management, striving to offer innovative solutions that
+                    promote environmental stewardship and drive positive change.
+                </h1>
             </div>
         </div>
 
-         <!-- RA 11898 - EPR Act -->
+        <!-- Right Column - Images -->
+        <div class="flex flex-col gap-2">
+            <div class="grid grid-cols-2 gap-2 justify-center">
+                <img src="../img/img1.png" alt="Image 1" class="w-full md:w-[29rem] h-[15rem] rounded-tl-3xl">
+                <img src="../img/img2.png" alt="Image 2" class="w-full md:w-[19rem] h-[15rem] rounded-tr-3xl">
+            </div>
+            <div class="grid grid-cols-2 gap-2 justify-center">
+                <img src="../img/img3.png" alt="Image 3" class="w-full md:w-[20rem] h-[15rem]">
+                <img src="../img/img4.png" alt="Image 4" class="w-full md:w-[25rem] h-[15rem]">
+            </div>
+            <div class="grid grid-cols-3 gap-2 justify-center">
+                <img src="../img/img5.png" alt="Image 5" class="w-full md:w-[20rem] h-[15rem] rounded-bl-3xl">
+                <img src="../img/img6.png" alt="Image 6" class="w-full md:w-[23rem] h-[15rem]">
+                <img src="../img/img7.png" alt="Image 7" class="w-full md:w-[15rem] h-[15rem] rounded-br-3xl">
+            </div>
+        </div>
+    </div>
+
+    <!-- RA 11898 - EPR Act -->
     <div class="flex flex-col lg:flex-row justify-center items-center w-[90%] mx-auto gap-[200px] mb-[150px]">
         <div class="w-full lg:w-auto">
             <h1 class="text-3xl lg:text-5xl mb-6 lg:mb-10 text-center lg:text-left text-[#016262]"><b>RA 11898 - EPR Act</b></h1>
@@ -68,7 +68,7 @@
                     <h1 class="text-lg lg:text-xl w-full lg:w-[640px] leading-8 lg:leading-10 text-[#016262]"><b>DENR Administrative Order No. 2023-02, or Implementing Rules and Regulations (IRR) of RA 11898 to facilitate compliance.</b></h1>
 
                     <h1 class="mt-6 lg:mt-10 text-[#016262] leading-10 font-normal">Effectivity date: August 12, 2022<br>
-                    IRR Effective Date: February 17, 2023</h1>
+                        IRR Effective Date: February 17, 2023</h1>
                 </div>
             </div>
         </div>
@@ -117,5 +117,119 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+    <div>
+        <div class="flex justify-center text-[#016262]">
+            <div class="w-[85%]">
+                <h1 class="text-3xl font-bold mb-5">
+                    Lorem ipsum dolor sit amet, consectetur
+                </h1>
+
+                <p class="text-md">John Doe</p>
+                <p class="text-md">December 24, 2025 . 5 min read</p>
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+            <img src="{{ asset('img/img1.png') }}" class="rounded-xl w-[65%] my-10" alt="Image description">
+        </div>
+
+        <div class="flex justify-center mb-5">
+            <div class="text-[#016262] w-[85%]">
+                <h1 class="text-3xl font-bold mb-5">
+                    Lorem ipsum dolor sit amet, consectetur
+                </h1>
+                <p class="text-md mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+                <h1 class="text-3xl font-bold mb-5">Lorem ipsum dolor sit amet, consectetur </h1>
+                <div class="border-l-2 ps-2 py-3 border-[#016262] mb-5">
+                    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <P class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</P>
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+            <div class="text-[#016262] w-[85%]">
+                <h1 class="text-3xl font-bold mb-5">
+                    Lorem ipsum dolor sit amet, consectetur
+                </h1>
+                <p class="text-md mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+
+                <div class="border-l-2 ps-2 py-3 border-[#016262] mb-5">
+                    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <P class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</P>
+            </div>
+        </div>
+
+        <div>
+            <div class="flex justify-center mt-10 text-[#016262]">
+                <div class="flex justify-between w-[85%]">
+                    <h1 class="text-3xl font-bold">Lorem Ipsum</h1>
+                    <h1 class="border-b-2 border-[#016262]"><a href="#">View All</a></h1>
+                </div>
+            </div>
+
+
+            <div class="my-10 flex justify-center gap-10 text-[#016262]">
+                <div class="flex flex-col w-[25%]">
+                    <img src="{{ asset('img/img1.png') }}" class="rounded-xl" alt="">
+                    <h1 class="my-5 text-lg font-semibold">
+                        Lorem ipsum dolor sit amet, consectetur
+                    </h1>
+                    <p class="mb-5">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    <h1>
+                        John Doe
+                    </h1>
+                    <p>December 24, 2025 . 5 min read</p>
+                </div>
+
+                <div class="flex flex-col w-[25%]">
+                    <img src="{{ asset('img/img1.png') }}" class="rounded-xl" alt="">
+                    <h1 class="my-5 text-lg font-semibold">
+                        Lorem ipsum dolor sit amet, consectetur
+                    </h1>
+                    <p class="mb-5">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    <h1>
+                        John Doe
+                    </h1>
+                    <p>December 24, 2025 . 5 min read</p>
+                </div>
+
+                <div class="flex flex-col w-[25%]">
+                    <img src="{{ asset('img/img1.png') }}" class="rounded-xl" alt="">
+                    <h1 class="my-5 text-lg font-semibold">
+                        Lorem ipsum dolor sit amet, consectetur
+                    </h1>
+                    <p class="mb-5">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    <h1>
+                        John Doe
+                    </h1>
+                    <p>December 24, 2025 . 5 min read</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
 
 </x-public-layout>

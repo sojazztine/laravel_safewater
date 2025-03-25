@@ -61,3 +61,8 @@ Route::get('/quill/create', [QuillContentController::class, 'create'])->name('qu
 Route::post('/quill/store', [QuillContentController::class, 'store'])->name('quill.store');
 Route::get('/quill/{id}', [QuillContentController::class, 'show'])->name('quill.show');
 Route::delete('/quill/{id}', [QuillContentController::class, 'destroy'])->name('quill.destroy');
+
+
+use App\Http\Controllers\ApiController;
+
+Route::get('/api-view', [ApiController::class, 'showApiData']);
