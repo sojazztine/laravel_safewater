@@ -3,10 +3,13 @@
 use App\Http\Controllers\PostController;
 use App\Models\Post;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TestimonialController;
+use App\Models\Testimonial;
 use Illuminate\Support\Facades\Route;
 //Route for interface
 Route::get('/', function () {
-    return view('index');
+    $testimonials = Testimonial::all();
+    return view('index', ['testimonials' => $testimonials]);
 });
 Route::get('/services', function(){
     return view('public.services');
@@ -42,5 +45,12 @@ Route::put('/posts/{id}', [PostController::class, 'update'])->name('posts.update
 Route::delete('/posts/{id}', [PostController::class, 'delete'])->name('posts.delete'); //delete post
 Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show'); // To fetch the data
 
-
+//Route for testminoials
+Route::get('/testimonials', [TestimonialController::class, 'index'])->name('testimonials.index');
+Route::get('/testimonials/create', [TestimonialController::class, 'create'])->name('testimonials.create');
+Route::post('/testimonials/store', [TestimonialController::class, 'store'])->name('testimonials.store');
+Route::get('/testimonials/{id}/edit', [TestimonialController::class, 'edit'])->name('testimonials.edit');
+Route::put('/testimonials/{id}', [TestimonialController::class, 'update'])->name('testimonials.update');
+Route::delete('/testimonials/{id}', [TestimonialController::class, 'delete'])->name('testimonials.delete');
+Route::get('/testimonials/{id}', [TestimonialController::class, 'show'])->name('testimonials.show');
 require __DIR__.'/auth.php';

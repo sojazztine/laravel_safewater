@@ -1,14 +1,14 @@
 <!-- Animation for parallax -->
 <style>
 @keyframes bgAnimation {
-    0%{ 
-        background-image: url('{{ asset('img/bg.png') }}'); 
+    0%{
+        background-image: url('{{ asset('img/bg.png') }}');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
-    50% { 
-        background-image: url('{{ asset('img/bg2.png') }}'); 
+    50% {
+        background-image: url('{{ asset('img/bg2.png') }}');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -59,7 +59,7 @@
     </div>
 </div>
 
-        
+
 
 
 
@@ -166,7 +166,7 @@
                 <h1 class="text-2xl text-[#016262] mt-10 font-semibold">Visit our SEB Mall Locations</h1>
                 <p class="text-[#016262] ">Visit our SEB Mall Locations Near You!</p>
             </div>
-        </div>   
+        </div>
     </div>
 
 
@@ -211,7 +211,7 @@
 
 
 
-    
+
     <!-- JOIN THE MOVEMENT -->
     <div class="flex items-center mt-40 w-[92%] mx-auto">
         <div class="flex justify-center">
@@ -231,7 +231,7 @@
 
 
 
-    
+
 
 
 
@@ -260,7 +260,7 @@
 
 
 
-    
+
 
         <!-- TESTIMONIALS -->
         <div class=" min-h-[500px] bg-[#016262] mt-20 mb-20 pb-10">
@@ -268,28 +268,30 @@
                 <h1 class="text-5xl text-bold text-[#EBFCFC]">
                         Testimonials
                 </h1>
-                <div class="flex items-center mt-10">
+                {{-- <div class="flex items-center mt-10">
                     <img src="../img/testimonial/robby.png" alt="" class="border-4 w-15 rounded-full border-[#17B67D]  border-solid ">
                     <img src="../img/testimonial/hansley.png" alt="" class="border-4 w-15 rounded-full border-[#17B67D] ml-[-20px] border-solid ">
                     <img src="../img/testimonial/marcus.png" alt="" class="border-4 w-15 rounded-full border-[#17B67D] ml-[-20px] border-solid ">
                     <p class="ml-10 text-[#EBFCFC] lg:w-120 lg:block hidden ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunta.
                     </p>
-                </div>
-                <p class=" text-[#EBFCFC] lg:w-120 mt-10 block md:hidden">
+                </div> --}}
+                {{-- <p class=" text-[#EBFCFC] lg:w-120 mt-10 block md:hidden">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunta.
-                </p>
+                </p> --}}
             </div>
             <div class="mt-10 flex flex-wrap justify-center gap-[3vw] p-3">
+                 @foreach ($testimonials as  $testimonial)
+                    <div class="w-80 h-90 rounded-xl bg-[#EBFCFC] p-5">
+                        <img src="images/testimonial/{{$testimonial->image}}" alt="Testimonial Picture" class="border-4 w-15 rounded-full border-[#17B67D]  border-solid ">
+                        <p class="text-[#016262] break-words mt-2 mb-5">{{ $testimonial->content }}</p>
+                        <p class="text-[#016262] ">{{$testimonial->name}}</p>
+                        <p class="text-[#016262]">{{$testimonial->company}}</p>
+                    </div>
+                 @endforeach
 
-                <div class="w-80 h-90 rounded-xl bg-[#EBFCFC] p-5">
-                    <img src="img/testimonial/robby.png" alt="" class="border-4 w-15 rounded-full border-[#17B67D]  border-solid ">
-                    <p class="text-[#016262]  mt-2 mb-5">I congratulate restore for doing this, finally we have some solution that we can say really works.</p>
-                    <p class="text-[#016262] ">Robby</p>
-                    <p class="text-[#016262]">Xavier Environmentalist</p>
-                </div>
 
-                <div class="w-80 h-90 rounded-xl bg-[#EBFCFC] p-5">
+                {{-- <div class="w-80 h-90 rounded-xl bg-[#EBFCFC] p-5">
                     <img src="img/testimonial/hansley.png" alt="" class="border-4 w-15 rounded-full border-[#17B67D]  border-solid ">
                     <p class="text-[#016262] mt-2 mb-5">We have particularly seen how restore solutions philippines takes advantage of these advancements in technologies in order to produce materials that are environmentally friendly and that could also help communities in need.</p>
                     <p class="text-[#016262]">Hansley Saw</p>
@@ -315,11 +317,11 @@
                     <p class="text-[#016262] mt-2 mb-5">We have particularly seen how restore solutions philippines takes advantage of these advancements in technologies in order to produce materials that are environmentally friendly and that could also help communities in need.</p>
                     <p class="text-[#016262]">Hansley Saw</p>
                     <p class="text-[#016262]">XS Robotixs Club Member</p>
-                </div>
+                </div> --}}
             </div>
         </div>
 
-        
+
 
 
 
