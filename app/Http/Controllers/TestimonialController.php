@@ -78,4 +78,5 @@ class TestimonialController extends Controller
         $testimonial = Testimonial::findOrFail($id);
         return view('testimonials.show', ['testimonials' => $testimonial]);
     }
+
 }
