@@ -359,44 +359,10 @@
                 <p class="text-[#016262] ">{{$testimonial->name}}</p>
                 <p class="text-[#016262]">{{$testimonial->company}}</p>
             </div>
-            <div class="mt-10 flex flex-wrap justify-center gap-[3vw] p-3">
-                 @foreach ($testimonials as  $testimonial)
-                    <div class="w-80 h-90 rounded-xl bg-[#EBFCFC] p-5">
-                        <img src="{{Storage::url($testimonial->image)}}" alt="Testimonial Picture" class="border-4 w-15 rounded-full border-[#17B67D]  h-20 w-20 border-solid ">
-                        <p class="text-[#016262] break-words mt-5 mb-5">{{ $testimonial->content }}</p>
-                        <p class="text-[#016262] ">{{$testimonial->name}}</p>
-                        <p class="text-[#016262]">{{$testimonial->company}}</p>
-                    </div>
-                 @endforeach
+             @endforeach
 
 
-            {{-- <div class="w-80 h-90 rounded-xl bg-[#EBFCFC] p-5">
-                    <img src="img/testimonial/hansley.png" alt="" class="border-4 w-15 rounded-full border-[#17B67D]  border-solid ">
-                    <p class="text-[#016262] mt-2 mb-5">We have particularly seen how restore solutions philippines takes advantage of these advancements in technologies in order to produce materials that are environmentally friendly and that could also help communities in need.</p>
-                    <p class="text-[#016262]">Hansley Saw</p>
-                    <p class="text-[#016262]">XS Robotixs Club Member</p>
-                </div>
-
-                <div class="w-80 h-90 rounded-xl bg-[#EBFCFC] p-5">
-                    <img src="img/testimonial/marcus.png" alt="" class="border-4 w-15 rounded-full border-[#17B67D]  border-solid ">
-                    <p class="text-[#016262] mt-2 mb-5">People can now understand that “oh yeah, recyclability can be used in many different ways aside from just refilling another water bottle”. They can use it as furniture, they can use it as chairs, they can use it as tables.</p>
-                    <p class="text-[#016262]">Marcus</p>
-                    <p class="text-[#016262]">XS Team Green Advocate</p>
-                </div>
-
-                <div class="w-80 h-90 rounded-xl bg-[#EBFCFC] p-5 ">
-                    <img src="img/testimonial/robby.png" alt="" class="border-4 w-15 rounded-full border-[#17B67D]  border-solid ">
-                    <p class="text-[#016262]  mt-2 mb-5">I congratulate restore for doing this, finally we have some solution that we can say really works.</p>
-                    <p class="text-[#016262] ">Robby</p>
-                    <p class="text-[#016262]">Xavier Environmentalist</p>
-                </div>
-
-                <div class="w-80 h-90 rounded-xl bg-[#EBFCFC] p-5">
-                    <img src="img/testimonial/hansley.png" alt="" class="border-4 w-15 rounded-full border-[#17B67D]  border-solid ">
-                    <p class="text-[#016262] mt-2 mb-5">We have particularly seen how restore solutions philippines takes advantage of these advancements in technologies in order to produce materials that are environmentally friendly and that could also help communities in need.</p>
-                    <p class="text-[#016262]">Hansley Saw</p>
-                    <p class="text-[#016262]">XS Robotixs Club Member</p>
-                </div> --}}
+        
         </div>
     </div>
 
