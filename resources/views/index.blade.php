@@ -122,7 +122,7 @@
         <span class="px-4 text-[#016262] font-bold text-4xl">The Circular Journey</span>
         <div class="w-1/4 border-t-2 border-[#016262]"></div>
     </div>
-    <div class="flex lg:flex-row flex-col justify-center items-center gap-[3vw]">
+    <div class="flex lg:flex-row flex-col justify-center items-center gap-[5vw]">
 
         <div class="flex flex-col items-center relative">
             <img src="img/img-index/throwAway.png" alt="Trash Icon" class="md:mt-11">
