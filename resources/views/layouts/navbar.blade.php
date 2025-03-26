@@ -2,7 +2,7 @@
 <nav class="font-[Inter] py-3">
     <div class="flex justify-between pt-3 w-[92%] mx-auto items-center">
         <div>
-         <a href="/"><img src="img/restore-logo.png" alt="" class="max-w-full h-auto cursor-pointer"></a>
+         <a href="/"><img src="{{asset('img/restore-logo.png')}}" alt="" class="max-w-full h-auto cursor-pointer"></a>
         </div>
         <div class="nav-links md:static absolute md:bg-transparent bg-[#f9fff5] rounded-md md:min-h-fit min-h-[30vh] justify-center left-0 top-[-100%] md:w-auto w-full flex items-center ml-auto px-5 transition-all duration-500 ease-in-out ">
             <ul class="flex md:flex-row flex-col gap-[1vw] md:text-center text-center md:gap-[1vw] ">

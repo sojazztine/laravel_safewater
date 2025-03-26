@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\InquiryController;
 use App\Http\Controllers\PostController;
 use App\Models\Post;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestimonialController;
+use App\Models\Inquiry;
 use App\Models\Testimonial;
 use Illuminate\Support\Facades\Route;
 //Route for interface
@@ -53,4 +55,10 @@ Route::get('/testimonials/{id}/edit', [TestimonialController::class, 'edit'])->n
 Route::put('/testimonials/{id}', [TestimonialController::class, 'update'])->name('testimonials.update');
 Route::delete('/testimonials/{id}', [TestimonialController::class, 'delete'])->name('testimonials.delete');
 Route::get('/testimonials/{id}', [TestimonialController::class, 'show'])->name('testimonials.show');
+
+//Route for contact
+Route::get('/inquiries', [InquiryController::class, 'index'])->name('inquiries.index');
+Route::post('/inquiries/store', [InquiryController::class, 'store'])->name('inquiries.store');
+Route::delete('/inquiries/{id}', [InquiryController::class, 'delete'])->name('inquiries.delete');
+
 require __DIR__.'/auth.php';

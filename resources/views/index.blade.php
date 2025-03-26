@@ -2,7 +2,7 @@
 
 
 <x-public-layout>
-<!-- 
+<!--
 <style>
 @keyframes bgAnimation {
     0%{
@@ -23,20 +23,20 @@
     animation: bgAnimation 10s infinite alternate ease-in-out;
 }
 </style>
-    
+
     <div class="relative flex justify-between items-center p-20 bg-cover bg-center bg-no-repeat bg-fixed min-h-screen animate-bgAnimation" style="background-image: url({{ asset('img/img-index/landingImage.png') }});">
-        
+
         <div class="absolute inset-0 bg-black/40 z-0"></div>
 
-        
+
         <div class="relative z-10">
             <h1 class="text-[#016262] font-bold text-7xl drop-shadow-[3px_3px_1px_#FFFFFF]">SAVING THE WORLD</h1>
             <h3 class="text-white text-xl">one plastic sachet at a time.</h3>
 
-    
+
         </div>
 
-        
+
         <div class="relative z-10 flex gap-[1vw]">
             <div class="rounded-tl-4xl">
                 <img src="img/bulb.png" alt="restore-picture" width="300" class="rounded-tl-[150px] rounded-bl-3xl md:w-100 hidden lg:block">
@@ -46,7 +46,7 @@
             </div>
         </div>
 
-        
+
         <div class="lg:hidden flex gap-[1vw] w-[80%] mx-auto mt-20 relative z-10">
             <div class="rounded-tl-4xl">
                 <img src="img/bulb.png" alt="restore-picture" class="rounded-tl-[80px] md:rounded-tl-[150px] rounded-bl-3xl w-400">
@@ -333,13 +333,13 @@
 
 
 
-    <!-- TESTIMONIALS -->
-    <div class=" min-h-[500px] bg-[#016262] mt-20 mb-20 pb-10">
-        <div class="ml-20 pt-20">
-            <h1 class="text-5xl text-bold text-[#EBFCFC]">
-                Testimonials
-            </h1>
-            {{-- <div class="flex items-center mt-10">
+        <!-- TESTIMONIALS -->
+        <div class=" min-h-[500px] bg-[#016262] mt-20 mb-20 pb-10">
+            <div class="ml-20 pt-20">
+                <h1 class="text-5xl text-bold text-[#EBFCFC]">
+                        Words from our Eco Heroes
+                </h1>
+                {{-- <div class="flex items-center mt-10">
                     <img src="../img/testimonial/robby.png" alt="" class="border-4 w-15 rounded-full border-[#17B67D]  border-solid ">
                     <img src="../img/testimonial/hansley.png" alt="" class="border-4 w-15 rounded-full border-[#17B67D] ml-[-20px] border-solid ">
                     <img src="../img/testimonial/marcus.png" alt="" class="border-4 w-15 rounded-full border-[#17B67D] ml-[-20px] border-solid ">
@@ -359,7 +359,15 @@
                 <p class="text-[#016262] ">{{$testimonial->name}}</p>
                 <p class="text-[#016262]">{{$testimonial->company}}</p>
             </div>
-            @endforeach
+            <div class="mt-10 flex flex-wrap justify-center gap-[3vw] p-3">
+                 @foreach ($testimonials as  $testimonial)
+                    <div class="w-80 h-90 rounded-xl bg-[#EBFCFC] p-5">
+                        <img src="{{Storage::url($testimonial->image)}}" alt="Testimonial Picture" class="border-4 w-15 rounded-full border-[#17B67D]  h-20 w-20 border-solid ">
+                        <p class="text-[#016262] break-words mt-5 mb-5">{{ $testimonial->content }}</p>
+                        <p class="text-[#016262] ">{{$testimonial->name}}</p>
+                        <p class="text-[#016262]">{{$testimonial->company}}</p>
+                    </div>
+                 @endforeach
 
 
             {{-- <div class="w-80 h-90 rounded-xl bg-[#EBFCFC] p-5">
