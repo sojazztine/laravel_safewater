@@ -155,8 +155,11 @@
 
             // Set the value of the hidden input to the Quill content
             document.getElementById('quill-content').value = editorContent;
-
-            // You can also log it to the console to see the data being added
+        });
+        </script>
+    </card>
+</x-sidebar-layout>
+            <!-- // You can also log it to the console to see the data being added
             // e.preventDefault(); // Prevent form from submitting immediately
 
             //     // Show SweetAlert2 confirmation dialog
@@ -182,7 +185,7 @@
             //         }
             //     });
 
-        });
+        // });
 
 
             // document.querySelector('form').onsubmit = function() {
@@ -229,7 +232,5 @@
             //             // });
             //         }
             //     });
-            // });
-        </script>
-    </card>
-</x-sidebar-layout>
+            // }); -->
+
