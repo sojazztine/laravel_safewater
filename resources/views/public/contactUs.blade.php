@@ -5,25 +5,26 @@
             <h1 class="text-6xl font-bold mt-[100px] mb-[50px]">Get in touch with us</h1>
             <h1 class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
         </div>
-        <form class="w-full mb-[100px] " method="POST" action="">
+        <form class="w-full mb-[100px] " method="POST" action="{{ route('inquiries.store') }} ">
+            @csrf
             <div class="flex flex-col items-center">
 
                 <div class="flex md:flex-row flex-col justify-center md:space-x-4">
                     <div class="flex flex-col md:w-1/2 w-96">
                         <label class="text-sm font-medium text-gray-700">First name</label>
-                        <input name="firstName" type="text" id="firstName" class="mt-1 px-3 py-2 border border-gray-300 rounded-md">
+                        <input name="first_name" type="text" id="firstName" class="mt-1 px-3 py-2 border border-gray-300 rounded-md">
                     </div>
 
                     <div class="flex flex-col md:w-1/2 w-96">
                         <label class="text-sm font-medium text-gray-700">Surname</label>
-                        <input name="surname" type="text" id="surname" class="mt-1 px-3 py-2 border border-gray-300 rounded-md">
+                        <input name="last_name" type="text" id="surname" class="mt-1 px-3 py-2 border border-gray-300 rounded-md">
                     </div>
                 </div>
 
                 <div class="flex md:flex-row flex-col md:space-x-4 mt-4">
                     <div class="flex flex-col md:w-1/2 w-96">
                         <label class="text-sm font-medium text-gray-700">Company name</label>
-                        <input name="companyName" type="text" id="companyName" class="mt-1 px-3 py-2 border border-gray-300 rounded-md">
+                        <input name="company_name" type="text" id="companyName" class="mt-1 px-3 py-2 border border-gray-300 rounded-md">
                     </div>
 
                     <div class="flex flex-col md:w-1/2 w-96">
@@ -34,7 +35,7 @@
 
                 <div class="mt-4 flex flex-col">
                     <label class="text-sm font-medium text-gray-700">Your message</label>
-                    <textarea id="message" rows="4" class="mt-1 md:w-full px-[100px] py-2 md:px-40 md:py-6    border border-gray-300 rounded-md"></textarea>
+                    <textarea id="message" name="message" rows="4" class="mt-1 md:w-full px-[100px] py-2 md:px-40 md:py-6    border border-gray-300 rounded-md"></textarea>
                 </div>
 
                 <div class="mt-6">

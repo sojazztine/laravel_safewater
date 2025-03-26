@@ -22,7 +22,7 @@ class TestimonialController extends Controller
             'content' => ['required'],
             'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
         ]);
-        $imagePath = 'images/testimonial';
+        // $imagePath = 'images/testimonial';
 
         $path = $request->file('image')->store('testimonial', 'public');
         $validated['image']= $path;
