@@ -12,12 +12,12 @@
         </div>
 
         <div class="flex justify-center">
-            <img src="{{Storage::url($post->image) }}" class="rounded-xl w-[65%] my-10" alt="Image description">
+            <img src="{{Storage::url($post->image) }}" class="rounded-xl h-[800px] w-[1200px] object-fill  my-10 "  alt="Image description">
         </div>
 
-        <div class="flex justify-center mb-5">
+        <div class="flex w-[90%] mx-auto mb-5">
 
-            <pre>
+            <pre class="text-wrap">
                 {!! $post->content !!}
             </pre>
          </div>

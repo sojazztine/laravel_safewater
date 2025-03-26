@@ -23,6 +23,13 @@
         #editor {
             height: 300px;  /* Set a height for the editor */
             overflow-y: auto;  /* Enable vertical scrolling */
+            width:600px;
+            overflow-x:auto;
+        }
+        .ql-editor img {
+            display: flex;
+            max-width: 50%;
+            margin-right: 10px;
         }
     </style>
     <h1 class="text-[#016262] text-xl">Post a new blog</h1>
@@ -106,6 +113,7 @@
                             <button class="ql-video"></button>
                             <button class="ql-formula"></button>
                         </span>
+
                         <span class="ql-formats">
                             <button class="ql-clean"></button>
                         </span>
