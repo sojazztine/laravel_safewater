@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Storage;
 class PostController extends Controller
 {
     //show all post
@@ -30,15 +30,20 @@ class PostController extends Controller
             'publisher' => ['required'],
             'content' => ['required']
         ]);
-        $imagePath = 'images/post';
+        // $imagePath = 'images/post';
 
-        if(!file_exists(public_path($imagePath))){
-            mkdir(public_path($imagePath), 0777, true);
-        }
 
-        $imageName = time().'.'.$request->image->extension();
-        $request->image->move(public_path($imagePath), $imageName);
-        $validated['image'] = $imageName;
+        $path = $request->file('image')->store('post', 'public');
+        $validated['image']= $path;
+
+
+        // if(!file_exists(public_path($imagePath))){
+        //     mkdir(public_path($imagePath), 0777, true);
+        // }
+
+        // $imageName = time().'.'.$request->image->extension();
+        // $request->image->move(public_path($imagePath), $imageName);
+        // $validated['image'] = $imageName;
 
 
         Post::create($validated);

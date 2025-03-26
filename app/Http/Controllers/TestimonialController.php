@@ -24,13 +24,15 @@ class TestimonialController extends Controller
         ]);
         $imagePath = 'images/testimonial';
 
-        if(!file_exists(public_path($imagePath))){
-            mkdir(public_path($imagePath), 0777, true);
-        }
+        $path = $request->file('image')->store('testimonial', 'public');
+        $validated['image']= $path;
+        // if(!file_exists(public_path($imagePath))){
+        //     mkdir(public_path($imagePath), 0777, true);
+        // }
 
-        $imageName = time().'.'.$request->image->extension();
-        $request->image->move(public_path($imagePath), $imageName);
-        $validated['image'] = $imageName;
+        // $imageName = time().'.'.$request->image->extension();
+        // $request->image->move(public_path($imagePath), $imageName);
+        // $validated['image'] = $imageName;
 
         Testimonial::create($validated);
         return redirect(route('testimonials.index'))->with('success', 'Testimonial Added');
