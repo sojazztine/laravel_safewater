@@ -1,5 +1,5 @@
 <footer class="min-h-[300px] bg-[#016262]">
-    <div class="flex justify-center md:justify-end px-5 md:px-10 pt-10">
+    <div class="flex justify-end px-5 md:px-10 pt-10">
         <img src="../img/img-footer/footer-restore.png" alt="" class="max-w-[120px] sm:max-w-[150px] md:max-w-[200px]">
     </div>
 

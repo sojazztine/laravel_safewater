@@ -1,10 +1,11 @@
 <x-public-layout>
     <!-- FRONT PAGE -->
     <div class="flex flex-col justify-center items-center mt-[200px] mb-[200px] max-md:p-10 max-md:mt-20 max-md:mb-0">
+        <img src="{{asset('img/img-aboutUs/logo.png')}}" alt="" class="mb-5">
         <h1 class="mb-12 text-6xl text-center font-bold w-full md:w-9/12 max-md:text-4xl text-[#016262]">
             At Restore Solutions PH, we operate with an iterative, pragmatic, and ecocentric approach towards making sustainability a standard in our contemporary society.
         </h1>
-        <p class="text-2xl text-center w-full md:w-1/2 mt-7 max-md:text-xl text-[#016262]">
+        <p class="text-3xl text-center w-full md:w-1/2 mt-7 max-md:text-xl text-[#016262]">
             By utilizing innovative solutions and fostering a spirit of environmental stewardship across people and communities, we believe that we can turn the concept of a circular economy into a tangible reality.
         </p>
     </div>
