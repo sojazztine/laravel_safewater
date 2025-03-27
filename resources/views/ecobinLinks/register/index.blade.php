@@ -17,37 +17,34 @@
     </style>
 
     <div class="">
-        <div class="flex justify-end mb-4">
+        {{-- <div class="flex justify-end mb-4">
             <a href="{{ route('landingPage.create')}}" class="mr-10 bg-green-700 text-white rounded-md px-5 py-2">+ Add new image</a>
-        </div>
+        </div> --}}
 
         <table id="search-table" class="table-auto w-full border-collapse">
             <thead>
 
                 <tr>
                     <th class="px-4 py-2">Id</th>
-                    <th class="px-4 py-2">Title</th>
-                    <th class="px-4 py-2">Image</th>
-                    <th class="px-4 py-2">Description</th>
+                    <th class="px-4 py-2">Link</th>
                     <th class="px-4 py-2">Action</th>
                 </tr>
             </thead>
             <tbody>
                 <!-- Example static row -->
-                @foreach ($landingPages as $landingPage)
+                @foreach ($ecobinRegisterLinks as $ecobinRegisterLink)
                    <tr>
-                        <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ $landingPage->id }}</td>
-                        <td style="overflow-wrap:anywhere;">{{$landingPage->title}}</td>
-                        <td style="overflow-wrap:anywhere;">{{$landingPage->image}}</td>
-                        <td style="overflow-wrap:anywhere;">{{$landingPage->description}}</td>
+                        <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ $ecobinRegisterLink->id }}</td>
+                        <td style="overflow-wrap:anywhere;">{{ $ecobinRegisterLink->registerLink }}</td>
                         <td>
                             <div class="flex">
+                                <a href="{{ route('ecobinLinks.register.edit', $ecobinRegisterLink->id) }}" class=" py-2 px-8 rounded-md bg-green-700 text-white mr-5">Edit</a>
                                 <!-- Delete Form with Confirmation -->
-                                <form action="{{ route('landingPage.delete', $landingPage->id) }}" method="POST" class="delete_form">
+                                {{-- <form action="{{ route('ecobinRegisterLink.delete', $ecobinRegisterLink->id) }}" method="POST" class="delete_form">
                                     @csrf
                                     @method('delete')
                                     <button type="submit" class="py-2 px-8 rounded-md bg-red-600 text-white">Delete</button>
-                                </form>
+                                </form> --}}
                             </div>
                         </td>
                     </tr>

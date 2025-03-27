@@ -71,8 +71,8 @@
           </div>
 
         <div class="absolute z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-center">
-                <h1 class="text-white font-bold text-7xl">SAVING THE WORLD.</h1>
-                <h3 class="text-white text-3xl">one plastic sachet at a time.</h3>
+                <h1 class="text-white font-bold text-7xl">{{$hero_heading_title}}</h1>
+                <h3 class="text-white text-3xl">{{$hero_heading_description}}</h3>
 
         </div>
     </div>
@@ -336,7 +336,7 @@
         <div class="flex items-center mt-10">
             @foreach ($testimonials->sortByDesc('created_at')->take(3) as $testimonial)
                 <img src="{{ Storage::url($testimonial->image) }}" alt="Testimonial Image"
-                    class="border-4 rounded-full w-[70px] h-[70px] border-[#17B67D] border-solid">
+                    class="border-4 rounded-full w-[70px] h-[70px] border-[#17B67D] border-solid ml-[-15px]">
             @endforeach
             <p class="ml-10 text-xl text-[#EBFCFC] lg:w-120 lg:block hidden">
                 Latest testimonials.

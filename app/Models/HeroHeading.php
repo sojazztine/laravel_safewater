@@ -4,11 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class LandingPage extends Model
+class HeroHeading extends Model
 {
     protected $fillable = [
         'title',
-        'image',
         'description'
     ];
 }

@@ -61,7 +61,7 @@
         </div>
         <div class="w-[75%]">
             <h1 class="text-6xl font-bold leading-20 lg:w-150 mb-10 text-[#016262]">Sustainability Is A Team Sport.</h1>
-            <p class="text-2xl font-medium mb-20 text-[#016262]">Environmental reform can only be brought about by a collective effort across different demographics of people who hope to see the same future for our environment. 
+            <p class="text-2xl font-medium mb-20 text-[#016262]">Environmental reform can only be brought about by a collective effort across different demographics of people who hope to see the same future for our environment.
                                                                     <br><br>We recognize the value of collaborating with communities, institutions, and organizations to efficiently manage waste and to revitalize our environment, and we devote plenty of our time and resources towards interacting and collaborating with communities as part of our commitment to society and the environment.</p>
 
             <div class="flex items-center gap-[3vw] mb-8">

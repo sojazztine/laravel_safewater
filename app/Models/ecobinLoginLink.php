@@ -4,11 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class LandingPage extends Model
+class ecobinLoginLink extends Model
 {
     protected $fillable = [
-        'title',
-        'image',
-        'description'
+        'loginLink'
     ];
 }

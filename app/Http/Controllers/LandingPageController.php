@@ -17,7 +17,9 @@ class LandingPageController extends Controller
 
     public function store(Request $request){
         $validated = $request->validate([
-            'image' => ['required']
+            'title' => ['required'],
+            'image' => ['required'],
+            'description' => ['required']
         ]);
 
         $path = $request->file('image')->store('landingPage', 'public');
