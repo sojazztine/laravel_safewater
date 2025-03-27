@@ -11,24 +11,8 @@
     </div>
 
     <!-- CONTENT -->
-    <div class="flex flex-col md:flex-row   w-[90%] mx-auto mb-[200px] gap-4 md:gap-10  items-center justify-center">
-        <!-- Left Column -->
-        <div class="md:w-5/12 ">
-            <!-- Logo -->
-            <img src="../img/logo2.png" alt="logo" class="w-[200px] md:w-[300px] h-auto mx-auto md:ms-7 ">
-
-            <!-- Text Content -->
-            <div class="space-y-6 md:space-y-10  m-4 md:m-7 text-[#016262] ">
-                <h1 class="text-xl md:text-2xl font-bold mt-[100px]">
-                    Restore, <span class="font-normal">by Safewater Technologies, Inc.,</span> is a flexible plastic waste upcycler
-                    based in Bulacan. The company transforms flexible plastic waste into plastic <b>Restore boards and furniture.</b>
-                </h1>
-                <h1 class="text-xl md:text-2xl font-bold text-[#016262]">
-                    Restore aims to take sustainability beyond waste management, striving to offer innovative solutions that
-                    promote environmental stewardship and drive positive change.
-                </h1>
-            </div>
-        </div>
+    <div class="flex flex-col   w-[90%] mx-auto mb-[200px] gap-4 md:gap-10  items-center justify-center">
+        
 
         <!-- Right Column - Images -->
         <div class="flex flex-col gap-2">
@@ -44,6 +28,27 @@
                 <img src="../img/img5.png" alt="Image 5" class="w-full md:w-[20rem] h-[15rem] rounded-bl-3xl">
                 <img src="../img/img6.png" alt="Image 6" class="w-full md:w-[23rem] h-[15rem]">
                 <img src="../img/img7.png" alt="Image 7" class="w-full md:w-[15rem] h-[15rem] rounded-br-3xl">
+            </div>
+        </div>
+
+
+        <!-- Left Column -->
+        <div class="w-[50%] text-center ">
+
+            <!-- Text Content -->
+            <div class="space-y-6 md:space-y-10  m-4 md:m-7 text-[#016262] ">
+                <h1 class="text-xl md:text-2xl font-bold mt-[100px]">
+                    Restore, <span class="font-normal">by Safewater Technologies, Inc.,</span> is a flexible plastic waste upcycler
+                    based in Bulacan. </b>
+                </h1>
+                <h1 class="text-2xl font-bold">
+                    The company transforms flexible plastic waste into plastic <b>Restore boards and furniture.
+                </h1>
+
+                <h1 class="text-xl md:text-2xl font-bold text-[#016262] mt-5">
+                    Restore aims to take sustainability beyond waste management, striving to offer innovative solutions that
+                    promote environmental stewardship and drive positive change.
+                </h1>
             </div>
         </div>
     </div>
