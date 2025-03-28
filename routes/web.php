@@ -97,4 +97,11 @@ Route::get('/site-settings', [SiteSettingController::class, 'index'])->name('sit
 
 Route::put('/site-settings/{id}/general', [SiteSettingController::class, 'updateGeneralSetting'])->name('site-settings.update');
 
+//Route for app overview admin
+Route::get('/site-settings/app-overview', [SiteSettingController::class, 'indexAppOverview'])->name('app-overview.index');
+Route::put('/site-settings/{id}/app-overview', [SiteSettingController::class, 'updateAppOverview'])->name('app-overview.update');
+
+//Route for external links admin
+Route::get('/site-settings/external-links', [SiteSettingController::class, 'indexExternalLinks'])->name('external-links.index');
+Route::put('/site-settings/{id}/external-links', [SiteSettingController::class, 'updateExternalLinks'])->name('external-links.update');
 require __DIR__.'/auth.php';
