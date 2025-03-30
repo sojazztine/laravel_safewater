@@ -19,11 +19,13 @@
         </div>
     @endif
 
-    <form action="{{ route('site-settings.update', $site_setting_id) }}" method="POST">
+    <form action="{{ route('site-settings.update', $site_setting_id) }}" method="POST" class="mt-10 ml-10">
         @csrf
         @method('PUT')
-        <img src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=2048x2048&w=is&k=20&c=dFWJz1EFJt7Tq2lA-hgTpSW119YywTWtS4EwU3fpKrE=" alt="" class="w-10">
-        <input type="file" name="logo">
+        <h1 class="text-md mb-5">Website Logo</h1>
+        <img id="preview" src="{{ asset('img/default-image.jpg')}}" 
+        alt="Preview Image" class="w-48 mb-5">
+        <input type="file" name="logo" id="fileInput" accept="image/*">
         <div class="relative z-0 w-full mb-5 group mt-5 ">
             <input type="text" name="app_title" id="app_title" class="block py-2.5 px-0 w-full text-lg text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-blue-600 peer" required placeholder=" "  value="{{$app_title}}" />
             <label for="web_login_link" class="peer-focus:font-medium absolute text-lg text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6" >App Title</label>
@@ -39,4 +41,17 @@
     
         <button type="submit" class="px-8 py-2 rounded-md bg-green-700 text-white"> Update</button>
     </form>
+
+    <script>
+        document.getElementById("fileInput").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById("preview").src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>   
 </x-sidebar-layout>
