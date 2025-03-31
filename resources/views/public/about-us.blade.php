@@ -1,33 +1,18 @@
 <x-public-layout>
     <!-- FRONT PAGE -->
     <div class="flex flex-col justify-center items-center mt-[200px] mb-[200px] max-md:p-10 max-md:mt-20 max-md:mb-0">
+        <img src="{{asset('img/img-aboutUs/logo.png')}}" alt="" class="mb-5">
         <h1 class="mb-12 text-6xl text-center font-bold w-full md:w-9/12 max-md:text-4xl text-[#016262]">
             At Restore Solutions PH, we operate with an iterative, pragmatic, and ecocentric approach towards making sustainability a standard in our contemporary society.
         </h1>
-        <p class="text-2xl text-center w-full md:w-1/2 mt-7 max-md:text-xl text-[#016262]">
+        <p class="text-3xl text-center w-full md:w-1/2 mt-7 max-md:text-xl text-[#016262]">
             By utilizing innovative solutions and fostering a spirit of environmental stewardship across people and communities, we believe that we can turn the concept of a circular economy into a tangible reality.
         </p>
     </div>
 
     <!-- CONTENT -->
-    <div class="flex flex-col md:flex-row   w-[90%] mx-auto mb-[200px] gap-4 md:gap-10  items-center justify-center">
-        <!-- Left Column -->
-        <div class="md:w-5/12 ">
-            <!-- Logo -->
-            <img src="../img/logo2.png" alt="logo" class="w-[200px] md:w-[300px] h-auto mx-auto md:ms-7 ">
+    <div class="flex flex-col   w-[90%] mx-auto mb-10 gap-4 md:gap-10  items-center justify-center">
 
-            <!-- Text Content -->
-            <div class="space-y-6 md:space-y-10  m-4 md:m-7 text-[#016262] ">
-                <h1 class="text-xl md:text-2xl font-bold mt-[100px]">
-                    Restore, <span class="font-normal">by Safewater Technologies, Inc.,</span> is a flexible plastic waste upcycler
-                    based in Bulacan. The company transforms flexible plastic waste into plastic <b>Restore boards and furniture.</b>
-                </h1>
-                <h1 class="text-xl md:text-2xl font-bold text-[#016262]">
-                    Restore aims to take sustainability beyond waste management, striving to offer innovative solutions that
-                    promote environmental stewardship and drive positive change.
-                </h1>
-            </div>
-        </div>
 
         <!-- Right Column - Images -->
         <div class="flex flex-col gap-2">
@@ -45,44 +30,32 @@
                 <img src="../img/img7.png" alt="Image 7" class="w-full md:w-[15rem] h-[15rem] rounded-br-3xl">
             </div>
         </div>
-    </div>
 
-    <!-- RA 11898 - EPR Act -->
-    <div class="flex flex-col lg:flex-row justify-center items-center w-[90%] mx-auto gap-[200px] mb-[150px]">
-        <div class="w-full lg:w-auto">
-            <h1 class="text-3xl lg:text-5xl mb-6 lg:mb-10 text-center lg:text-left text-[#016262]"><b>RA 11898 - EPR Act</b></h1>
-            <div class="flex flex-col lg:flex-row items-center lg:items-start">
-                <div class="mb-6 lg:mb-0 lg:me-6">
-                    <img src="../img/Law.png" alt="" class="w-auto lg:w-auto">
-                </div>
 
-                <div class="text-center lg:text-left">
-                    <h1 class="text-lg lg:text-xl w-full lg:w-[640px] leading-8 lg:leading-10 text-[#016262]"><b>An act institutionalizing the Extended Producer Responsibility on Plastic Packaging Waste, amending for this purpose Republic Act No. 9003, otherwise known as the “Ecological Solid Waste Management Act of 2000”.</b></h1>
-                </div>
-            </div>
-            <div class="flex flex-col lg:flex-row items-center lg:items-start mt-8 lg:mt-15">
-                <div class="mb-6 lg:mb-0 lg:me-6">
-                    <img src="../img/Landscape.png" alt="" class="w-full lg:w-auto">
-                </div>
-                <div class="text-center lg:text-left">
-                    <h1 class="text-lg lg:text-xl w-full lg:w-[640px] leading-8 lg:leading-10 text-[#016262]"><b>DENR Administrative Order No. 2023-02, or Implementing Rules and Regulations (IRR) of RA 11898 to facilitate compliance.</b></h1>
+        <!-- Left Column -->
+        <div class="text-center w-[50%]">
 
-                    <h1 class="mt-6 lg:mt-10 text-[#016262] leading-10 font-normal">Effectivity date: August 12, 2022<br>
-                        IRR Effective Date: February 17, 2023</h1>
-                </div>
+            <!-- Text Content -->
+            <div class="space-y-6 md:space-y-10  m-4 md:m-7 text-[#016262] ">
+                <h1 class="text-xl md:text-2xl font-bold mt-[100px]">
+                    Restore, <span class="font-normal">by Safewater Technologies, Inc.,</span> is a flexible plastic waste upcycler
+                    based in Bulacan. </b>
+                </h1>
+                <h1 class="text-2xl font-bold">
+                    The company transforms flexible plastic waste into plastic <b>Restore boards and furniture.
+                </h1>
+
+                <h1 class="text-xl md:text-2xl font-bold text-[#016262] mt-5">
+                    Restore aims to take sustainability beyond waste management, striving to offer innovative solutions that
+                    promote environmental stewardship and drive positive change.
+                </h1>
             </div>
         </div>
-
-        <div class="mt-12 lg:mt-0 lg:ms-15 lg:w-auto">
-            <img src="../img/RA.png" alt="" class="hidden lg:block w-[500px] h-[600px] rounded-tr-4xl rounded-tl-4xl rounded-br-4xl rounded-bl-[270px]">
-        </div>
     </div>
+
 
     <!-- MISION & VISION -->
-    <div class="w-[90%] px-4  mx-auto mt-20 sm:mt-40 mb-[10rem] sm:mb-30 ">
-        <h1 class="text-3xl sm:text-5xl font-bold text-center flex flex-start text-[#016262]">OUR MISSION AND VISION</h1>
-        <h1 class="mt-5 mb-5 text-center text-lg sm:text-xl flex flex-start text-[#016262]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunta.</h1>
-
+    <div class="w-[90%] px-4  mx-auto mt-10 mb-[10rem] sm:mb-30 ">
         <div class="flex flex-col sm:flex-row justify-center  border-b-2">
 
             <div class="w-full sm:w-1/2 p-4 border-r-2">
@@ -117,5 +90,114 @@
             </div>
         </div>
     </div>
+
+
+
+    <!-- Meet the Team -->
+    <div>
+        <div>
+            <div>
+                <h1>Meet the Team</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi velit possimus facere, totam nobis minima odio earum atque fugit tempore! Lorem ipsum dolor sit amet.</p>
+            </div>
+
+            <div class="flex flex-col">
+                <h1>Board of Directors</h1>
+                <div class="grid grid-cols-3">
+                    <div>
+                        <img src="" alt="">
+                        <h1>John Gilbert Madarang</h1>
+                        <p>Chairman</p>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                        <h1>Francis Eric Chao</h1>
+                        <p>Chairman</p>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                        <h1>Heliogen Arbatin</h1>
+                        <p>Chairman</p>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                        <h1> May Ann Madarang-Uy</h1>
+                        <p>Chairman</p>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                        <h1>Wilhelmina Madarang</h1>
+                        <p>Chairman</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h1>Business Operations</h1>
+                <div>
+                    <div>
+                        <img src="" alt="">
+                        <h1>Miguel Lorenzo Yorro</h1>
+                        <p>Business Development and Sustainability</p>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                        <h1>Mercy Jane Mora</h1>
+                        <p>Research & Development and Product Innovation</p>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                        <h1>Roxanne Bernardo</h1>
+                        <p>Plant Operations</p>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                        <h1>Kylee Sy</h1>
+                        <p>Management Trainee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- RA 11898 - EPR Act -->
+    <div class="flex flex-col lg:flex-row justify-center items-center w-[90%] mx-auto gap-[200px] mb-[150px]">
+        <div class="w-full lg:w-auto">
+            <h1 class="text-3xl lg:text-5xl mb-6 lg:mb-10 text-center lg:text-left text-[#016262]"><b>RA 11898 - EPR Act</b></h1>
+            <div class="flex flex-col lg:flex-row items-center lg:items-start">
+                <div class="mb-6 lg:mb-0 lg:me-6">
+                    <img src="../img/Law.png" alt="" class="w-auto lg:w-auto">
+                </div>
+
+                <div class="text-center lg:text-left">
+                    <h1 class="text-lg lg:text-xl w-full lg:w-[640px] leading-8 lg:leading-10 text-[#016262]"><b>An act institutionalizing the Extended Producer Responsibility on Plastic Packaging Waste, amending for this purpose Republic Act No. 9003, otherwise known as the “Ecological Solid Waste Management Act of 2000”.</b></h1>
+                </div>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center lg:items-start mt-8 lg:mt-15">
+                <div class="mb-6 lg:mb-0 lg:me-6">
+                    <img src="../img/Landscape.png" alt="" class="w-full lg:w-auto">
+                </div>
+                <div class="text-center lg:text-left">
+                    <h1 class="text-lg lg:text-xl w-full lg:w-[640px] leading-8 lg:leading-10 text-[#016262]"><b>DENR Administrative Order No. 2023-02, or Implementing Rules and Regulations (IRR) of RA 11898 to facilitate compliance.</b></h1>
+
+                    <h1 class="mt-6 lg:mt-10 text-[#016262] leading-10 font-normal">Effectivity date: August 12, 2022<br>
+                        IRR Effective Date: February 17, 2023</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 lg:mt-0 lg:ms-15 lg:w-auto">
+            <img src="../img/RA.png" alt="" class="hidden lg:block w-[500px] h-[600px] rounded-tr-4xl rounded-tl-4xl rounded-br-4xl rounded-bl-[270px]">
+        </div>
+    </div>
+
+
 
 </x-public-layout>
