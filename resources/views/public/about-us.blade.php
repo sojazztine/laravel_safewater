@@ -17,17 +17,17 @@
         <!-- Right Column - Images -->
         <div class="flex flex-col gap-2">
             <div class="grid grid-cols-2 gap-2 justify-center">
-                <img src="../img/img1.png" alt="Image 1" class="w-full md:w-[29rem] h-[15rem] rounded-tl-3xl">
-                <img src="../img/img2.png" alt="Image 2" class="w-full md:w-[19rem] h-[15rem] rounded-tr-3xl">
+                <img src="{{asset('img/img-aboutUs/img1.png')}}" alt="Image 1" class="w-full md:w-[29rem] h-[15rem] rounded-tl-3xl">
+                <img src="{{asset('img/img-aboutUs/img2.png')}}" alt="Image 2" class="w-full md:w-[19rem] h-[15rem] rounded-tr-3xl">
             </div>
             <div class="grid grid-cols-2 gap-2 justify-center">
-                <img src="../img/img3.png" alt="Image 3" class="w-full md:w-[20rem] h-[15rem]">
-                <img src="../img/img4.png" alt="Image 4" class="w-full md:w-[25rem] h-[15rem]">
+                <img src="{{asset('img/img-aboutUs/img3.png')}}" alt="Image 3" class="w-full md:w-[20rem] h-[15rem]">
+                <img src="{{asset('img/img-aboutUs/img4.png')}}" alt="Image 4" class="w-full md:w-[25rem] h-[15rem]">
             </div>
             <div class="grid grid-cols-3 gap-2 justify-center">
-                <img src="../img/img5.png" alt="Image 5" class="w-full md:w-[20rem] h-[15rem] rounded-bl-3xl">
-                <img src="../img/img6.png" alt="Image 6" class="w-full md:w-[23rem] h-[15rem]">
-                <img src="../img/img7.png" alt="Image 7" class="w-full md:w-[15rem] h-[15rem] rounded-br-3xl">
+                <img src="{{asset('img/img-aboutUs/img5.png')}}" alt="Image 5" class="w-full md:w-[20rem] h-[15rem] rounded-bl-3xl">
+                <img src="{{asset('img/img-aboutUs/img6.png')}}" alt="Image 6" class="w-full md:w-[23rem] h-[15rem]">
+                <img src="{{asset('img/img-aboutUs/img7.png')}}" alt="Image 7" class="w-full md:w-[15rem] h-[15rem] rounded-br-3xl">
             </div>
         </div>
 
@@ -37,15 +37,15 @@
 
             <!-- Text Content -->
             <div class="space-y-6 md:space-y-10  m-4 md:m-7 text-[#016262] ">
-                <h1 class="text-xl md:text-2xl font-bold mt-[100px]">
-                    Restore, <span class="font-normal">by Safewater Technologies, Inc.,</span> is a flexible plastic waste upcycler
+                <h1 class="text-xl md:text-2xl mt-[100px]">
+                    <b>Restore, </b><span class="font-normal">by Safewater Technologies, Inc.,</span> is a <b>flexible plastic waste upcycler</b>
                     based in Bulacan. </b>
                 </h1>
-                <h1 class="text-2xl font-bold">
+                <h1 class="text-2xl">
                     The company transforms flexible plastic waste into plastic <b>Restore boards and furniture.
                 </h1>
 
-                <h1 class="text-xl md:text-2xl font-bold text-[#016262] mt-5">
+                <h1 class="text-xl md:text-2xl text-[#016262] mt-5">
                     Restore aims to take sustainability beyond waste management, striving to offer innovative solutions that
                     promote environmental stewardship and drive positive change.
                 </h1>
@@ -94,71 +94,72 @@
 
 
     <!-- Meet the Team -->
-    <div>
-        <div>
-            <div>
-                <h1>Meet the Team</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi velit possimus facere, totam nobis minima odio earum atque fugit tempore! Lorem ipsum dolor sit amet.</p>
+        <div class="flex flex-col items-center text-[#016262] mb-[150px]">
+            <div class="flex flex-col justify-center items-center mb-10">
+                <h1 class="text-4xl mb-5">Meet the Team</h1>
+                <p class="w-[75%] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi velit possimus facere, totam nobis minima odio earum atque fugit tempore! Lorem ipsum dolor sit amet.</p>
             </div>
 
-            <div class="flex flex-col">
-                <h1>Board of Directors</h1>
-                <div class="grid grid-cols-3">
-                    <div>
-                        <img src="" alt="">
-                        <h1>John Gilbert Madarang</h1>
-                        <p>Chairman</p>
-                    </div>
-                    <div>
-                        <img src="" alt="">
-                        <h1>Francis Eric Chao</h1>
-                        <p>Chairman</p>
-                    </div>
-                    <div>
-                        <img src="" alt="">
-                        <h1>Heliogen Arbatin</h1>
-                        <p>Chairman</p>
-                    </div>
-                    <div>
-                        <img src="" alt="">
-                        <h1> May Ann Madarang-Uy</h1>
-                        <p>Chairman</p>
-                    </div>
-                    <div>
-                        <img src="" alt="">
-                        <h1>Wilhelmina Madarang</h1>
-                        <p>Chairman</p>
+            <div class="flex flex-col items-center">
+                <h1 class="text-xl my-10">Board of Directors</h1>
+                <div class="flex justify-center items-center">
+                    <div class="grid grid-cols-6 gap-10 justify-items-center">
+                        <div class="flex flex-col items-center justify-center col-span-3 h-[300px] w-[250px] text-center p-5">
+                            <img src="{{asset('img/img-aboutUs/John Gilbert Madarang.png')}}" alt="" class=" ">
+                            <h1 class="mt-3">John Gilbert Madarang</h1>
+                            <p class="text-sm font-normal">Chairman</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center col-span-3 h-[300px] w-[250px] text-center p-5">
+                            <img src="{{asset('img/img-aboutUs/Francis Eric Chao.png')}}" alt="" class="">
+                            <h1 class="mt-3">Francis Eric Chao</h1>
+                            <p class="text-sm font-normal">President</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center col-span-2 h-[300px] w-[250px] text-center p-5">
+                            <img src="" alt="" class="w-[300px] h-[280px]  rounded-3xl bg-[#EBFCFC]">
+                            <h1 class="mt-3">Heliogen Arbatin</h1>
+                            <p class="text-sm font-normal">Treasurer</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center col-span-2 h-[300px] w-[250px] text-center p-5">
+                            <img src="" alt="" class="w-[300px] h-[280px]  rounded-3xl bg-[#EBFCFC]">
+                            <h1 class="mt-3">May Ann Madarang-Uy</h1>
+                            <p class="text-sm font-normal"> Corporate Secretary </p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center col-span-2 h-[300px] w-[250px] text-center p-5">
+                            <img src="" alt="" class="w-[300px] h-[280px]  rounded-3xl bg-[#EBFCFC]">
+                            <h1 class="mt-3">Wilhelmina Madarang</h1>
+                            <p class="text-sm font-normal">Director</p>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-            <div>
-                <h1>Business Operations</h1>
-                <div>
-                    <div>
-                        <img src="" alt="">
-                        <h1>Miguel Lorenzo Yorro</h1>
-                        <p>Business Development and Sustainability</p>
+            <div class="flex flex-col items-center justify-between">
+                <h1 class="text-xl my-10">Business Operations</h1>
+                <div class="flex items-center gap-10">
+                    <div class="flex flex-col items-center justify-center col-span-3 h-[300px] w-[250px] text-center p-5">
+                        <img src="" alt="" class="w-[300px] h-[280px]  rounded-3xl bg-[#EBFCFC]">
+                        <h1 class="mt-3">Miguel Lorenzo Yorro</h1>
+                        <p class="text-sm font-normal">Business Development and Sustainability</p>
                     </div>
-                    <div>
-                        <img src="" alt="">
-                        <h1>Mercy Jane Mora</h1>
-                        <p>Research & Development and Product Innovation</p>
+                    <div class="flex flex-col items-center justify-center col-span-3 h-[300px] w-[250px] text-center p-5">
+                        <img src="" alt="" class="w-[300px] h-[280px]  rounded-3xl bg-[#EBFCFC]">
+                        <h1 class="mt-3">Mercy Jane Mora</h1>
+                        <p class="text-sm font-normal">Research & Development and Product Innovation</p>
                     </div>
-                    <div>
-                        <img src="" alt="">
-                        <h1>Roxanne Bernardo</h1>
-                        <p>Plant Operations</p>
+                    <div class="flex flex-col items-center justify-center col-span-3 h-[300px] w-[250px] text-center p-5">
+                        <img src="" alt="" class="w-[300px] h-[280px]  rounded-3xl bg-[#EBFCFC]">
+                        <h1 class="mt-3">Roxanne Bernardo</h1>
+                        <p class="text-sm font-normal">Plant Operations</p>
                     </div>
-                    <div>
-                        <img src="" alt="">
-                        <h1>Kylee Sy</h1>
-                        <p>Management Trainee</p>
+                    <div class="flex flex-col items-center justify-center col-span-3 h-[300px] w-[250px] text-center p-5">
+                        <img src="" alt="" class="w-[300px] h-[280px]  rounded-3xl bg-[#EBFCFC]">
+                        <h1 class="mt-3">Kylee Sy</h1>
+                        <p class="text-sm font-normal">Management Trainee</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
 
@@ -194,7 +195,7 @@
         </div>
 
         <div class="mt-12 lg:mt-0 lg:ms-15 lg:w-auto">
-            <img src="../img/RA.png" alt="" class="hidden lg:block w-[500px] h-[600px] rounded-tr-4xl rounded-tl-4xl rounded-br-4xl rounded-bl-[270px]">
+            <img src="{{asset('img/img-aboutUs/RA.png')}}" alt="" class="hidden lg:block w-[500px] h-[600px] rounded-tr-4xl rounded-tl-4xl rounded-br-4xl rounded-bl-[270px]">
         </div>
     </div>
 
