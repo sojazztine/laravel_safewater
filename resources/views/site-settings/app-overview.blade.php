@@ -1,5 +1,5 @@
 <x-sidebar-layout>
-    
+
     <x-tab-settings-layout></x-tab-settings-layout>
     @if(session('success'))
     <div id="alert-3" class="flex items-center p-4 mb-4 text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
@@ -18,7 +18,7 @@
         </button>
     </div>
 @endif
-    <form action="{{ route('app-overview.update', $site_setting_id) }}" method="POST">
+    <form action="{{ route('app-overview.update', $site_setting_id) }}" method="POST" class="mt-10 ml-10">
         @csrf
         @method('PUT')
         <div class="relative z-0 w-full mb-5 group ">
@@ -29,7 +29,7 @@
             <input type="text" name="app_version" id="app_version" class="block py-2.5 px-0 w-full text-lg text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-blue-600 peer" required placeholder=" "  value="{{ $site_app_version }}" />
             <label for="app_version" class="peer-focus:font-medium absolute text-lg text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6" >App version</label>
         </div>
-       
+
         <button type="submit" class="px-8 py-2 rounded-md bg-green-700 text-white"> Update</button>
     </form>
 

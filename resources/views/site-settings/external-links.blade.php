@@ -17,7 +17,7 @@
         </button>
     </div>
     @endif
-    <form action="{{ route('external-links.update', $site_setting_id) }}" method="POST" class="mt-10">
+    <form action="{{ route('external-links.update', $site_setting_id) }}" method="POST" class="mt-10 ml-10">
         @csrf
         @method('PUT')
         <div class="relative z-0 w-full mb-5 group ">
