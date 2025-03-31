@@ -12,7 +12,7 @@
                 <div class="flex flex-col border border-transparent mt-20 w-[500px] p-5 rounded-[30px] hover:bg-[#e6e6e5] hover:border-[#e6e6e5] cursor-pointer">
 
                     <!-- Content inside each post card (kept vertical) -->
-                    <a href="{{ route('posts.show', $post->id) }}">
+                    <a href="{{ route('public.post.showBlog', $post->id) }}">
                         <div class="flex flex-col items-center">
                             <img src=" {{ Storage::url($post->image) }}" alt="" class="w-[504px] h-[260px] rounded-[30px] object-cover">
                             <h1 class="mt-10 text-2xl font-bold" style="overflow-wrap:anywhere;">{{ $post->title }}</h1>

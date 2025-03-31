@@ -16,9 +16,8 @@
         </div>
 
         <div class="flex w-[90%] mx-auto mb-5">
-
             <pre class="text-wrap">
-                {!! $post->content !!}
+                {!! preg_replace('/<span class="ql-ui" contenteditable="false"><\/span>/', '', $post->content) !!}
             </pre>
          </div>
 </x-public-layout>

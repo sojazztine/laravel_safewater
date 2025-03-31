@@ -9,11 +9,11 @@
 
             <!-- ABOUT US NAV -->
             <li class="text-[#016262] px-1 py-1 text-md md:w-25 md:h-8 lg:w-25 lg:h-9 md:cursor-pointer cursor-pointer rounded-sm text-md transition delay-30 duration-300 ease-in-out font-bold">
-                <a class="<?= $_SERVER['SCRIPT_NAME'] == "/view/productAndService.php" ? 'bg-[#e6e6e5] text-[#016262] py-2 px-2 rounded-sm' : 'hover:bg-[#e6e6e5] py-2 px-2 rounded-sm' ?>" href="{{ route('services') }}">About us</a>
+                <a class="<?= $_SERVER['SCRIPT_NAME'] == "/view/productAndService.php" ? 'bg-[#e6e6e5] text-[#016262] py-2 px-2 rounded-sm' : 'hover:bg-[#e6e6e5] py-2 px-2 rounded-sm' ?>" href="{{ route('public.about-us') }}">About us</a>
             </li>
 
             <!-- SOLUTIONS NAV -->
-            <li id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="btn text-[#016262] px-1  py-1 text-md md:w-25 md:h-8 lg:w-25 lg:h-9  md:cursor-pointer cursor-pointer rounded-sm text-md transition delay-30 duration-300 ease-in-out font-bold flex  justify-center items-center" type="button"><a class="<?= $_SERVER['SCRIPT_NAME'] == "/view/aboutUs.php" ? 'bg-[#e6e6e5] text-[#016262] py-2 px-2 rounded-sm' : 'hover:bg-[#e6e6e5] py-2 px-2 rounded-sm' ?>"  href="{{ route('about')}}">Solutions</a><svg class="w-2.5 h-2.5 ms-3 flex" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <li id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="btn text-[#016262] px-1  py-1 text-md md:w-25 md:h-8 lg:w-25 lg:h-9  md:cursor-pointer cursor-pointer rounded-sm text-md transition delay-30 duration-300 ease-in-out font-bold flex  justify-center items-center" type="button"><a class="<?= $_SERVER['SCRIPT_NAME'] == "/view/aboutUs.php" ? 'bg-[#e6e6e5] text-[#016262] py-2 px-2 rounded-sm' : 'hover:bg-[#e6e6e5] py-2 px-2 rounded-sm' ?>"  href="{{ route('public.solution')}}">Solutions</a><svg class="w-2.5 h-2.5 ms-3 flex" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                 </svg>
             </li>
@@ -37,12 +37,12 @@
 
             <!-- CONTACT US NAV -->
             <li class="text-[#016262] px-1 py-1 text-md md:w-25 md:h-8 lg:w-30 lg:h-9 md:cursor-pointer cursor-pointer rounded-sm text-md transition delay-30 duration-300 ease-in-out font-bold">
-                <a class="<?= $_SERVER['SCRIPT_NAME'] == "/view/contactUs.php" ? 'bg-[#e6e6e5] text-[#016262] py-2 px-2 rounded-sm' : 'hover:bg-[#e6e6e5] py-2 px-2 rounded-sm' ?>" href="{{ route('contact')}}">Contact us</a>
+                <a class="<?= $_SERVER['SCRIPT_NAME'] == "/view/contactUs.php" ? 'bg-[#e6e6e5] text-[#016262] py-2 px-2 rounded-sm' : 'hover:bg-[#e6e6e5] py-2 px-2 rounded-sm' ?>" href="{{ route('public.contactUs')}}">Contact us</a>
             </li>
 
             <!-- BLOG NAV -->
             <li class="text-[#016262] px-1 py-1 text-md md:w-25 md:h-8 lg:w-30 lg:h-9 md:cursor-pointer cursor-pointer rounded-sm text-md transition delay-30 duration-300 ease-in-out font-bold">
-                <a class="<?= $_SERVER['SCRIPT_NAME'] == "/view/getInTouch.php" ? 'bg-[#e6e6e5] text-[#016262] py-2 px-2 rounded-sm' : 'hover:bg-[#e6e6e5] py-2 px-2 rounded-sm' ?>" href="{{ route('blog') }}">Blog</a>
+                <a class="<?= $_SERVER['SCRIPT_NAME'] == "/view/getInTouch.php" ? 'bg-[#e6e6e5] text-[#016262] py-2 px-2 rounded-sm' : 'hover:bg-[#e6e6e5] py-2 px-2 rounded-sm' ?>" href="{{ route('public.blog') }}">Blog</a>
             </li>
 
             <!-- ECOBIN NAV -->

@@ -57,33 +57,22 @@
         </div>
     </div> -->
 
-
-
-
-
-
-
-
-
-
-
     <div id="animation-carousel" class="relative w-full h-screen overflow-hidden">
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black/40 z-10"></div>
-
-        <!-- Carousel wrapper -->
         <div class="relative h-56 md:h-96">
-            <div class="absolute inset-0 flex transition-opacity duration-1000 ease-in-out opacity-0" data-carousel-item>
-                <img src="{{ asset('img/img-index/landingImage.png') }}" class="w-full h-screen object-cover z-0" alt="...">
-            </div>
-            <div class="absolute inset-0 flex transition-opacity duration-1000 ease-in-out opacity-0" data-carousel-item>
-                <img src="{{ asset('img/bg.png') }}" class="w-full h-screen object-cover z-0" alt="...">
-            </div>
-        </div>
+        <!-- Carousel wrapper -->
+            @foreach ($landingPages as $landingPage )
+                    <div class="absolute inset-0 flex transition-opacity duration-1000 ease-in-out opacity-0" data-carousel-item>
+                        <img src="{{Storage::url($landingPage->image) }}" class="w-full h-screen object-cover z-0" alt="...">
+                        </div>
+            @endforeach
+
+          </div>
 
         <div class="absolute z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-center">
-                <h1 class="text-white font-bold text-7xl">SAVING THE WORLD.</h1>
-                <h3 class="text-white text-3xl">one plastic sachet at a time.</h3>
+                <h1 class="text-white font-bold text-7xl">{{$hero_heading_title}}</h1>
+                <h3 class="text-white text-3xl">{{$hero_heading_description}}</h3>
 
         </div>
     </div>
@@ -261,9 +250,11 @@
             <h1 class="text-[#016262] text-4xl font-semibold lg:w-[470px] leading-14 mb-5">
                 Amount of Sachets Collected
             </h1>
-            <h1 class="text-[#016262] text-9xl font-bold mb-10 lg:w-[580px] italic">
-                250,000
-            </h1>
+
+                    <h1 class="text-[#016262] text-9xl font-bold mb-10 lg:w-[580px] italic">
+                    {{ number_format($total_sachets)  }}
+                    </h1>
+
             <h1 class="text-[#016262] text-4xl font-semibold lg:w-[470px] leading-14 mb-5">
                 Diverted as of today
             </h1>
@@ -330,27 +321,33 @@
 
 
 
+   @php
+    $limit = request()->query('limit');
+@endphp
 
+<!-- TESTIMONIALS -->
+<div class="min-h-[500px] bg-[#016262] mt-20 mb-20 pb-10">
+    <div class="ml-20 pt-20">
+        <h1 class="text-5xl font-bold text-[#EBFCFC]">
+            Words from our Eco Heroes
+        </h1>
 
-
-        <!-- TESTIMONIALS -->
-        <div class=" min-h-[500px] bg-[#016262] mt-20 mb-20 pb-10">
-            <div class="ml-20 pt-20">
-                <h1 class="text-5xl text-bold text-[#EBFCFC]">
-                        Words from our Eco Heroes
-                </h1>
-                {{-- <div class="flex items-center mt-10">
-                    <img src="../img/testimonial/robby.png" alt="" class="border-4 w-15 rounded-full border-[#17B67D]  border-solid ">
-                    <img src="../img/testimonial/hansley.png" alt="" class="border-4 w-15 rounded-full border-[#17B67D] ml-[-20px] border-solid ">
-                    <img src="../img/testimonial/marcus.png" alt="" class="border-4 w-15 rounded-full border-[#17B67D] ml-[-20px] border-solid ">
-                    <p class="ml-10 text-[#EBFCFC] lg:w-120 lg:block hidden ">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunta.
-                    </p>
-                </div> --}}
-            {{-- <p class=" text-[#EBFCFC] lg:w-120 mt-10 block md:hidden">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunta.
-                </p> --}}
+        <!-- Limit only the images to 3 -->
+        <div class="flex items-center mt-10">
+            @foreach ($testimonials->sortByDesc('created_at')->take(3) as $testimonial)
+                <img src="{{ Storage::url($testimonial->image) }}" alt="Testimonial Image"
+                    class="border-4 rounded-full w-[70px] h-[70px] border-[#17B67D] border-solid ml-[-15px]">
+            @endforeach
+            <p class="ml-10 text-xl text-[#EBFCFC] lg:w-120 lg:block hidden">
+                Latest testimonials.
+            </p>
+            <p class="text-[#EBFCFC] lg:w-120 mt-10 block md:hidden text-xl">
+                Latest testimonials
+             </p>
         </div>
+
+
+
         <div class="mt-10 flex flex-wrap justify-center gap-[3vw] p-3">
             @foreach ($testimonials as $testimonial)
             <div class="w-80 h-90 rounded-xl bg-[#EBFCFC] p-5">
@@ -362,8 +359,13 @@
              @endforeach
 
 
-        
+
         </div>
+    </div>
+</div>
+
+
+
     </div>
 
 

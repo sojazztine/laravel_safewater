@@ -1,32 +1,39 @@
 <?php
-
+use App\Http\Controllers\ApiController;
+use App\Http\Controllers\EcobinLoginLinkController;
+use App\Http\Controllers\EcobinRegisterLinkController;
+use App\Http\Controllers\HeroHeadingController;
 use App\Http\Controllers\InquiryController;
 use App\Http\Controllers\PostController;
 use App\Models\Post;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestimonialController;
 use App\Models\Inquiry;
+use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\SiteSettingController;
+use App\Models\LandingPage;
 use App\Models\Testimonial;
 use Illuminate\Support\Facades\Route;
 //Route for interface
-Route::get('/', function () {
-    $testimonials = Testimonial::all();
-    return view('index', ['testimonials' => $testimonials]);
-});
-Route::get('/services', function(){
-    return view('public.services');
-})->name('services');
 
-Route::get('/contact', function(){
-    return view('public.contactUs');
-})->name('contact');
-Route::get('/blog', function () {
-    $posts = Post::all();  // Fetch all posts from the database
-    return view('public.blog', compact('posts'));  // Pass posts to the view
-})->name('blog');
-Route::get('/about', function(){
-    return view('public.aboutUs');
-})->name('about');
+// Route::get('/', [ApiController::class, 'index'])->name('/');
+
+Route::get('/', [PublicController::class, 'index'])->name('home');
+
+Route::get('about', [PublicController::class, 'aboutPage'])->name('public.about-us');
+
+Route::get('solution', [PublicController::class, 'solutionPage'])->name('public.solution');
+
+Route::get('contact', [PublicController::class, 'contactPage'])->name('public.contactUs');
+
+Route::get('blog', [PublicController::class, 'blogPage'])->name('public.blog');
+
+Route::get('blog/{id}', [PublicController::class, 'showBlog'])->name('public.post.showBlog');
+
+// Route::get('/about', function(){
+//     return view('public.aboutUs');
+// })->name('about');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -45,7 +52,7 @@ Route::post('/posts/store', [PostController::class, 'store'])->name('posts.store
 Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('posts.edit'); //open speicific post
 Route::put('/posts/{id}', [PostController::class, 'update'])->name('posts.update'); //update a post
 Route::delete('/posts/{id}', [PostController::class, 'delete'])->name('posts.delete'); //delete post
-Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show'); // To fetch the data
+// Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
 
 //Route for testminoials
 Route::get('/testimonials', [TestimonialController::class, 'index'])->name('testimonials.index');
@@ -61,4 +68,40 @@ Route::get('/inquiries', [InquiryController::class, 'index'])->name('inquiries.i
 Route::post('/inquiries/store', [InquiryController::class, 'store'])->name('inquiries.store');
 Route::delete('/inquiries/{id}', [InquiryController::class, 'delete'])->name('inquiries.delete');
 
+
+//Landing Page for image
+Route::get('/landingPage', [LandingPageController::class, 'index'])->name('landingPage.index');
+Route::get('/landigPage/create', [LandingPageController::class, 'create'])->name('landingPage.create');
+Route::post('/landingPage/store', [LandingPageController::class, 'store'])->name('landingPage.store');
+Route::delete('/landingPage/{id}', [LandingPageController::class, 'delete'])->name('landingPage.delete');
+
+//Route for Hero description and heading
+Route::get('/heroHeading', [HeroHeadingController::class, 'index'])->name('heroHeading.index');
+Route::get('/heroHeading/{id}/edit', [HeroHeadingController::class, 'edit'])->name('heroHeading.edit');
+Route::put('/heroHeading/{id}', [HeroHeadingController::class, 'update'])->name('heroHeading.update');
+
+//Route for ecobinLinks register
+Route::get('/ecobinLinks/register', [EcobinRegisterLinkController::class, 'index'])->name('ecobinLinks.register.index');
+Route::get('/ecobinLinks/register/{id}/edit', [EcobinRegisterLinkController::class, 'edit'])->name('ecobinLinks.register.edit');
+Route::put('/ecobinLinks/register/{id}', [EcobinRegisterLinkController::class, 'update'])->name('ecobinLinks.register.update');
+
+//Route for ecobinlinks login
+Route::get('/ecobinLinks/login', [EcobinLoginLinkController::class, 'index'])->name('ecobinLinks.login.index');
+Route::get('/ecobinLinks/login/{id}/edit', [EcobinLoginLinkController::class, 'edit'])->name('ecobinLinks.login.edit');
+Route::put('/ecobinLinks/login/{id}', [EcobinLoginLinkController::class, 'update'])->name('ecobinLinks.login.update');
+
+//Route for site settings
+Route::get('/site-settings', [SiteSettingController::class, 'index'])->name('site-settings.index');
+
+// Route::post('/site-settings/store', [SiteSettingController::class, 'store'])->name('site-settings.store');
+
+Route::put('/site-settings/{id}/general', [SiteSettingController::class, 'updateGeneralSetting'])->name('site-settings.update');
+
+//Route for app overview admin
+Route::get('/site-settings/app-overview', [SiteSettingController::class, 'indexAppOverview'])->name('app-overview.index');
+Route::put('/site-settings/{id}/app-overview', [SiteSettingController::class, 'updateAppOverview'])->name('app-overview.update');
+
+//Route for external links admin
+Route::get('/site-settings/external-links', [SiteSettingController::class, 'indexExternalLinks'])->name('external-links.index');
+Route::put('/site-settings/{id}/external-links', [SiteSettingController::class, 'updateExternalLinks'])->name('external-links.update');
 require __DIR__.'/auth.php';

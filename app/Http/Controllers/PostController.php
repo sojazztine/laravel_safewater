@@ -31,11 +31,6 @@ class PostController extends Controller
         ]);
         // $imagePath = 'images/post';
 
-
-        $path = $request->file('image')->store('post', 'public');
-        $validated['image']= $path;
-
-
         // if(!file_exists(public_path($imagePath))){
         //     mkdir(public_path($imagePath), 0777, true);
         // }
