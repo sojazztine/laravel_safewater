@@ -185,7 +185,7 @@
 
     <!-- SMART ECOBIN -->
     <div class="flex justify-center items-center mt-[80px] ">
-        <div class="flex items-center justify-center border-t-2 border-b-2 border-[#51A5BE] w-[80%] mx-auto">
+        <div class="flex items-center justify-center border-t border-b border-[#51A5BE] w-[80%] mx-auto">
             <div class="hidden md:block">
                 <img src="img/img-index/restoreMachine.png" alt="">
             </div>
@@ -213,22 +213,22 @@
     <!-- SEB MALLS -->
     <div class="flex items-center justify-center self-start mb-10 flex-wrap lg:flex-row flex-col w-[90%] mx-auto">
 
-        <div class="border-r-2 border-[#51A5BE] flex flex-col items-center justify-center p-10">
+        <div class="border-r border-[#51A5BE] flex flex-col items-center justify-center p-10">
             <img src="img/mall/up.png" alt="" class="object-cover w-70 h-30">
             <!-- <h5 class="text-lg text-[#016262] font-bold">Uptown Mall</h5>
             <p class="w-48 text-md text-[#016262] text-start mt-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error aliquid ipsa nulla corporis sequi maiores architecto culpa facilis earum impedit veritatis labore minus, deleniti amet non voluptatem alias possimus tenetur.</p> -->
         </div>
-        <div class="border-r-2 border-[#51A5BE] flex flex-col items-center justify-center p-10">
+        <div class="border-r border-[#51A5BE] flex flex-col items-center justify-center p-10">
             <img src="img/mall/new.png" alt="" class="object-cover w-50 h-30">
             <!-- <h5 class="text-lg text-[#016262] font-bold">Newport Mall</h5>
             <p class="w-48 text-md text-[#016262] text-start mt-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error aliquid ipsa nulla corporis sequi maiores architecto culpa facilis earum impedit veritatis labore minus, deleniti amet non voluptatem alias possimus tenetur.</p> -->
         </div>
-        <div class="border-r-2 border-[#51A5BE] flex flex-col items-center justify-center p-10">
+        <div class="border-r border-[#51A5BE] flex flex-col items-center justify-center p-10">
             <img src="img/mall/east.png" alt="" class=" object-cover w-50 h-30">
             <!-- <h5 class="text-lg text-[#016262] font-bold">Eastwood Mall</h5>
             <p class="w-48 text-md text-[#016262] text-start mt-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error aliquid ipsa nulla corporis sequi maiores architecto culpa facilis earum impedit veritatis labore minus, deleniti amet non voluptatem alias possimus tenetur.</p> -->
         </div>
-        <div class="border-r-2 border-[#51A5BE] flex flex-col items-center justify-center p-10">
+        <div class="border-r border-[#51A5BE] flex flex-col items-center justify-center p-10">
             <img src="img/mall/chinaTown.png" alt="" class="object-cover w-70 h-30">
             <!-- <h5 class="text-lg text-[#016262] font-bold">Lucky Chinatown Mall</h5>
             <p class="w-48 text-md text-[#016262] text-start mt-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error aliquid ipsa nulla corporis sequi maiores architecto culpa facilis earum impedit veritatis labore minus, deleniti amet non voluptatem alias possimus tenetur.</p> -->
