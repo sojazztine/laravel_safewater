@@ -10,6 +10,18 @@
         </p>
     </div>
 
+    <div>
+        <div>
+            
+        </div>
+    </div>
+
+
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt="">
+
+
     <!-- CONTENT -->
     <div class="flex flex-col   w-[90%] mx-auto mb-10 gap-4 md:gap-10  items-center justify-center">
 
@@ -135,8 +147,8 @@
             </div>
 
             <div class="flex flex-col items-center justify-between">
-                <h1 class="text-xl my-10">Business Operations</h1>
-                <div class="flex items-center gap-10">
+                <h1 class="text-xl mt-20 mb-10">Business Operations</h1>
+                <div class="flex items-center gap-10 my-10">
                     <div class="flex flex-col items-center justify-center col-span-3 h-[300px] w-[250px] text-center p-5">
                         <img src="" alt="" class="w-[300px] h-[280px]  rounded-3xl bg-[#EBFCFC]">
                         <h1 class="mt-3">Miguel Lorenzo Yorro</h1>
