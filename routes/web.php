@@ -36,7 +36,10 @@ Route::get('blog/{id}', [PublicController::class, 'showBlog'])->name('public.pos
 // })->name('about');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $total_post = Post::count();
+    $total_testimonials = Testimonial::count();
+    $total_inquiries  = Inquiry::count();
+    return view('dashboard', compact('total_post', 'total_testimonials', 'total_inquiries'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -76,19 +79,10 @@ Route::post('/landingPage/store', [LandingPageController::class, 'store'])->name
 Route::delete('/landingPage/{id}', [LandingPageController::class, 'delete'])->name('landingPage.delete');
 
 //Route for Hero description and heading
-Route::get('/heroHeading', [HeroHeadingController::class, 'index'])->name('heroHeading.index');
-Route::get('/heroHeading/{id}/edit', [HeroHeadingController::class, 'edit'])->name('heroHeading.edit');
-Route::put('/heroHeading/{id}', [HeroHeadingController::class, 'update'])->name('heroHeading.update');
+// Route::get('/heroHeading', [HeroHeadingController::class, 'index'])->name('heroHeading.index');
+// Route::get('/heroHeading/{id}/edit', [HeroHeadingController::class, 'edit'])->name('heroHeading.edit');
+// Route::put('/heroHeading/{id}', [HeroHeadingController::class, 'update'])->name('heroHeading.update');
 
-//Route for ecobinLinks register
-Route::get('/ecobinLinks/register', [EcobinRegisterLinkController::class, 'index'])->name('ecobinLinks.register.index');
-Route::get('/ecobinLinks/register/{id}/edit', [EcobinRegisterLinkController::class, 'edit'])->name('ecobinLinks.register.edit');
-Route::put('/ecobinLinks/register/{id}', [EcobinRegisterLinkController::class, 'update'])->name('ecobinLinks.register.update');
-
-//Route for ecobinlinks login
-Route::get('/ecobinLinks/login', [EcobinLoginLinkController::class, 'index'])->name('ecobinLinks.login.index');
-Route::get('/ecobinLinks/login/{id}/edit', [EcobinLoginLinkController::class, 'edit'])->name('ecobinLinks.login.edit');
-Route::put('/ecobinLinks/login/{id}', [EcobinLoginLinkController::class, 'update'])->name('ecobinLinks.login.update');
 
 //Route for site settings
 Route::get('/site-settings', [SiteSettingController::class, 'index'])->name('site-settings.index');

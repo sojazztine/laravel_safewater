@@ -24,7 +24,7 @@
                         <!-- Publisher and date (horizontal) -->
                         <div class="flex flex-col  mt-5 justify-between">
                             <h5 class="text-xl font-bold" style="overflow-wrap:anywhere;">{{ $post->publisher }} </h5>
-                            <p class="font-bold">{{$post->created_at}}</p>
+                            <p class="font-bold">{{$post->created_at->format('F d, Y') }}</p>
                         </div>
                       </a>
                     </div>

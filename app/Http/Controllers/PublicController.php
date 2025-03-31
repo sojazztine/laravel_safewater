@@ -5,19 +5,29 @@ namespace App\Http\Controllers;
 use App\Models\HeroHeading;
 use App\Models\LandingPage;
 use App\Models\Post;
+use App\Models\SiteSetting;
 use App\Models\Testimonial;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
 class PublicController extends Controller
 {
     public function index() {
+
         $total_sachets = $this->getTotalSachetCount();
         $hero_heading_title = HeroHeading::value('title');
         $hero_heading_description = HeroHeading::value('description');
         $landingPages = LandingPage::select('image')->get();
-
+        $siteSettings = SiteSetting::select('logo', 'app_title', 'app_subtitle', 'web_login_link', 'web_register_link')->first();
+        $logo = $siteSettings->logo;
+        $web_login_link = $siteSettings->web_login_link;
+        $web_register_link = $siteSettings->web_register_link;
+        $web_login_link =  str_replace("http://safewater.test/", "", $web_login_link);
+        $web_register_link = str_replace("http://safewater.test/", "", $web_register_link);
+        $app_title = $siteSettings->app_title;
+        $app_subtitle = $siteSettings->app_subtitle;
         $latestTestimonialImages = Testimonial::select('image')->limit(3)->latest()->get();
 
         $testimonials = Testimonial::select('name', 'company', 'content', 'image')->latest()->get();
@@ -28,7 +38,13 @@ class PublicController extends Controller
             'testimonials' => $testimonials,
             'hero_heading_title' => $hero_heading_title,
             'hero_heading_description' =>  $hero_heading_description,
-            'total_sachets' => $total_sachets
+            'total_sachets' => $total_sachets,
+            'logo' => $logo,
+            'app_title'=> $app_title,
+            'app_subtitle' => $app_subtitle,
+            'web_login_link' => $web_login_link,
+            'web_register_link' => $web_register_link
+
         ]);
     }
 

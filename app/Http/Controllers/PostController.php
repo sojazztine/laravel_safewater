@@ -8,7 +8,7 @@ class PostController extends Controller
 {
     //show all post
     public function index(){
-        $posts = Post::get();
+        $posts = Post::latest()->get();
         return view('posts.index',['posts' => $posts]);
     }
 
@@ -38,6 +38,13 @@ class PostController extends Controller
         // $imageName = time().'.'.$request->image->extension();
         // $request->image->move(public_path($imagePath), $imageName);
         // $validated['image'] = $imageName;
+
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('post', 'public');
+            $validated['image'] = $path;
+        } else {
+            unset($validated['image']);
+        }
 
 
         Post::create($validated);
@@ -70,14 +77,10 @@ class PostController extends Controller
 
         // Handle image upload if a new one is provided
         if ($request->hasFile('image')) {
-            $imagePath = 'images/post';
-            if (!file_exists(public_path($imagePath))) {
-                mkdir(public_path($imagePath), 0777, true);
-            }
-
-            $imageName = time() . '.' . $request->image->extension();
-            $request->image->move(public_path($imagePath), $imageName);
-            $validated['image'] = $imageName; // Store the image filename
+            $path = $request->file('image')->store('post', 'public');
+            $validated['image'] = $path;
+        } else {
+            unset($validated['image']);
         }
 
         // Update the post data (this includes the image if uploaded)

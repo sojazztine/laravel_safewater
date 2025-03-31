@@ -39,7 +39,7 @@
                                 <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"/>
                              </svg>
                             <span class="flex-1 ms-3 whitespace-nowrap">Testimonials</span>
-                            <span class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium  bg-blue-100 rounded-full ">3</span>
+                            {{-- <span class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium  bg-blue-100 rounded-full ">3</span> --}}
                          </a>
                       </li>
 
@@ -75,12 +75,12 @@
                               <li>
                                  <a href="{{ route('landingPage.index') }}" class=" {{request()->is('landingPage') ? 'pl-11 flex items-center p-2 text-gray-900 rounded-lg  bg-gray-300  group' : 'flex items-center p-2 group hover:bg-gray-100 pl-11' }}">Landing Page Image</a>
                               </li>
-                              <li>
+                              {{-- <li>
                                  <a href="{{ route('heroHeading.index') }}" class="{{request()->is('heroHeading') ? 'pl-11 flex items-center p-2 text-gray-900 rounded-lg  bg-gray-300  group' : 'flex items-center p-2 group hover:bg-gray-100 pl-11' }}">Heading and Description</a>
-                              </li>
+                              </li> --}}
                         </ul>
                      </li>
-                     <li>
+                     {{-- <li>
                         <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 "  onclick="toggleDropdown('dropdown-ecobin')">
                             <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75  group-hover:text-gray-900 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.96 2.96 0 0 0 .13 5H5Z"/>
@@ -100,7 +100,7 @@
                              <a href="{{ route('ecobinLinks.login.index') }}" class="{{request()->is('ecobinLinks/login') ? 'pl-11 flex items-center p-2 text-gray-900 rounded-lg  bg-gray-300  group' : 'flex items-center p-2 group hover:bg-gray-100 pl-11' }}">Login</a>
                           </li>
                     </ul>
-                 </li>
+                 </li> --}}
                  <li>
                     <li>
                         <a href="{{ route('site-settings.index') }}" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 group">

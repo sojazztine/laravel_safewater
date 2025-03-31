@@ -7,17 +7,18 @@
                 </h1>
 
                 <p class="text-md">{{$post->publisher}}</p>
-                <p class="text-md">December 24, 2025 . 5 min read</p>
+                <p class="text-md">{{$post->created_at->format('F d, Y') }}</p>
             </div>
         </div>
 
         <div class="flex justify-center">
-            <img src="{{Storage::url($post->image) }}" class="rounded-xl h-[800px] w-[1200px] object-fill  my-10 "  alt="Image description">
+            <img src="{{Storage::url($post->image) }}" class="rounded-xl h-[500px] w-[1400px] object-fill  my-10 "  alt="Image description">
         </div>
 
         <div class="flex w-[90%] mx-auto mb-5">
             <pre class="text-wrap">
-                {!! preg_replace('/<span class="ql-ui" contenteditable="false"><\/span>/', '', $post->content) !!}
+                {!! html_entity_decode($post->content) !!}
+
             </pre>
          </div>
 </x-public-layout>

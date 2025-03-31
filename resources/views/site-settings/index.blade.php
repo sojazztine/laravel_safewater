@@ -19,11 +19,11 @@
         </div>
     @endif
 
-    <form action="{{ route('site-settings.update', $site_setting_id) }}" method="POST" class="mt-10 ml-10">
+    <form action="{{ route('site-settings.update', $site_setting_id) }}" method="POST" class="mt-10 ml-10" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <h1 class="text-md mb-5">Website Logo</h1>
-        <img id="preview" src="{{ asset('img/default-image.jpg')}}" 
+        <img id="preview" src="{{ Storage::url($logo)}}"
         alt="Preview Image" class="w-48 mb-5">
         <input type="file" name="logo" id="fileInput" accept="image/*">
         <div class="relative z-0 w-full mb-5 group mt-5 ">
@@ -36,9 +36,9 @@
         </div>
         <div class="relative z-0 w-full mb-5 group mt-5 ">
             <input type="text" name="app_description" id="app_description" class="block py-2.5 px-0 w-full text-lg text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-blue-600 peer" required placeholder=" "  value="{{$app_description}}" />
-            <label for="app_description" class="peer-focus:font-medium absolute text-lg text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6" >Login Link</label>
+            <label for="app_description" class="peer-focus:font-medium absolute text-lg text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6" >App Description</label>
         </div>
-    
+
         <button type="submit" class="px-8 py-2 rounded-md bg-green-700 text-white"> Update</button>
     </form>
 
@@ -53,5 +53,5 @@
                 reader.readAsDataURL(file);
             }
         });
-    </script>   
+    </script>
 </x-sidebar-layout>

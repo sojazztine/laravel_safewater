@@ -2,7 +2,7 @@
 <nav class="font-[Inter] py-3">
     <div class="flex justify-between pt-3 w-[92%] mx-auto items-center">
         <div>
-         <a href="/"><img src="{{asset('img/restore-logo.png')}}" alt="" class="max-w-full h-auto cursor-pointer"></a>
+         <a href="/"><img src="{{ $logo }}" alt="" class="max-w-full h-auto cursor-pointer"></a>
         </div>
         <div class="nav-links md:static absolute md:bg-transparent bg-[#f9fff5] rounded-md md:min-h-fit min-h-[30vh] justify-center left-0 top-[-100%] md:w-auto w-full flex items-center ml-auto px-5 transition-all duration-500 ease-in-out ">
             <ul class="flex md:flex-row flex-col gap-[1vw] md:text-center text-center md:gap-[1vw] ">
@@ -18,19 +18,19 @@
                 </svg>
             </li>
                 <!-- Dropdown menu in Solutions -->
-                <div id="dropdownHover" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
-                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+                <div id="dropdownHover" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-50 ">
+                    <ul class="py-2 text-sm text-gray-700 " aria-labelledby="dropdownHoverButton">
                     <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Community Collections</a>
                     </li>
                     <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Restore Boards</a>
                     </li>
                     <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Restore Furniture and Applications</a>
                     </li>
                     <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Restore-a-Classroom</a>
                     </li>
                     </ul>
                 </div>
