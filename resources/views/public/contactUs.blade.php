@@ -42,7 +42,7 @@
     </div>
 
     <!-- MODAL -->
-<div id="modal" class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50 hidden">
+<div id="modal" class="fixed top-0 left-0 w-full h-full flex  justify-center items-center bg-black bg-opacity-50 hidden">
     <div class="relative flex flex-col items-center border rounded-3xl w-[90%] md:w-[50%] p-8 bg-white shadow-lg">
         <!-- Close Button -->
         <button onclick="closeModal()" class="absolute top-5 right-5 text-gray-500 hover:text-gray-700 text-4xl">&times;</button>
@@ -108,6 +108,7 @@
         function closeModal() {
             document.getElementById('modal').classList.add('hidden');
         }
+
     </script>
 
 </x-public-layout>

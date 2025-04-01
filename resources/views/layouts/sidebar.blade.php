@@ -48,7 +48,7 @@
                             <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75  group-hover:text-gray-900 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z"/>
                              </svg>
-                            <span class="flex-1 ms-3 whitespace-nowrap">Email</span>
+                            <span class="flex-1 ms-3 whitespace-nowrap">Inquiries</span>
                          </a>
                       </li>
                       {{-- <li>
@@ -61,11 +61,17 @@
                          </a>
                       </li>
                       <li> --}}
-                        <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group " onclick="toggleDropdown('dropdown-hero')">
-                                <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75  group-hover:text-gray-900 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                                    <path d="M18 0H6a2 2 0 0 0-2 2h14v12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Z"/>
-                                    <path d="M14 4H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2ZM2 16v-6h12v6H2Z"/>
-                                </svg>
+                        <li>
+                           <a href="{{ route('landingPage.index')}}" class="{{ request()->is('landingPage') ? 'flex items-center p-2 text-gray-900 rounded-lg bg-gray-300  group' : 'flex items-center p-2 group '  }} ">
+                              <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75  group-hover:text-gray-900 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                                 <path d="M18 0H6a2 2 0 0 0-2 2h14v12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Z"/>
+                                 <path d="M14 4H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2ZM2 16v-6h12v6H2Z"/>
+                             </svg>
+                              <span class="flex-1 ms-3 whitespace-nowrap">Hero Image</span>
+                           </a>
+                        </li>
+                        {{-- <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group " onclick="toggleDropdown('dropdown-hero')">
+                               
                               <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Hero Section</span>
                               <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
@@ -75,10 +81,10 @@
                               <li>
                                  <a href="{{ route('landingPage.index') }}" class=" {{request()->is('landingPage') ? 'pl-11 flex items-center p-2 text-gray-900 rounded-lg  bg-gray-300  group' : 'flex items-center p-2 group hover:bg-gray-100 pl-11' }}">Landing Page Image</a>
                               </li>
-                              {{-- <li>
+                              <li>
                                  <a href="{{ route('heroHeading.index') }}" class="{{request()->is('heroHeading') ? 'pl-11 flex items-center p-2 text-gray-900 rounded-lg  bg-gray-300  group' : 'flex items-center p-2 group hover:bg-gray-100 pl-11' }}">Heading and Description</a>
-                              </li> --}}
-                        </ul>
+                              </li>
+                        </ul> --}}
                      </li>
                      {{-- <li>
                         <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 "  onclick="toggleDropdown('dropdown-ecobin')">

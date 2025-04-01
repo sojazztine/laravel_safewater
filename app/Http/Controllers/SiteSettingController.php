@@ -25,9 +25,9 @@ class SiteSettingController extends Controller
         $siteSettings = SiteSetting::findOrFail($id);
         $validated = $request->validate([
             'logo' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
-            'app_title' => ['required'],
-            'app_subtitle' => ['required'],
-            'app_description' =>['required']
+            'app_title' => ['nullable'],
+            'app_subtitle' => ['nullable'],
+            'app_description' => ['nullable']
         ]);
 
 

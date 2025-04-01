@@ -9,7 +9,7 @@
 
             <!-- ABOUT US NAV -->
             <li class="text-[#016262] px-1 py-1 text-md md:w-25 md:h-8 lg:w-25 lg:h-9 md:cursor-pointer cursor-pointer rounded-sm text-md transition delay-30 duration-300 ease-in-out font-bold">
-                <a class="<?= $_SERVER['SCRIPT_NAME'] == "/view/productAndService.php" ? 'bg-[#e6e6e5] text-[#016262] py-2 px-2 rounded-sm' : 'hover:bg-[#e6e6e5] py-2 px-2 rounded-sm' ?>" href="{{ route('public.about-us') }}">About us</a>
+                <a class="{{ request()->is('about') ? 'bg-[#e6e6e5] text-[#016262] py-2 px-2 rounded-sm' : 'hover:bg-[#e6e6e5] py-2 px-2 rounded-sm' }}" href="{{ route('public.about-us') }}">About us</a>
             </li>
 
             <!-- SOLUTIONS NAV -->
@@ -47,7 +47,7 @@
 
             <!-- ECOBIN NAV -->
             <li class="text-white text-extrabold px-7 py-4 text-md md:w-35 md:h-9 bg-[#016262] border hover:border-[#016262] border-transparent hover:text-[#016262] hover:bg-[#f9fff5]  cursor-pointer rounded-full text-md transition duration-300 ease-out font-extrabold items-center flex justify-center">
-                <a href="../view/productAndService.php">Eco-bin App</a>
+                <a href="">Eco-bin App</a>
             </li>
 
             </ul>

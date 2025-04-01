@@ -50,7 +50,7 @@
         <tbody>
             @foreach ($testimonials as $testimonial )
             <tr>
-                <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ $testimonial-> id}}</td>
+                <td class="font-medium text-gray-900 whitespace-nowrap ">{{ $testimonial-> id}}</td>
                 <td style="overflow-wrap:anywhere;">{{ $testimonial-> name }}</td>
                 <td style="overflow-wrap:anywhere;">{{ $testimonial-> company }}</td>
                 <td style="overflow-wrap:anywhere;">{{ $testimonial-> content }}</td>

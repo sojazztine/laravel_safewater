@@ -69,7 +69,8 @@ class PostController extends Controller
             'title' => ['required'],
             'description' => ['required'],
             'image' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
-            'publisher' => ['required']
+            'publisher' => ['required'],
+            'content' => ['required']
         ]);
 
         // Fetch the post to update
