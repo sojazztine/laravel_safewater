@@ -62,8 +62,8 @@
             @foreach ($landingPages as $landingPage)
                 <div class="absolute inset-0 flex transition-opacity duration-1000 ease-in-out opacity-0"
                     data-carousel-item>
-                    <img src="{{ Storage::url($landingPage->image) }}" class="w-full h-screen object-cover z-0"
-                        alt="...">
+                    <img src="{{ Storage::url($landingPage->image) }}"
+                        class="w-full h-screen object-cover z-0 will-change-transform" data-parallax alt="...">
                 </div>
             @endforeach
 
@@ -77,9 +77,11 @@
         </div>
     </div>
 
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             let items = document.querySelectorAll("[data-carousel-item]");
+            let parallaxImages = document.querySelectorAll("[data-parallax]");
             let index = 0;
 
             function showNextImage() {
@@ -96,8 +98,18 @@
 
             setInterval(showNextImage, 3000); // Change image every 3 seconds
             showNextImage();
+
+            // Parallax Effect
+            window.addEventListener("scroll", function() {
+                let scrollPosition = window.scrollY;
+                parallaxImages.forEach((img) => {
+                    let speed = 0.5; // Adjust parallax speed
+                    img.style.transform = `translateY(${scrollPosition * speed}px)`;
+                });
+            });
         });
     </script>
+
 
 
 
