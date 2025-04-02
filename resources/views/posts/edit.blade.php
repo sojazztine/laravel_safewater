@@ -114,6 +114,11 @@
         </form>
 
         <script>
+            function applyInlineFontSize(content) {
+                    return content.replace(/class="ql-size-([^"]+)"/g, (match, size) => {
+                    return `style="font-size: ${size};"`;
+                });
+            }   
             var FontSize = Quill.import('formats/size');
             FontSize.whitelist = ['10px', '12px', '14px', '16px', '18px', '20px', '24px', '28px', '32px', '36px', '48px'];
             Quill.register(FontSize, true);
@@ -163,6 +168,7 @@
                 }
         
                 // ✅ Convert Quill's `data-list` attributes to Proper `<ul>` & `<ol>`
+                editorContent = applyInlineFontSize(editorContent);
                 editorContent = editorContent.replace(/<li data-list="ordered">/g, "<li style='list-style-type:decimal;'>");
                 editorContent = editorContent.replace(/<li data-list="bullet">/g, "<li style='list-style-type:disc;'>");
         

@@ -7,7 +7,7 @@
 
         <!-- Container for posts -->
         <div class="flex gap-[3vw] flex-wrap justify-center mb-20">
-            @foreach ($posts as $post)
+            @foreach ($posts->sortByDesc('created_at') as $post)
                 <!-- Individual post container -->
                 <div class="flex flex-col border border-transparent mt-20 w-[500px] p-5 rounded-[30px] hover:bg-[#e6e6e5] hover:border-[#e6e6e5] cursor-pointer">
 

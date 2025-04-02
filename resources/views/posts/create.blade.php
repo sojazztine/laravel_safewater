@@ -114,9 +114,9 @@
 
         <script>
         
-            var FontSize = Quill.import('formats/size');
-            FontSize.whitelist = ['10px', '12px', '14px', '16px', '18px', '20px', '24px', '28px', '32px', '36px', '48px'];
-            Quill.register(FontSize, true);
+            var Size = Quill.import('attributors/style/size');
+            Size.whitelist = ['10px', '12px', '14px', '16px', '18px', '20px', '24px', '28px', '32px', '36px', '48px'];
+            Quill.register(Size, true);
 
             const quill = new Quill('#editor', {
                 modules: {
