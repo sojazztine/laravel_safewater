@@ -47,7 +47,7 @@
 
             <!-- ECOBIN NAV -->
             <li class="text-white text-extrabold px-7 py-4 text-md md:w-35 md:h-9 bg-[#016262] border hover:border-[#016262] border-transparent hover:text-[#016262] hover:bg-[#f9fff5]  cursor-pointer rounded-full text-md transition duration-300 ease-out font-extrabold items-center flex justify-center">
-                <a href="">Eco-bin App</a>
+                <a href="https://ecobin.posmworks.com/login" target="_blank">Eco-bin App</a>
             </li>
 
             </ul>

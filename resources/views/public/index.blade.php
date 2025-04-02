@@ -377,15 +377,6 @@
 
 
 
-        <div class="mt-10 flex flex-wrap justify-center gap-[3vw] p-3">
-            @foreach ($testimonials as $testimonial)
-            <div class="w-80 h-90 rounded-xl bg-[#EBFCFC] p-5">
-                <img src="{{Storage::url($testimonial->image)}}" alt="Testimonial Picture" class="border-4 w-15 w-[50px] h-[50px] rounded-full border-[#17B67D]  border-solid ">
-                <p class="text-[#016262] break-words mt-2 mb-5">{{ $testimonial->content }}</p>
-                <p class="text-[#016262] ">{{$testimonial->name}}</p>
-                <p class="text-[#016262]">{{$testimonial->company}}</p>
-            </div>
-
 
 
             <div class="mt-10 flex flex-wrap justify-center gap-[3vw] p-3">
