@@ -46,8 +46,7 @@
                         <label for="blog_description" class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Description Blog</label>
                     </div>
                     <h1 class="text-md mb-5">Post Image</h1>
-                    <img id="preview" src=""
-                    alt="Preview Image" class="w-48 mb-5">
+                    <img id="preview" src="{{ asset('img/default-image.jpg') }}" alt="Preview Image" class="w-48 mb-5">
                     <input type="file" name="image" id="fileInput" accept="image/*">
 
                     <div class="relative z-0 w-full my-5 group">
