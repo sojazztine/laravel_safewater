@@ -52,7 +52,7 @@
             <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
         </div>
 
-        <form class="w-full mb-10" method="POST" action="{{ route('inquiries.store') }}">
+        <form class="w-full mb-10" method="POST" action="{{ route('inquiries.store') }}" id="inquiryForm">
             @csrf
             <div class="flex flex-col items-center">
                 <div class="flex md:flex-row flex-col justify-center md:space-x-4">
@@ -83,8 +83,9 @@
                 </div>
 
                 <div class="mt-6">
-                    <button name="submit" type="submit" class="flex justify-center items-center px-4 py-2 bg-[#016262] border border-transparent text-white w-40 font-semibold hover:bg-[#f9fff5] hover:border-[#17B67D] hover:text-[#016262] cursor-pointer rounded-full text-md transition duration-300 ease-out">
-                        Send
+                 
+                    <button id="submitButton" name="submit" type="submit" class="flex justify-center items-center px-4 py-2 bg-[#016262] border border-transparent text-white w-40 font-semibold hover:bg-[#f9fff5] hover:border-[#17B67D] hover:text-[#016262] cursor-pointer rounded-full text-md transition duration-300 ease-out">
+                      Submit
                     </button>
                 </div>
             </div>
@@ -108,6 +109,7 @@
         function closeModal() {
             document.getElementById('modal').classList.add('hidden');
         }
+    
 
     </script>
 
