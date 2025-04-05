@@ -32,5 +32,8 @@
 
             @endforeach
         </div>
+        <div class="w-[95%] mx-auto my-10">
+            {{ $posts->links() }}
+        </div>
     </div>
 </x-public-layout>

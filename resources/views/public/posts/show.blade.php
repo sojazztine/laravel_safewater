@@ -15,7 +15,7 @@
             <img src="{{Storage::url($post->image) }}" class="rounded-xl h-[500px] w-[1400px] object-fill  my-10 "  alt="Image description">
         </div>
 
-        <div class="flex w-[90%] mx-auto mb-5">
+        <div class="w-[90%] mx-auto">
             <pre class="text-wrap">
                 {!! html_entity_decode($post->content) !!}
 

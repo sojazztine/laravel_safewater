@@ -2,6 +2,9 @@
     <!-- Quill Core CSS -->
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <link href="https://cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <style>
         .ql-size-10px { font-size: 10px !important; }
@@ -22,35 +25,54 @@
             width:600px;
             overflow-x:auto;
         }
-
-        .ql-editor img {
+        .ql-editor{
+            font-family: "Old Standard TT", serif;
+            font-size: 16px;
+        }
+             .ql-editor img {
             display: flex;
             max-width: 50%;
             margin-right: 10px;
         }
+
+
+
+.ql-editor ol {
+  list-style-type: decimal !important; /* Ensures numbering for ordered lists */
+}
+
+.ql-editor li {
+  list-style-position: inside; /* Keeps alignment clean */
+}
+
+       
+
     </style>
 
-    <h1 class="text-[#016262] text-xl">Post a new blog</h1>
+    <h1 class="text-[#016262] text-xl">Add blog post</h1>
     <div class="block w-[90%] max-w-full mt-5 p-6 bg-white border border-gray-200 rounded-lg shadow-sm ">
         <form method="POST" action="{{ route('posts.store') }}" enctype="multipart/form-data" id="post_form">
             @csrf
             <div class="flex ">
                 <div class="w-[100%]">
                     <div class="relative z-0 w-full mb-5 group">
-                        <input type="text" name="title" id="title" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-blue-600 peer" required placeholder=" "  />
+                        <input type="text" name="title" id="title" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-blue-600 peer" required placeholder=" "   />
                         <label for="title" class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Title Blog</label>
                     </div>
 
                     <div class="relative z-0 w-full mb-5 group">
-                        <textarea name="description" id="description" rows="4" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="" required></textarea>
+                        <textarea name="description" id="description" rows="4" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="" required> </textarea>
                         <label for="blog_description" class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Description Blog</label>
-                    </div>
-                    <h1 class="text-md mb-5">Post Image</h1>
+                    </div>  
+
+                    <label class="block mb-2 text-sm font-medium text-gray-900" for="file_input">Upload Image</label>
                     <img id="preview" src="{{ asset('img/default-image.jpg') }}" alt="Preview Image" class="w-48 mb-5">
-                    <input type="file" name="image" id="fileInput" accept="image/*">
+                   
+                    <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-poin2ter bg-gray-50  focus:outline-none" aria-describedby="file_input_help" id="image" name="image" accept="image/*" type="file" required >
+                    <p class="mt-1 text-sm text-gray-500 " id="file_input_help">SVG, PNG, JPG or GIF (MAX. 800x400px).</p>
 
                     <div class="relative z-0 w-full my-5 group">
-                        <input type="text" name="publisher" id="publisher" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="" required  />
+                        <input type="text" name="publisher" id="publisher" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="" required   />
                         <label for="publisher" class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Publish by</label>
                     </div>
                 </div>
@@ -63,8 +85,8 @@
                                 <select class="ql-size">
                                     <option value="10px">10px</option>
                                     <option value="12px">12px</option>
-                                    <option value="14px" selected>14px</option>
-                                    <option value="16px">16px</option>
+                                    <option value="14px">14px</option>
+                                    <option value="16px" selected>16px</option>
                                     <option value="18px">18px</option>
                                     <option value="20px">20px</option>
                                     <option value="24px">24px</option>
@@ -92,7 +114,7 @@
                             </span>
                             <span class="ql-formats">
                                 <button class="ql-list" value="ordered"></button>
-                                <button class="ql-list" value="bullet"></button>
+                                {{-- <button class="ql-list" value="bullet"></button> --}}
                             </span>
                             <span class="ql-formats">
                                 <button class="ql-link"></button>
@@ -112,11 +134,25 @@
         </form>
 
         <script>
-        
-            var Size = Quill.import('attributors/style/size');
-            Size.whitelist = ['10px', '12px', '14px', '16px', '18px', '20px', '24px', '28px', '32px', '36px', '48px'];
-            Quill.register(Size, true);
+            function applyInlineFontSize(content) {
+                    return content.replace(/class="ql-size-([^"]+)"/g, (match, size) => {
+                    return `style="font-size: ${size};"`;
+                });
+            }   
+                // Function to apply inline font-family to all Quill content
+              function applyInlineFontFamily(content) {
+                       return content.replace(/<p>/g, '<p style="font-family: Old Standard TT, serif; display:flex">')
+                      .replace(/<span>/g, '<span style="font-family: Old Standard TT, serif;">');
+           }
 
+            var FontSize = Quill.import('formats/size');
+            FontSize.whitelist = ['10px', '12px', '14px', '16px', '18px', '20px', '24px', '28px', '32px', '36px', '48px'];
+            Quill.register(FontSize, true);
+
+            var Font = Quill.import('formats/font');
+            Font.whitelist = ['oldstandard'];
+            Quill.register(Font, true);
+           
             const quill = new Quill('#editor', {
                 modules: {
                     syntax: true,
@@ -135,8 +171,11 @@
                 },
                 placeholder: 'Compose here',
                 theme: 'snow',
+                formats: ['bold', 'italic', 'underline', 'strike', 'size', 'font','list', 'image']
             });
-        
+            
+
+         
             document.getElementById('add-data-btn').addEventListener('click', function(e) {
                 e.preventDefault(); // Prevent form from submitting immediately
         
@@ -144,11 +183,11 @@
                 let editorContent = quill.root.innerHTML.trim();
                 const title = document.getElementById('title').value;
                 const description = document.getElementById('description').value;
-                const image = document.getElementById('fileInput').value;
+                
                 const publisher = document.getElementById('publisher').value;
         
                 // Check if required fields are empty
-                if (editorContent === "" || editorContent === "<p><br></p>" || title == "" || description == "" || image == "" || publisher == "") {
+                if (editorContent === "" || editorContent === "<p><br></p>" || title == "" || description == "" || publisher == "") {
                     Swal.fire({
                         title: 'Please fill in the content!',
                         text: 'The content field cannot be empty.',
@@ -159,8 +198,15 @@
                 }
         
                 // ✅ Convert Quill's `data-list` attributes to Proper `<ul>` & `<ol>`
-                editorContent = editorContent.replace(/<li data-list="ordered">/g, "<li style='list-style-type:decimal;'>");
-                editorContent = editorContent.replace(/<li data-list="bullet">/g, "<li style='list-style-type:disc;'>");
+                editorContent = applyInlineFontSize(editorContent);
+                editorContent = applyInlineFontFamily(editorContent); 
+                // editorContent = editorContent.replace(/<li data-list="bullet">/g, "<li style='list-style-type:disc;'>");
+                editorContent = editorContent.replace(/<li data-list="ordered">/g, "<li style='list-style-type:decimal;margin-left:25px;'>");
+                // Ensure images have inline styles for centering
+
+                editorContent = editorContent.replace(/<img /g, '<img style="display: flex; justify-content: center; margin: auto;" ');
+
+
         
                 // Set the value of the hidden input to the processed Quill content
                 document.getElementById('quill-content').value = editorContent;
@@ -186,7 +232,8 @@
                     }
                 });
             });
-            document.getElementById("fileInput").addEventListener("change", function(event) {
+
+            document.getElementById("image").addEventListener("change", function(event) {
             const file = event.target.files[0];
             if (file) {
                 const reader = new FileReader();
@@ -196,7 +243,6 @@
                 reader.readAsDataURL(file);
             }
             });
-
         </script>
     </div>
 </x-sidebar-layout>

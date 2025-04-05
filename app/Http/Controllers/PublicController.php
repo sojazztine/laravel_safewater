@@ -30,7 +30,7 @@ class PublicController extends Controller
         $app_subtitle = $siteSettings->app_subtitle;
         $latestTestimonialImages = Testimonial::select('image')->limit(3)->latest()->get();
 
-        $testimonials = Testimonial::select('name', 'company', 'content', 'image')->latest()->get();
+        $testimonials = Testimonial::select('name', 'company', 'content', 'image')->latest()->paginate(3);
 
         return view('public.index', [
             'landingPages' => $landingPages,
@@ -61,7 +61,7 @@ class PublicController extends Controller
     }
 
     public function blogPage(){
-        $posts = Post::all();
+        $posts = Post::latest()->paginate(6);
         return view('public.posts.index', compact('posts'));
     }
 
