@@ -24,6 +24,10 @@ Route::get('/', [PublicController::class, 'index'])->name('home');
 Route::get('about', [PublicController::class, 'aboutPage'])->name('public.about-us');
 
 Route::get('solution', [PublicController::class, 'solutionPage'])->name('public.solution');
+Route::get('solution/community-collection', [PublicController::class, 'communityCollection'])->name('public.solutions.community-collection');
+Route::get('solution/restore-boards', [PublicController::class, 'restoreBoards'])->name('public.solutions.restore-boards');
+Route::get('solution/restore-furniture',[PublicController::class, 'restoreFurniture'])->name('public.solutions.restore-furniture');
+Route::get('solution/restore-classroom',[PublicController::class, 'restoreClassroom'])->name('public.solutions.restore-classroom');
 
 Route::get('contact', [PublicController::class, 'contactPage'])->name('public.contactUs');
 

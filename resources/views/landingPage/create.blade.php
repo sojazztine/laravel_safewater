@@ -1,6 +1,14 @@
 <x-sidebar-layout>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <h1 class="text-[#016262] text-xl">Post a new Image</h1>
+    <div class="flex gap-5">
+        <a href="{{ route('landingPage.index') }}" type="button" class="text-white bg-[#016262] hover:bg-[#018266] focus:ring-4 rotate-180 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center me-2 ">
+            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+            <span class="sr-only">Icon description</span>
+        </a>
+        <h1 class="text-[#016262] text-xl">Add new hero image</h1>
+    </div>
     <card class="block max-w-2xl mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow-sm ">
         <form class="max-w-md mx-auto" method="POST" action="{{ route('landingPage.store') }}" enctype="multipart/form-data" id="testimonial_form">
             @csrf

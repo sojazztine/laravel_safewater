@@ -55,6 +55,18 @@ class PublicController extends Controller
     public function solutionPage(){
         return view('public.solution');
     }
+    public function communityCollection(){
+        return view('public.solutions.community-collection');
+    }
+    public function restoreBoards(){
+        return view('public.solutions.restore-boards');
+    }
+    public function restoreFurniture(){
+        return view('public.solutions.restore-furniture');
+    }
+    public function restoreClassroom(){
+        return view('public.solutions.restore-classroom');
+    }
 
     public function contactPage(){
         return view('public.contactUs');
@@ -66,8 +78,9 @@ class PublicController extends Controller
     }
 
     public function showBlog(string $id){
+        $posts = Post::latest()->paginate(3);
         $post = Post::findOrFail($id);
-        return view('public.posts.show', ['post' => $post]);
+        return view('public.posts.show', ['post' => $post, 'posts' => $posts]);
     }
 
     private function getTotalSachetCount() {

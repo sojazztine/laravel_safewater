@@ -52,7 +52,11 @@
             <tr>
                 <td class="font-medium text-gray-900 whitespace-nowrap ">{{ $post-> id}}</td>
                 <td style="overflow-wrap:anywhere;">{{ $post->title }}</td>
-                <td style="overflow-wrap:anywhere;">{{ $post->description }}</td>
+                <td class="w-96">
+                    <div class="max-h-[100px] overflow-y-auto break-words">
+                        {{ $post->description }}
+                    </div>
+                </td>
                 <td style="overflow-wrap:anywhere;">{{ $post->publisher }}</td>
                 <td>{{$post->created_at->format('F d, Y') }}</td>
                 <td>

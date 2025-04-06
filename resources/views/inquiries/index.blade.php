@@ -65,8 +65,12 @@
                 <td style="overflow-wrap:anywhere;">{{$inquiry->last_name}}</td>
                 <td style="overflow-wrap:anywhere;">{{$inquiry->company_name}}</td>
                 <td style="overflow-wrap:anywhere;">{{$inquiry->email}}</td>
-                <td style="overflow-wrap:anywhere;">{{$inquiry->message}}</td>
-                <td>{{$post->created_at->format('F d, Y') }}</td>
+                <td class="w-96">
+                    <div class="max-h-[100px] overflow-y-auto break-words">
+                        {{$inquiry->message}}
+                    </div>
+                </td>
+                <td>{{$inquiry->created_at->format('F d, Y') }}</td>
 
                 <td>
                     <div class="flex">

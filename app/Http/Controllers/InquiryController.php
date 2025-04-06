@@ -11,7 +11,7 @@ use Illuminate\Mail\Message;
 class InquiryController extends Controller
 {
     public function index(){
-        $inquiries  = Inquiry::get();
+        $inquiries  = Inquiry::latest()->get();
         return view('inquiries.index', ['inquiries' => $inquiries]);
     }
 
