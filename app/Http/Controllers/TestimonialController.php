@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class TestimonialController extends Controller
 {
     public function index(){
-        $testimonials = Testimonial::get();
+        $testimonials = Testimonial::latest()->get();
         return view('testimonials.index', ['testimonials' => $testimonials]);
     }
 

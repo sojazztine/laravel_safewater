@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('site_settings', function (Blueprint $table) {
             $table->id();
-            $table->string('logo');
-            $table->string('app_title');
-            $table->string('app_subtitle');
+            $table->string('logo')->nullable();
+            $table->string('app_title')->nullable();
+            $table->string('app_subtitle')->nullable();
             $table->string('app_description')->nullable();
             $table->string('app_keywords')->nullable();
             $table->string('app_version')->nullable();

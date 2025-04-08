@@ -69,10 +69,9 @@
 
         </div>
 
-        <div
-            class="absolute z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-center">
-            <h1 class="text-white font-bold text-7xl">{{ $hero_heading_title }}</h1>
-            <h3 class="text-white text-3xl">{{ $hero_heading_description }}</h3>
+        <div class="absolute z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-center">
+                <h1 class="text-white font-bold text-7xl">{{$app_title}}</h1>
+                <h3 class="text-white text-3xl">{{$app_subtitle}}</h3>
 
         </div>
     </div>
@@ -216,11 +215,8 @@
                 <p class="md:text-2xl text-lg mb-20 md:leading-10 text-[#016262] font-normal ">Sign-up for your Smart
                     E-Collection Bin <br> account now and help make a difference!</p>
                 <div class="flex gap-[1vw] flex-col md:flex-row">
-                    <a href=""
-                        class="bg-[#016262] rounded-full   md:px-10 py-2 px-4 text-center text-white border hover:text-[#016262] hover:border-[#016262] hover:bg-[#f9fff5] transition delay-30 duration-300 ease-in-out">Login</a>
-                    <a href=""
-                        class="bg-[#51A5BE] rounded-full   md:px-10 py-2 px-4 text-center text-white border hover:text-[#51A5BE] hover:border-[#51A5BE] hover:bg-[#f9fff5] transition delay-30 duration-300 ease-in-out">Register
-                        Now</a>
+                    <a href="https://{{ $web_login_link }}"  target="_blank" class="bg-[#016262] rounded-full   md:px-10 py-2 px-4 text-center text-white border hover:text-[#016262] hover:border-[#016262] hover:bg-[#f9fff5] transition delay-30 duration-300 ease-in-out">Login</a>
+                    <a href="https://{{ $web_register_link }}"  target="_blank" class="bg-[#51A5BE] rounded-full   md:px-10 py-2 px-4 text-center text-white border hover:text-[#51A5BE] hover:border-[#51A5BE] hover:bg-[#f9fff5] transition delay-30 duration-300 ease-in-out">Register Now</a>
                 </div>
                 <h1 class="text-2xl text-[#016262] mt-10 font-semibold">Visit our SEB Mall Locations</h1>
                 <p class="text-[#016262] ">Visit our SEB Mall Locations Near You!</p>
@@ -534,11 +530,11 @@ Alpine.start()
                 Words from our Eco Heroes
             </h1>
 
-            <!-- Limit only the images to 3 -->
+         <!-- Limit only the images to 3 -->
             <div class="flex items-center mt-10">
                 @foreach ($testimonials->sortByDesc('created_at')->take(3) as $testimonial)
                     <img src="{{ Storage::url($testimonial->image) }}" alt="Testimonial Image"
-                        class="border-4 rounded-full w-[70px] h-[70px] border-[#17B67D] border-solid ml-[-15px]">
+                        class="border-4 rounded-full w-[60px] h-[60px] border-[#17B67D] border-solid ml-[-15px]">
                 @endforeach
                 <p class="ml-10 text-xl text-[#EBFCFC] lg:w-120 lg:block hidden">
                     Latest testimonials.
@@ -550,12 +546,14 @@ Alpine.start()
 
 
 
+
+
             <div class="mt-10 flex flex-wrap justify-center gap-[3vw] p-3">
                 @foreach ($testimonials as $testimonial)
                     <div class="w-80 h-90 rounded-xl bg-[#EBFCFC] p-5">
-                        <img src="images/testimonial/{{ Storage::url($testimonial->image) }}"
+                        <img src="{{ Storage::url($testimonial->image) }} "
                             alt="Testimonial Picture"
-                            class="border-4 w-15 rounded-full border-[#17B67D]  border-solid ">
+                            class="border-4 w-[55px] h-[55px] rounded-full border-[#17B67D]  border-solid ">
                         <div class="h-40 overflow-auto p-2 my-5">
                             <p class="text-[#016262] break-words mt-2 mb-5">{{ $testimonial->content }}</p>
                         </div>
@@ -563,7 +561,9 @@ Alpine.start()
                         <p class="text-[#016262]">{{ $testimonial->company }}</p>
                     </div>
                 @endforeach
-
+            </div>
+            <div class="w-[95%] mx-auto">
+                {{ $testimonials->links() }}
             </div>
         </div>
     </div>

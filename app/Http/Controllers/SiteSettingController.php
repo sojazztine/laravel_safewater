@@ -24,10 +24,20 @@ class SiteSettingController extends Controller
 
         $siteSettings = SiteSetting::findOrFail($id);
         $validated = $request->validate([
-            'app_title' => ['required'],
-            'app_subtitle' => ['required'],
-            'app_description' =>['required']
+            'logo' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
+            'app_title' => ['nullable'],
+            'app_subtitle' => ['nullable'],
+            'app_description' => ['nullable']
         ]);
+
+
+        if ($request->hasFile('logo')) {
+            $path = $request->file('logo')->store('landingPage', 'public');
+            $validated['logo'] = $path;
+        } else {
+            unset($validated['logo']);
+        }
+
         $siteSettings->update($validated);
         return redirect(route('site-settings.index'))->with('success', 'Settings saved successfully!');;
     }
@@ -40,8 +50,8 @@ class SiteSettingController extends Controller
         $site_key_words = $site_settings->app_keywords;
 
         return view('site-settings.app-overview', compact('site_setting_id', 'site_app_version', 'site_key_words'));
-       
-        
+
+
     }
 
     public function updateAppOverview(Request $request, $id){

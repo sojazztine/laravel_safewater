@@ -36,7 +36,7 @@
                 <!-- Example static row -->
                 @foreach ($landingPages as $landingPage)
                    <tr>
-                        <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ $landingPage->id }}</td>
+                        <td class="font-medium text-gray-900 whitespace-nowrap ">{{ $landingPage->id }}</td>
                         <td style="overflow-wrap:anywhere;">{{$landingPage->title}}</td>
                         <td style="overflow-wrap:anywhere;">{{$landingPage->image}}</td>
                         <td style="overflow-wrap:anywhere;">{{$landingPage->description}}</td>
