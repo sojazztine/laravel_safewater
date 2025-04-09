@@ -34,6 +34,7 @@
             display: flex;
             max-width: 50%;
             margin-right: 10px;
+            justify-content: center;
         }
         .ql-editor ul {
   list-style-type: disc !important; /* Ensures bullets are used */
@@ -133,7 +134,7 @@
                             </span>
                         </div>
                         <div id="editor" class="min-h-[50%]"></div>
-                        <input type="hidden" name="content" id="quill-content">
+                        <input type="hidden" name="content" id="quill-content" >
                     </div>
                 </div>
             </div>
@@ -144,6 +145,8 @@
         </form>
 
         <script>
+            
+
             function applyInlineFontSize(content) {
                     return content.replace(/class="ql-size-([^"]+)"/g, (match, size) => {
                     return `style="font-size: ${size};"`;
@@ -184,10 +187,10 @@
                 formats: ['bold', 'italic', 'underline', 'strike', 'size', 'font','list', 'image']
             });
             
-
             @if($post->content)
                  quill.clipboard.dangerouslyPasteHTML({!! json_encode($post->content) !!});
             @endif
+            
             document.getElementById('add-data-btn').addEventListener('click', function(e) {
                 e.preventDefault(); // Prevent form from submitting immediately
         
@@ -215,13 +218,13 @@
                 // editorContent = editorContent.replace(/<li data-list="bullet">/g, "<li style='list-style-type:disc;'>");
                 editorContent = editorContent.replace(/<li data-list="ordered">/g, "<li style='list-style-type:decimal;margin-right:10px;'>");
                     // Ensure images have inline styles for centering
-                editorContent = editorContent.replace(/<img /g, '<img style="display: flex; justify-content: center; margin: auto;" ');
+                editorContent = editorContent.replace(/<img /g, '<img style="display: flex; justify-content: center; width: 300px;margin: 0 auto; margin-bottom: 20px;" ');
 
 
         
                 // Set the value of the hidden input to the processed Quill content
                 document.getElementById('quill-content').value = editorContent;
-        
+              
                 // Show confirmation dialog before submitting
                 Swal.fire({
                     title: 'Are you sure you want to submit this?',

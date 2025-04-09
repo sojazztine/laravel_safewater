@@ -33,6 +33,7 @@
             display: flex;
             max-width: 50%;
             margin-right: 10px;
+            width: 300px;
         }
 
 
@@ -148,7 +149,7 @@
             }   
                 // Function to apply inline font-family to all Quill content
               function applyInlineFontFamily(content) {
-                       return content.replace(/<p>/g, '<p style="font-family: Old Standard TT, serif; display:flex">')
+                       return content.replace(/<p>/g, '<p style="font-family: Old Standard TT, serif; display:flex; flex-direction:column; margin-bottom:10px;">')
                       .replace(/<span>/g, '<span style="font-family: Old Standard TT, serif;">');
            }
 
@@ -211,7 +212,7 @@
                 editorContent = editorContent.replace(/<li data-list="ordered">/g, "<li style='list-style-type:decimal;margin-left:25px;'>");
                 // Ensure images have inline styles for centering
 
-                editorContent = editorContent.replace(/<img /g, '<img style="display: flex; justify-content: center; margin: auto;" ');
+                editorContent = editorContent.replace(/<img /g, '<img style="display: flex; justify-content: center; width:300px; flex-direction: column; width:300px; margin-bottom: 10px; " ');
 
 
         
