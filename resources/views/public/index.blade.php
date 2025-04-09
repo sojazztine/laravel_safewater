@@ -549,30 +549,73 @@ Alpine.start()
             </p>
         </div>
 
-        <!-- Testimonial Cards -->
-        <div class="mt-10 overflow-x-auto scrollbar-hide pb-10">
-            <div class="flex gap-6 snap-x snap-mandatory px-2 md:px-0">
-                @foreach ($testimonials as $testimonial)
-                    <div class="min-w-[280px] max-w-sm snap-start shrink-0 bg-[#EBFCFC] rounded-xl p-5">
-                        <img src="{{ Storage::url($testimonial->image) }}" alt="Testimonial Picture"
-                            class="border-4 w-[55px] h-[55px] rounded-full border-[#17B67D]">
-                        <div class="h-40 overflow-auto p-2 my-5">
-                            <p class="text-[#016262] break-words">{{ $testimonial->content }}</p>
-                        </div>
-                        <p class="text-[#016262] font-semibold">{{ $testimonial->name }}</p>
-                        <p class="text-[#016262] text-sm">{{ $testimonial->company }}</p>
+        <!-- Testimonial Cards with Navigation Buttons outside -->
+        <div class="mt-10 relative pb-10">
+            <div class="flex justify-center">
+                <!-- Carousel -->
+                <div class="overflow-hidden w-full md:w-[70%]">
+                    <div id="carousel" class="flex gap-6 transition-transform duration-500 ease-in-out">
+                        @foreach ($testimonials as $testimonial)
+                            <div class="min-w-[280px] max-w-sm shrink-0 bg-[#EBFCFC] rounded-xl p-5">
+                                <img src="{{ Storage::url($testimonial->image) }}" alt="Testimonial Picture"
+                                    class="border-4 w-[55px] h-[55px] rounded-full border-[#17B67D]">
+                                <div class="h-40 overflow-auto p-2 my-5">
+                                    <p class="text-[#016262] break-words">{{ $testimonial->content }}</p>
+                                </div>
+                                <p class="text-[#016262] font-semibold">{{ $testimonial->name }}</p>
+                                <p class="text-[#016262] text-sm">{{ $testimonial->company }}</p>
+                            </div>
+                        @endforeach
                     </div>
-                @endforeach
+                </div>
             </div>
+
+            <!-- Navigation buttons -->
+            <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white p-3 rounded-3xl hover:bg-gray-600 focus:outline-none sm:left-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+        
+            <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white p-3 rounded-3xl hover:bg-gray-600 focus:outline-none sm:right-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
         </div>
     </div>
 </div>
 
 
+<script>
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    const carousel = document.getElementById('carousel');
+    const cards = document.querySelectorAll('#carousel > div');
+    const cardWidth = cards[0].offsetWidth + 24; // 24px is the gap between cards (tailwind gap-6)
+    const totalCards = cards.length;
+    let currentIndex = 0;
+
+    // Next button functionality
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < totalCards - 3) { // Ensure only 3 cards are shown at a time
+            currentIndex++;
+            carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        }
+    });
+
+    // Prev button functionality
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        }
+    });
+</script>
 
     </div>
-
-
+</div>
+    
 
 
 
