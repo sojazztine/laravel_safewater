@@ -523,50 +523,50 @@ Alpine.start()
         $limit = request()->query('limit');
     @endphp
 
-    <!-- TESTIMONIALS -->
-    <div class="min-h-[500px] bg-[#016262] mt-20 mb-20 pb-10">
-        <div class="ml-20 pt-20">
-            <h1 class="text-5xl font-bold text-[#EBFCFC]">
-                Words from our Eco Heroes
-            </h1>
-
-         <!-- Limit only the images to 3 -->
-            <div class="flex items-center mt-10">
-                @foreach ($testimonials->sortByDesc('created_at')->take(3) as $testimonial)
-                    <img src="{{ Storage::url($testimonial->image) }}" alt="Testimonial Image"
-                        class="border-4 rounded-full w-[60px] h-[60px] border-[#17B67D] border-solid ml-[-15px]">
-                @endforeach
-                <p class="ml-10 text-xl text-[#EBFCFC] lg:w-120 lg:block hidden">
-                    Latest testimonials.
-                </p>
-                <p class="text-[#EBFCFC] lg:w-120 mt-10 block md:hidden text-xl">
-                    Latest testimonials
-                </p>
-            </div>
 
 
 
 
 
-            <div class="mt-10 flex flex-wrap justify-center gap-[3vw] p-3">
+
+
+<!-- TESTIMONIALS -->
+<div class="bg-[#016262] mt-20 mb-20 pb-10">
+    <div class="px-6 py-12 md:px-20">
+        <h1 class="text-3xl md:text-5xl font-bold text-[#EBFCFC] text-center md:text-left">
+            Words from our Eco Heroes
+        </h1>
+
+        <!-- Latest testimonial images -->
+        <div class="flex flex-wrap items-center justify-center md:justify-start mt-8 gap-2 md:gap-4">
+            @foreach ($testimonials->sortByDesc('created_at')->take(3) as $testimonial)
+                <img src="{{ Storage::url($testimonial->image) }}" alt="Testimonial Image"
+                    class="border-4 rounded-full w-[60px] h-[60px] border-[#17B67D] -ml-3 first:ml-0">
+            @endforeach
+
+            <p class="text-[#EBFCFC] text-lg mt-4 md:mt-0 md:ml-6 text-center md:text-left w-full md:w-auto">
+                Latest testimonials
+            </p>
+        </div>
+
+        <!-- Testimonial Cards -->
+        <div class="mt-10 overflow-x-auto scrollbar-hide pb-10">
+            <div class="flex gap-6 snap-x snap-mandatory px-2 md:px-0">
                 @foreach ($testimonials as $testimonial)
-                    <div class="w-80 h-90 rounded-xl bg-[#EBFCFC] p-5">
-                        <img src="{{ Storage::url($testimonial->image) }} "
-                            alt="Testimonial Picture"
-                            class="border-4 w-[55px] h-[55px] rounded-full border-[#17B67D]  border-solid ">
+                    <div class="min-w-[280px] max-w-sm snap-start shrink-0 bg-[#EBFCFC] rounded-xl p-5">
+                        <img src="{{ Storage::url($testimonial->image) }}" alt="Testimonial Picture"
+                            class="border-4 w-[55px] h-[55px] rounded-full border-[#17B67D]">
                         <div class="h-40 overflow-auto p-2 my-5">
-                            <p class="text-[#016262] break-words mt-2 mb-5">{{ $testimonial->content }}</p>
+                            <p class="text-[#016262] break-words">{{ $testimonial->content }}</p>
                         </div>
-                        <p class="text-[#016262] ">{{ $testimonial->name }}</p>
-                        <p class="text-[#016262]">{{ $testimonial->company }}</p>
+                        <p class="text-[#016262] font-semibold">{{ $testimonial->name }}</p>
+                        <p class="text-[#016262] text-sm">{{ $testimonial->company }}</p>
                     </div>
                 @endforeach
             </div>
-            <div class="w-[95%] mx-auto">
-                {{ $testimonials->links() }}
-            </div>
         </div>
     </div>
+</div>
 
 
 
