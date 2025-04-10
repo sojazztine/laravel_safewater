@@ -85,7 +85,7 @@
                     </div>
                 </div>
 
-                <div class=" flex justify-center ms-5">
+                <div class=" flex  justify-center ms-5">
                     <div class="w-[100%]">
                         <div id="toolbar-container">
                             <span class="ql-formats">
@@ -177,7 +177,7 @@
                         }
                     }
                 },
-                placeholder: 'Compose here',
+                placeholder: 'Long description here',
                 theme: 'snow',
                 formats: ['bold', 'italic', 'underline', 'strike', 'size', 'font','list', 'image']
             });
@@ -212,7 +212,7 @@
                 editorContent = editorContent.replace(/<li data-list="ordered">/g, "<li style='list-style-type:decimal;margin-left:25px;'>");
                 // Ensure images have inline styles for centering
 
-                editorContent = editorContent.replace(/<img /g, '<img style="display: flex; justify-content: center; width:300px; flex-direction: column; width:300px; margin-bottom: 10px; " ');
+                editorContent = editorContent.replace(/<img /g, '<img style="display: flex; justify-content: center; width:300px; flex-direction: column; margin: 0 auto; margin-bottom: 10px; " ');
 
 
         

@@ -182,7 +182,7 @@
                         }
                     }
                 },
-                placeholder: 'Compose here',
+                placeholder: 'Long description here',
                 theme: 'snow',
                 formats: ['bold', 'italic', 'underline', 'strike', 'size', 'font','list', 'image']
             });
