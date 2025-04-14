@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('app_version')->nullable();
             $table->string('web_login_link')->nullable();
             $table->string('web_register_link')->nullable();
+            $table->text('inquery_recipients')->nullable();
 
             $table->timestamps();
         });

@@ -84,4 +84,46 @@ class SiteSettingController extends Controller
         $site_setting->update($validated);
         return redirect(route('external-links.index'))->with('success', 'External Links updated successfully!');
     }
+
+    public function inquiryRecipients(){
+        // $recipients = SiteSetting::select('id','inquiry_recipients')->latest()->get();
+        $data = SiteSetting::first();
+        $recipients = array_map('trim', explode(',', $data->inquiry_recipients));
+       
+        return view('site-settings.inquiry-recipient.inquiry-recipients', compact('recipients'));
+    }
+    public function createInquiryRecipeints(){
+        return view('site-settings.inquiry-recipient.inquiry-recipients-create');
+    }
+    public function storeInquiryRecipients(Request $request){
+        $validated = $request->validate([
+            'inquiry_recipients' => ['nullable']
+        ]);
+
+        $data = SiteSetting::first();
+        $recipients = array_map('trim', explode(',', $data->inquiry_recipients));
+        array_push($recipients, $validated['inquiry_recipients']);
+        $recipients = implode(',', $recipients);
+        $data->inquiry_recipients = $recipients;
+        $data->save();
+        // SiteSetting::update($validated);
+        return redirect(route('inquiry-recipients.index'))->with('success', 'Successfully added!');
+        
+    }
+
+    public function deleteInquiryRecipients(string $email){
+        $data = SiteSetting::first();
+        $recipients = array_map('trim', explode(',', $data->inquiry_recipients));
+        $result = array_diff($recipients, [$email]);
+        $recipients = implode(',', $result);
+        $data->inquiry_recipients = $recipients;
+        $data->save();
+
+        return redirect(route('inquiry-recipients.index'))->with('success', 'Deleted Successfully!');
+
+
+
+
+    }
+
 }

@@ -14,6 +14,7 @@ class SiteSetting extends Model
         'app_keywords',
         'app_version',
         'web_login_link',
-        'web_register_link'
+        'web_register_link',
+        'inquiry_recipients'
     ];
 }
