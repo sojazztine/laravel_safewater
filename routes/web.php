@@ -30,6 +30,8 @@ Route::get('solution/restore-furniture',[PublicController::class, 'restoreFurnit
 Route::get('solution/restore-classroom',[PublicController::class, 'restoreClassroom'])->name('public.solutions.restore-classroom');
 
 Route::get('contact', [PublicController::class, 'contactPage'])->name('public.contactUs');
+Route::get('contact/faq', [PublicController::class, 'faqPage'])->name('public.contact.faq');
+
 
 Route::get('blog', [PublicController::class, 'blogPage'])->name('public.blog');
 

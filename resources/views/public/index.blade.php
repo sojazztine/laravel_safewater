@@ -325,9 +325,12 @@
 
 
 
- <!-- PARTNERS -->
+ 
 
- <style>
+
+<!-- PARTNERS -->
+
+<style>
     .marquee {
         animation: scrolling var(--marquee-time) linear infinite;
     }
@@ -509,9 +512,6 @@
 
 
 
-
-
-
     @php
         $limit = request()->query('limit');
     @endphp
@@ -524,9 +524,9 @@
 
 
     <!-- TESTIMONIALS -->
-    <div class="bg-[#016262] mt-20 mb-20 pb-10">
+    <div class="bg-[#E7E7E7] mt-20 pb-10">
         <div class="px-6 py-12 md:px-20">
-            <h1 class="text-3xl md:text-5xl font-bold text-[#EBFCFC] text-center md:text-left">
+            <h1 class="text-3xl md:text-5xl font-bold text-[#016262] text-center md:text-left">
                 Words from our Eco Heroes
             </h1>
 
@@ -537,7 +537,7 @@
                         class="border-4 rounded-full w-[60px] h-[60px] border-[#17B67D] -ml-3 first:ml-0">
                 @endforeach
 
-                <p class="text-[#EBFCFC] text-lg mt-4 md:mt-0 md:ml-6 text-center md:text-left w-full md:w-auto">
+                <p class="text-[#016262] text-lg mt-4 md:mt-0 md:ml-6 text-center md:text-left w-full md:w-auto">
                     Latest testimonials
                 </p>
             </div>
@@ -546,7 +546,7 @@
             <div class="mt-10 relative pb-10">
                 <div class="flex justify-center">
                     <!-- Carousel -->
-                    <div class="overflow-hidden w-full md:w-[70%]">
+                    <div class="overflow-hidden w-full md:w-[92%]">
                         <div id="carousel" class="flex gap-6 transition-transform duration-500 ease-in-out">
                             @foreach ($testimonials as $testimonial)
                                 <div class="min-w-[280px] max-w-sm shrink-0 bg-[#EBFCFC] rounded-xl p-5">
