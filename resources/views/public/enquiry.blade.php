@@ -6,7 +6,7 @@
 <h3> Company Name: {{ $data['company_name'] }}</h3>
 <h3> Message: {{$data['message']}}</h3>
 
-<x-mail::button :url="$url" style="color:#e6e6e5  background-color:#016262">
+<x-mail::button :url="$url" style="color:#e6e6e5;  background-color:#016262">
 View More
 </x-mail::button>
 

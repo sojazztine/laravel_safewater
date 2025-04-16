@@ -33,6 +33,7 @@
             display: flex;
             max-width: 50%;
             margin-right: 10px;
+            width: 300px;
         }
 
 
@@ -84,7 +85,7 @@
                     </div>
                 </div>
 
-                <div class=" flex justify-center ms-5">
+                <div class=" flex  justify-center ms-5">
                     <div class="w-[100%]">
                         <div id="toolbar-container">
                             <span class="ql-formats">
@@ -148,7 +149,7 @@
             }   
                 // Function to apply inline font-family to all Quill content
               function applyInlineFontFamily(content) {
-                       return content.replace(/<p>/g, '<p style="font-family: Old Standard TT, serif; display:flex">')
+                       return content.replace(/<p>/g, '<p style="font-family: Old Standard TT, serif; display:flex; flex-direction:column; margin-bottom:10px;">')
                       .replace(/<span>/g, '<span style="font-family: Old Standard TT, serif;">');
            }
 
@@ -176,7 +177,7 @@
                         }
                     }
                 },
-                placeholder: 'Compose here',
+                placeholder: 'Long description here',
                 theme: 'snow',
                 formats: ['bold', 'italic', 'underline', 'strike', 'size', 'font','list', 'image']
             });
@@ -211,7 +212,7 @@
                 editorContent = editorContent.replace(/<li data-list="ordered">/g, "<li style='list-style-type:decimal;margin-left:25px;'>");
                 // Ensure images have inline styles for centering
 
-                editorContent = editorContent.replace(/<img /g, '<img style="display: flex; justify-content: center; margin: auto;" ');
+                editorContent = editorContent.replace(/<img /g, '<img style="display: flex; justify-content: center; width:300px; flex-direction: column; margin: 0 auto; margin-bottom: 10px; " ');
 
 
         

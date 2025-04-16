@@ -92,23 +92,36 @@ class SiteSettingController extends Controller
        
         return view('site-settings.inquiry-recipient.inquiry-recipients', compact('recipients'));
     }
+
     public function createInquiryRecipeints(){
         return view('site-settings.inquiry-recipient.inquiry-recipients-create');
     }
-    public function storeInquiryRecipients(Request $request){
+
+    public function storeInquiryRecipients(Request $request)
+    {
         $validated = $request->validate([
-            'inquiry_recipients' => ['nullable']
+            'inquiry_recipients' => ['nullable', 'email']     
         ]);
 
         $data = SiteSetting::first();
-        $recipients = array_map('trim', explode(',', $data->inquiry_recipients));
-        array_push($recipients, $validated['inquiry_recipients']);
-        $recipients = implode(',', $recipients);
-        $data->inquiry_recipients = $recipients;
+
+        $existingRecipients = explode(',', $data->inquiry_recipients);
+
+        $existingRecipients = array_filter(array_map(function ($email) {
+            $email = trim($email, " \t\n\r\0\x0B\"[]"); 
+            return filter_var($email, FILTER_VALIDATE_EMAIL) ? $email : null;
+        }, $existingRecipients));
+
+        $newEmail = trim($validated['inquiry_recipients'], " \t\n\r\0\x0B\"[]");
+
+        if (filter_var($newEmail, FILTER_VALIDATE_EMAIL) && !in_array($newEmail, $existingRecipients)) {
+            $existingRecipients[] = $newEmail;
+        }
+
+        $data->inquiry_recipients = implode(',', $existingRecipients);
         $data->save();
-        // SiteSetting::update($validated);
+
         return redirect(route('inquiry-recipients.index'))->with('success', 'Successfully added!');
-        
     }
 
     public function deleteInquiryRecipients(string $email){
@@ -120,10 +133,5 @@ class SiteSettingController extends Controller
         $data->save();
 
         return redirect(route('inquiry-recipients.index'))->with('success', 'Deleted Successfully!');
-
-
-
-
     }
-
 }
