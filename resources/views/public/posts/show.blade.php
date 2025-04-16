@@ -19,8 +19,8 @@
             </div>
         </div>
 
-        <div class="flex justify-center">
-            <img src="{{Storage::url($post->image) }}" class="rounded-xl  w-[1400px] object-fill  my-10 "  alt="Image description">
+        <div class="flex justify-center ">
+            <img src="{{Storage::url($post->image) }}" class="rounded-xl flex justify-center  w-[500px] object-fill  my-10 "  alt="Image description">
         </div>
 
         <div class="w-[90%] mx-auto">
