@@ -138,17 +138,6 @@
             </form>
         </div>
     </div>
-
-    <!-- Button to Open Modal -->
-    <div class="flex justify-center">
-        <div class="w-[30%] text-center flex flex-col items-center justify-center">
-            <h1 class="my-5">Got any questions about our product, solutions, or initiatives? We're here to help you contribute to a cleaner, greener future. Let's talk!</h1>
-            <button @click="show = !show" 
-                    class="flex justify-center items-center px-4 py-2 bg-[#016262] border border-transparent text-white w-40 font-semibold hover:bg-[#f9fff5] hover:border-[#17B67D] hover:text-[#016262] cursor-pointer rounded-full text-md transition duration-300 ease-out mb-5">
-                Write a Letter
-            </button>
-        </div>
-    </div>
 </div>
 
 
