@@ -17,8 +17,7 @@ class PublicController extends Controller
     public function index() {
 
         $total_sachets = $this->getTotalSachetCount();
-        // $hero_heading_title = HeroHeading::value('title');
-        // $hero_heading_description = HeroHeading::value('description');
+        
         $landingPages = LandingPage::select('image')->get();
         $siteSettings = SiteSetting::select('logo', 'app_title', 'app_subtitle', 'web_login_link', 'web_register_link')->first();
         $logo = $siteSettings?->logo;
@@ -30,14 +29,12 @@ class PublicController extends Controller
         $app_subtitle = $siteSettings?->app_subtitle;
         $latestTestimonialImages = Testimonial::select('image')->limit(3)->latest()->get();
 
-        $testimonials = Testimonial::select('name', 'company', 'content', 'image')->latest()->paginate(3);
+        $testimonials = Testimonial::select('name', 'company', 'content', 'image')->latest()->get();
 
         return view('public.index', [
             'landingPages' => $landingPages,
             'latestTestimonialsImage' => $latestTestimonialImages,
             'testimonials' => $testimonials,
-            // 'hero_heading_title' => $hero_heading_title,
-            // 'hero_heading_description' =>  $hero_heading_description,
             'total_sachets' => $total_sachets,
             'logo' => $logo,
             'app_title'=> $app_title,
@@ -70,6 +67,9 @@ class PublicController extends Controller
 
     public function contactPage(){
         return view('public.contactUs');
+    }
+    public function faqPage(){
+        return view('public.contact.faq');
     }
 
     public function blogPage(){

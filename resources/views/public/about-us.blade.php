@@ -6,7 +6,7 @@
             At Restore Solutions PH, we operate with an iterative, pragmatic, and ecocentric approach towards making
             sustainability a standard in our contemporary society.
         </h1>
-        <p class="text-3xl text-center w-full md:w-1/2 mt-7 max-md:text-xl text-[#016262]">
+        <p class="text-3xl text-center w-full md:w-1/2 max-md:text-xl text-[#016262] mb-20 md:mb-10">
             By utilizing innovative solutions and fostering a spirit of environmental stewardship across people and
             communities, we believe that we can turn the concept of a circular economy into a tangible reality.
         </p>
@@ -67,25 +67,26 @@
             </div>
 
 
-        <div class="text-center w-[50%]">
-            <!-- Text Content -->
-            <div class="space-y-6 md:space-y-10  m-4 md:m-7 text-[#016262] ">
-                <h1 class="text-xl md:text-2xl mt-10">
-                    <b>Restore, </b><span class="font-normal">by Safewater Technologies, Inc.,</span> is a <b>flexible
-                        plastic waste upcycler</b>
-                    based in Bulacan. </b>
-                </h1>
-                <h1 class="text-2xl">
-                    The company transforms flexible plastic waste into plastic <b>Restore boards and furniture.
-                </h1>
-
-                <h1 class="text-xl md:text-2xl text-[#016262] mt-5">
-                    Restore aims to take sustainability beyond waste management, striving to offer innovative solutions
-                    that
-                    promote environmental stewardship and drive positive change.
-                </h1>
+            <div class="text-center w-full md:w-[50%]">
+                <!-- Text Content -->
+                <div class="space-y-6 md:space-y-10 m-4 md:m-7 text-[#016262]">
+                    <h1 class="text-xl md:text-2xl mt-10">
+                        <b>Restore, </b><span class="font-normal">by Safewater Technologies, Inc.,</span> is a <b>flexible
+                            plastic waste upcycler</b>
+                        based in Bulacan. </b>
+                    </h1>
+                    <h1 class="text-2xl">
+                        The company transforms flexible plastic waste into plastic <b>Restore boards and furniture.
+                    </h1>
+            
+                    <h1 class="text-xl md:text-2xl text-[#016262] mt-5">
+                        Restore aims to take sustainability beyond waste management, striving to offer innovative solutions
+                        that
+                        promote environmental stewardship and drive positive change.
+                    </h1>
+                </div>
             </div>
-        </div>
+            
     </div>
 
 
@@ -93,7 +94,7 @@
     <div class="w-[90%] px-4  mx-auto mt-10 mb-[10rem] sm:mb-30 ">
         <div class="flex flex-col sm:flex-row justify-center  border-b-2">
 
-            <div class="w-full sm:w-1/2 p-4 border-r-2">
+            <div class="w-full sm:w-1/2 p-4 sm:border-r-2 mb-10 sm:mb-0">
                 <div class="flex items-center mb-5">
                     <img src="../img/Goal.png" alt="Goal" class="w-12 h-12">
                     <h1 class="text-xl font-bold ml-2 text-[#016262]">MISSION</h1>
@@ -134,80 +135,73 @@
 
 
 
-    <!-- Meet the Team -->
-    <div class="flex flex-col items-center text-[#016262] mb-[150px]">
-        <div class="flex flex-col justify-center items-center mb-10">
-            <h1 class="text-4xl mb-5">Meet the Team</h1>
-            <p class="w-[75%] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi velit possimus
-                facere, totam nobis minima odio earum atque fugit tempore! Lorem ipsum dolor sit amet.</p>
-        </div>
+  <!-- Meet the Team -->
+<div class="flex flex-col items-center text-[#016262] mb-[150px]">
+    <div class="flex flex-col justify-center items-center mb-10">
+        <h1 class="text-4xl mb-5">Meet the Team</h1>
+        <p class="w-[75%] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi velit possimus
+            facere, totam nobis minima odio earum atque fugit tempore! Lorem ipsum dolor sit amet.</p>
+    </div>
 
-        <div class="flex flex-col items-center">
-            <h1 class="text-xl my-10">Board of Directors</h1>
-            <div class="flex justify-center items-center">
-                <div class="grid grid-cols-6 gap-10 justify-items-center">
-                    <div
-                        class="flex flex-col items-center justify-center col-span-3 h-[300px] w-[250px] text-center p-5">
-                        <img src="{{ asset('img/img-aboutUs/John Gilbert Madarang.png') }}" alt=""
-                            class=" ">
-                        <h1 class="mt-3">John Gilbert Madarang</h1>
-                        <p class="text-sm font-normal">Chairman</p>
-                    </div>
-                    <div
-                        class="flex flex-col items-center justify-center col-span-3 h-[300px] w-[250px] text-center p-5">
-                        <img src="{{ asset('img/img-aboutUs/Francis Eric Chao.png') }}" alt="" class="">
-                        <h1 class="mt-3">Francis Eric Chao</h1>
-                        <p class="text-sm font-normal">President</p>
-                    </div>
-                    <div
-                        class="flex flex-col items-center justify-center col-span-2 h-[300px] w-[250px] text-center p-5">
-                        <img src="" alt="" class="w-[300px] h-[280px]  rounded-3xl bg-[#EBFCFC]">
-                        <h1 class="mt-3">Heliogen Arbatin</h1>
-                        <p class="text-sm font-normal">Treasurer</p>
-                    </div>
-                    <div
-                        class="flex flex-col items-center justify-center col-span-2 h-[300px] w-[250px] text-center p-5">
-                        <img src="" alt="" class="w-[300px] h-[280px]  rounded-3xl bg-[#EBFCFC]">
-                        <h1 class="mt-3">May Ann Madarang-Uy</h1>
-                        <p class="text-sm font-normal"> Corporate Secretary </p>
-                    </div>
-                    <div
-                        class="flex flex-col items-center justify-center col-span-2 h-[300px] w-[250px] text-center p-5">
-                        <img src="" alt="" class="w-[300px] h-[280px]  rounded-3xl bg-[#EBFCFC]">
-                        <h1 class="mt-3">Wilhelmina Madarang</h1>
-                        <p class="text-sm font-normal">Director</p>
-                    </div>
+    <div class="flex flex-col items-center">
+        <h1 class="text-xl my-10">Board of Directors</h1>
+        <div class="flex justify-center items-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-10 justify-items-center">
+                <div class="flex flex-col items-center justify-center col-span-1 sm:col-span-1 lg:col-span-1 xl:col-span-3 h-[300px] w-[250px] text-center p-5">
+                    <img src="{{ asset('img/img-aboutUs/John Gilbert Madarang.png') }}" alt="">
+                    <h1 class="mt-3">John Gilbert Madarang</h1>
+                    <p class="text-sm font-normal">Chairman</p>
                 </div>
-            </div>
-
-        </div>
-
-        <div class="flex flex-col items-center justify-between">
-            <h1 class="text-xl mt-20 mb-10">Business Operations</h1>
-            <div class="flex items-center gap-10 my-10">
-                <div class="flex flex-col items-center justify-center col-span-3 h-[300px] w-[250px] text-center p-5">
-                    <img src="" alt="" class="w-[300px] h-[280px]  rounded-3xl bg-[#EBFCFC]">
-                    <h1 class="mt-3">Miguel Lorenzo Yorro</h1>
-                    <p class="text-sm font-normal">Business Development and Sustainability</p>
+                <div class="flex flex-col items-center justify-center col-span-1 sm:col-span-1 lg:col-span-1 xl:col-span-3 h-[300px] w-[250px] text-center p-5">
+                    <img src="{{ asset('img/img-aboutUs/Francis Eric Chao.png') }}" alt="">
+                    <h1 class="mt-3">Francis Eric Chao</h1>
+                    <p class="text-sm font-normal">President</p>
                 </div>
-                <div class="flex flex-col items-center justify-center col-span-3 h-[300px] w-[250px] text-center p-5">
-                    <img src="" alt="" class="w-[300px] h-[280px]  rounded-3xl bg-[#EBFCFC]">
-                    <h1 class="mt-3">Mercy Jane Mora</h1>
-                    <p class="text-sm font-normal">Research & Development and Product Innovation</p>
+                <div class="flex flex-col items-center justify-center col-span-1 sm:col-span-1 lg:col-span-2 xl:col-span-2 h-[300px] w-[250px] text-center p-5">
+                    <img src="" alt="" class="w-[300px] h-[280px] rounded-3xl bg-[#EBFCFC]">
+                    <h1 class="mt-3">Heliogen Arbatin</h1>
+                    <p class="text-sm font-normal">Treasurer</p>
                 </div>
-                <div class="flex flex-col items-center justify-center col-span-3 h-[300px] w-[250px] text-center p-5">
-                    <img src="" alt="" class="w-[300px] h-[280px]  rounded-3xl bg-[#EBFCFC]">
-                    <h1 class="mt-3">Roxanne Bernardo</h1>
-                    <p class="text-sm font-normal">Plant Operations</p>
+                <div class="flex flex-col items-center justify-center col-span-1 sm:col-span-1 lg:col-span-2 xl:col-span-2 h-[300px] w-[250px] text-center p-5">
+                    <img src="" alt="" class="w-[300px] h-[280px] rounded-3xl bg-[#EBFCFC]">
+                    <h1 class="mt-3">May Ann Madarang-Uy</h1>
+                    <p class="text-sm font-normal">Corporate Secretary</p>
                 </div>
-                <div class="flex flex-col items-center justify-center col-span-3 h-[300px] w-[250px] text-center p-5">
-                    <img src="" alt="" class="w-[300px] h-[280px]  rounded-3xl bg-[#EBFCFC]">
-                    <h1 class="mt-3">Kylee Sy</h1>
-                    <p class="text-sm font-normal">Management Trainee</p>
+                <div class="flex flex-col items-center justify-center col-span-1 sm:col-span-2 lg:col-span-2 xl:col-span-2 h-[300px] w-[250px] text-center p-5">
+                    <img src="" alt="" class="w-[300px] h-[280px] rounded-3xl bg-[#EBFCFC]">
+                    <h1 class="mt-3">Wilhelmina Madarang</h1>
+                    <p class="text-sm font-normal">Director</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="flex flex-col items-center justify-between">
+        <h1 class="text-xl mt-20 mb-10">Business Operations</h1>
+        <div class="flex flex-wrap justify-center gap-10 my-10">
+            <div class="flex flex-col items-center justify-center h-[300px] w-[250px] text-center p-5">
+                <img src="" alt="" class="w-[300px] h-[280px] rounded-3xl bg-[#EBFCFC]">
+                <h1 class="mt-3">Miguel Lorenzo Yorro</h1>
+                <p class="text-sm font-normal">Business Development and Sustainability</p>
+            </div>
+            <div class="flex flex-col items-center justify-center h-[300px] w-[250px] text-center p-5">
+                <img src="" alt="" class="w-[300px] h-[280px] rounded-3xl bg-[#EBFCFC]">
+                <h1 class="mt-3">Mercy Jane Mora</h1>
+                <p class="text-sm font-normal">Research & Development and Product Innovation</p>
+            </div>
+            <div class="flex flex-col items-center justify-center h-[300px] w-[250px] text-center p-5">
+                <img src="" alt="" class="w-[300px] h-[280px] rounded-3xl bg-[#EBFCFC]">
+                <h1 class="mt-3">Roxanne Bernardo</h1>
+                <p class="text-sm font-normal">Plant Operations</p>
+            </div>
+            <div class="flex flex-col items-center justify-center h-[300px] w-[250px] text-center p-5">
+                <img src="" alt="" class="w-[300px] h-[280px] rounded-3xl bg-[#EBFCFC]">
+                <h1 class="mt-3">Kylee Sy</h1>
+                <p class="text-sm font-normal">Management Trainee</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -217,7 +211,7 @@
 
 
     <!-- RA 11898 - EPR Act -->
-    <div class="flex flex-col lg:flex-row justify-center items-center w-[90%] mx-auto gap-[200px] mb-[150px]">
+    <div class="flex flex-col lg:flex-row justify-center items-center w-[90%] mx-auto gap-[200px] md:mb-[150px]">
         <div class="w-full lg:w-auto">
             <h1 class="text-3xl lg:text-5xl mb-6 lg:mb-10 text-center lg:text-left text-[#016262]"><b>RA 11898 - EPR
                     Act</b></h1>

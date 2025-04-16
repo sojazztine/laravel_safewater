@@ -17,7 +17,7 @@
                             <img src=" {{ Storage::url($post->image) }}" alt="" class="w-[504px] h-[260px] rounded-[30px] object-cover">
                             <h1 class="mt-10 text-2xl font-bold" style="overflow-wrap:anywhere;">{{ $post->title }}</h1>
                             <div class="max-h-[200px] overflow-y-auto break-words">
-                                <p class=" text-lg mt-5 hover:underline" >
+                                <p class=" line-clamp-5" >
                                     {{ $post->description }}
                                 </p>
                             </div>

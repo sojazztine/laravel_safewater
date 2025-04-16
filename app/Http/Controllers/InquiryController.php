@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\Enquiry;
 use App\Models\Inquiry;
+use App\Models\SiteSetting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Mail\Message;
@@ -15,29 +16,29 @@ class InquiryController extends Controller
         return view('inquiries.index', ['inquiries' => $inquiries]);
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $validated = $request->validate([
-            'first_name' => ['required'],
-            'last_name' => ['required'],
-            'company_name' => ['required'],
-            'email' => ['required'],
-            'message' => ['required']
+            'first_name'    => ['required'],
+            'last_name'     => ['required'],
+            'company_name'  => ['required'],
+            'email'         => ['required', 'email'],
+            'message'       => ['required'],
         ]);
-        // $toEmail = 'restore@gmail.com';
-        // $subject = 'Hello from jazz';
-        // $fromEmail = 'jazz@gmail.com';
-        // $htmlContent = '<h3> This is the hello world  </h3>';
         
-        // Mail::html($htmlContent, function(Message $message) use($toEmail, $subject, $fromEmail){
-        //     $message->to($toEmail)
-        //     ->subject($subject)
-        //     ->from($fromEmail); 
-        // });
-        Mail::to('ericmabasa51@gmail.com')->send(new Enquiry($validated));
+        $data = SiteSetting::first();
+        $recipients = explode(',', $data->inquiry_recipients);
+
+        Mail::to($recipients)->send(new Enquiry($validated));
         Mail::to($validated['email'])->send(new Enquiry($validated));
+    
         Inquiry::create($validated);
+    
         return redirect('/')->with('success', 'Successfully Submitted');
     }
+    
+
+    
 
     public function delete(string $id){
         Inquiry::where('id', $id)->delete();

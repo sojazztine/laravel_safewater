@@ -30,6 +30,8 @@ Route::get('solution/restore-furniture',[PublicController::class, 'restoreFurnit
 Route::get('solution/restore-classroom',[PublicController::class, 'restoreClassroom'])->name('public.solutions.restore-classroom');
 
 Route::get('contact', [PublicController::class, 'contactPage'])->name('public.contactUs');
+Route::get('contact/faq', [PublicController::class, 'faqPage'])->name('public.contact.faq');
+
 
 Route::get('blog', [PublicController::class, 'blogPage'])->name('public.blog');
 
@@ -102,4 +104,10 @@ Route::put('/site-settings/{id}/app-overview', [SiteSettingController::class, 'u
 //Route for external links admin
 Route::get('/site-settings/external-links', [SiteSettingController::class, 'indexExternalLinks'])->name('external-links.index');
 Route::put('/site-settings/{id}/external-links', [SiteSettingController::class, 'updateExternalLinks'])->name('external-links.update');
+
+//Route for inquiry recipeints
+Route::get('/site-settings/inquiry-recipients', [SiteSettingController::class, 'inquiryRecipients'])->name('inquiry-recipients.index');
+Route::get('/site-settings/inquiry-recipients/create',[SiteSettingController::class, 'createInquiryRecipeints'])->name('inquiry-recipients.create');
+Route::post('/site-settings/inquiry-recipients/store' ,[SiteSettingController::class, 'storeInquiryRecipients'])->name('inquiry-recipients.store');
+Route::delete('/site-settings/{id}',[SiteSettingController::class,'deleteInquiryRecipients'])->name('inquiry-recipients.delete');
 require __DIR__.'/auth.php';
