@@ -211,7 +211,7 @@
 
 
     <!-- RA 11898 - EPR Act -->
-    <div class="flex flex-col lg:flex-row justify-center items-center w-[90%] mx-auto gap-[200px] mb-[150px]">
+    <div class="flex flex-col lg:flex-row justify-center items-center w-[90%] mx-auto gap-[200px] md:mb-[150px]">
         <div class="w-full lg:w-auto">
             <h1 class="text-3xl lg:text-5xl mb-6 lg:mb-10 text-center lg:text-left text-[#016262]"><b>RA 11898 - EPR
                     Act</b></h1>

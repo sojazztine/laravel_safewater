@@ -68,6 +68,9 @@ class PublicController extends Controller
     public function contactPage(){
         return view('public.contactUs');
     }
+    public function faqPage(){
+        return view('public.contact.faq');
+    }
 
     public function blogPage(){
         $posts = Post::latest()->paginate(6);
