@@ -8,7 +8,7 @@
 
     <div class="flex justify-center my-10 gap-10">
         <div class="flex justify-center">
-            <div class="p-10">
+            <div class="">
                 <div class="flex items-center p-5">
                     <img class="me-5" src="{{ asset('img/img-contact/fb.png') }}" alt="">
                     <div class="border w-[90%] rounded-xl bg-[#EBFCFC] p-5">
