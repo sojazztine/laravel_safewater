@@ -17,8 +17,7 @@
                     {{$post->title}}
                 </h1>
 
-                <p class="text-md">{{$post->publisher}}</p>
-                <p class="text-md">{{$post->created_at->format('F d, Y') }}</p>
+                <p class="text-md">{{$post->publisher}} • {{$post->created_at->format('F d, Y') }}</p>
             </div>
         </div>
 

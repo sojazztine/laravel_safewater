@@ -19,7 +19,7 @@
                     <img src="{{ Storage::url($post->image) }}"  alt=""
                         class="rounded-xl mb-4  object-cover w-[200px]">
                     <div class="px-2 md:px-4">
-                        <h1 class="text-sm text-gray-500 mb-2">{{ $post->publisher }}   {{$post->created_at->format('F d, Y')}}</h1>
+                        <h1 class="text-sm text-gray-500 mb-2">{{ $post->publisher }} • {{$post->created_at->format('F d, Y')}}</h1>
                         <h2 class="text-lg md:text-xl font-semibold text-black mb-3">{{ $post->title }}</h2>
                         <p class="text-black text-justify text-sm md:text-base">{{ $post->description }}</p>
                     </div>
@@ -32,7 +32,7 @@
                 <img src="{{ Storage::url($post->image) }}" class="w-[200px]" alt=""
                     class="rounded-xl w-full sm:w-1/2 object-cover">
                 <div class="flex flex-col justify-start">
-                    <h1 class="text-sm text-gray-500 mb-2">{{ $post->publisher }} {{ $post->created_at->format('F d, Y') }} </h1>
+                    <h1 class="text-sm text-gray-500 mb-2">{{ $post->publisher }} • {{ $post->created_at->format('F d, Y') }} </h1>
                     <h2 class="text-lg md:text-xl font-semibold text-black mb-3">{{ $post->title }}</h2>
                     <p class="text-black text-justify text-sm md:text-base">{{ $post->description }}</p>
                 </div>
@@ -43,7 +43,7 @@
                 <img src="{{ Storage::url($post->image) }}" class="w-[200px]" alt=""
                     class="rounded-xl sm:w-1/2 object-cover">
                 <div class="flex flex-col justify-start">
-                    <h1 class="text-sm text-gray-500 mb-2">{{$post->publisher}} {{ $post->created_at->format('F d,Y') }}</h1>
+                    <h1 class="text-sm text-gray-500 mb-2">{{$post->publisher}} • {{ $post->created_at->format('F d,Y') }}</h1>
                     <h2 class="text-lg md:text-xl font-semibold text-black mb-3">{{ $post->title }}</h2>
                     <p class="text-black text-justify text-sm md:text-base">{{ $post->description }}</p>
                 </div>
@@ -54,7 +54,7 @@
                 <img src=" {{Storage::url($post->image)}}" class="w-[200px]"  alt=""
                     class="rounded-xl w-full sm:w-1/3 object-cover">
                 <div class="flex flex-col justify-start w-full sm:w-2/3">
-                    <h1 class="text-sm text-gray-500 mb-2">{{ $post->publisher }} {{ $post->created_at->format('F d, Y') }} </h1>
+                    <h1 class="text-sm text-gray-500 mb-2">{{ $post->publisher }} • {{ $post->created_at->format('F d, Y') }} </h1>
                     <h2 class="text-lg md:text-xl font-semibold text-black mb-3">{{ $post->title }}</h2>
                     <p class="text-black text-justify text-sm md:text-base">{{ $post->description }}</p>
                 </div>
