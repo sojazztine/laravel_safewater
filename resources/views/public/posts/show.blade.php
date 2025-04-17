@@ -1,12 +1,15 @@
 <x-public-layout>
     <div>
-        <div class="ml-[20px]">
+        <div class="ml-[20px] flex items-center mb-10 " >
             <a href="{{ route('public.blog') }}" type="button" class="text-white bg-[#016262] hover:bg-[#018266] focus:ring-4 rotate-180 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center me-2 ">
                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                 </svg>
                 <span class="sr-only">Icon description</span>
                 </a>
+                <h1 class="text-gray-500 text-lg font-medium ml-2">
+                    Go Back
+                </h1>
         </div>
         <div class="flex justify-center text-[#016262]">
             <div class="w-[85%]">

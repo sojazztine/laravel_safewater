@@ -73,8 +73,9 @@ class PublicController extends Controller
     }
 
     public function blogPage(){
-        $posts = Post::latest()->paginate(6);
-        return view('public.posts.index', compact('posts'));
+        $recentPosts= Post::latest()->get();
+        $posts = Post::paginate(6);
+        return view('public.posts.index', compact('posts', 'recentPosts'));
     }
 
     public function showBlog(string $id){
