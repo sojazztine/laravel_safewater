@@ -53,29 +53,36 @@
             </div>
         </div>
     </div> -->
-    @if(session('success'))
-                <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 5000)">
-                     <div id="alert-3" x-show="show" class="flex items-center p-4 mb-4 text-green-800 rounded-lg bg-green-50 " role="alert">
-                        <svg class="shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
-                        </svg>
-                        <span class="sr-only">Info</span>
-                        <div class="ms-3 text-sm font-medium">
-                        Your feedback was sent! Thank you for your feedback.
-                        </div>
-                        <button type="button" @click= "show = false" class="ms-auto -mx-1.5 -my-1.5 bg-green-50 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex items-center justify-center h-8 w-8 " data-dismiss-target="#alert-3" aria-label="Close">
-                            <span class="sr-only">Close</span>
-                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                            </svg>
-                        </button>
-                    </div>
+    @if (session('success'))
+        <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 5000)">
+            <div id="alert-3" x-show="show" class="flex items-center p-4 mb-4 text-green-800 rounded-lg bg-green-50 "
+                role="alert">
+                <svg class="shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                    viewBox="0 0 20 20">
+                    <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                </svg>
+                <span class="sr-only">Info</span>
+                <div class="ms-3 text-sm font-medium">
+                    Your feedback was sent! Thank you for your feedback.
                 </div>
-            @endif
+                <button type="button" @click= "show = false"
+                    class="ms-auto -mx-1.5 -my-1.5 bg-green-50 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex items-center justify-center h-8 w-8 "
+                    data-dismiss-target="#alert-3" aria-label="Close">
+                    <span class="sr-only">Close</span>
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    @endif
     <div id="animation-carousel" class="relative w-full h-screen overflow-hidden">
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black/40 z-10"></div>
-    
+
         <div class="relative h-56 md:h-96">
             <!-- Carousel wrapper -->
             @foreach ($landingPages as $landingPage)
@@ -154,8 +161,7 @@
             </p>
 
             <div class="relative">
-                <img src="img/img-index/pieceCount.png" alt="Piece Count Image"
-                    class="max-w-full h-auto">
+                <img src="img/img-index/pieceCount.png" alt="Piece Count Image" class="max-w-full h-auto">
 
                 <div class="absolute bottom-0 left-0 w-full flex items-center justify-between p-4">
                     <h1 class="text-white text-xl font-bold">Every piece of plastic counts</h1>
@@ -178,8 +184,7 @@
             </p>
 
             <div class="relative">
-                <img src="img/img-index/RestoreBoards.png" alt="Smart Eco Bin Image"
-                    class="max-w-full h-auto">
+                <img src="img/img-index/RestoreBoards.png" alt="Smart Eco Bin Image" class="max-w-full h-auto">
 
                 <div class="absolute bottom-0 left-0 w-full flex items-center justify-between p-4">
                     <h1 class="text-white text-xl font-bold">Restore Boards</h1>
@@ -229,7 +234,8 @@
             </div>
             <div class="w-full md:w-1/2 md:pt-40 text-center md:text-left">
                 <h1 class="md:text-6xl text-2xl font-bold text-[#016262] mb-10">Smart EcoBin</h1>
-                <p class="md:text-2xl text-lg mb-6 md:leading-10 text-[#016262] font-normal">Anybody can be a hero. <br>
+                <p class="md:text-2xl text-lg mb-6 md:leading-10 text-[#016262] font-normal">Anybody can be a hero.
+                    <br>
                     Help lead the charge towards a cleaner <br> and greener future!</p>
                 <p class="md:text-2xl text-lg mb-6 md:leading-10 text-[#016262] font-normal">Every piece of plastic
                     counts!</p>
@@ -252,21 +258,27 @@
 
 
     <!-- SEB MALLS -->
-    <div class="grid grid-cols-6 grid-rows-2 sm:grid-cols-5 sm:grid-rows-1 gap-4 items-center justify-center self-start mb-10  w-[90%] mx-auto">
+    <div
+        class="grid grid-cols-6 grid-rows-2 sm:grid-cols-5 sm:grid-rows-1 gap-4 items-center justify-center self-start mb-10  w-[90%] mx-auto">
 
-        <div class="col-span-2 sm:col-span-1 row-span-1 col-start-1 sm:col-start-1 row-start-1 sm:row-start-1 border-r border-[#51A5BE] flex items-center justify-center md:p-5">
+        <div
+            class="col-span-2 sm:col-span-1 row-span-1 col-start-1 sm:col-start-1 row-start-1 sm:row-start-1 border-r border-[#51A5BE] flex items-center justify-center md:p-5">
             <img src="img/mall/up.png" alt="" class="">
         </div>
-        <div class="col-span-2 sm:col-span-1 row-span-1 col-start-3 sm:col-start-2 row-start-1 sm:row-start-1 border-r border-[#51A5BE] flex items-center justify-center md:p-5">
+        <div
+            class="col-span-2 sm:col-span-1 row-span-1 col-start-3 sm:col-start-2 row-start-1 sm:row-start-1 border-r border-[#51A5BE] flex items-center justify-center md:p-5">
             <img src="img/mall/new.png" alt="" class="">
         </div>
-        <div class="col-span-2 sm:col-span-1 row-span-1 col-start-5 sm:col-start-3 row-start-1 sm:row-start-1 sm:border-r border-[#51A5BE] flex items-center justify-center md:p-5">
+        <div
+            class="col-span-2 sm:col-span-1 row-span-1 col-start-5 sm:col-start-3 row-start-1 sm:row-start-1 sm:border-r border-[#51A5BE] flex items-center justify-center md:p-5">
             <img src="img/mall/east.png" alt="" class=" ">
         </div>
-        <div class="col-span-2 sm:col-span-1 row-span-1 col-start-2 sm:col-start-4 row-start-2 sm:row-start-1 border-r border-[#51A5BE] flex items-center justify-center md:p-5">
+        <div
+            class="col-span-2 sm:col-span-1 row-span-1 col-start-2 sm:col-start-4 row-start-2 sm:row-start-1 border-r border-[#51A5BE] flex items-center justify-center md:p-5">
             <img src="img/mall/chinaTown.png" alt="" class="">
         </div>
-        <div class="col-span-2 sm:col-span-1 row-span-1 col-start-4 sm:col-start-5 row-start-2 sm:row-start-1 flex items-center justify-center md:p-5">
+        <div
+            class="col-span-2 sm:col-span-1 row-span-1 col-start-4 sm:col-start-5 row-start-2 sm:row-start-1 flex items-center justify-center md:p-5">
             <img src="img/mall/grandCanal.png" alt="" class="">
         </div>
     </div>
@@ -344,183 +356,183 @@
 
 
 
- 
 
 
-<!-- PARTNERS -->
+    <!-- PARTNERS -->
 
-<style>
-    .marquee {
-        animation: scrolling var(--marquee-time) linear infinite;
-    }
-
-    .marquee:hover {
-        animation-play-state: paused;
-    }
-
-    @keyframes scrolling {
-        0% {
-            transform: translateX(0);
+    <style>
+        .marquee {
+            animation: scrolling var(--marquee-time) linear infinite;
         }
 
-        100% {
-            transform: translateX(calc(-1 * var(--marquee-width)));
+        .marquee:hover {
+            animation-play-state: paused;
         }
-    }
-</style>
-<div class="flex justify-center mb-[10px] mt-20">
-    <h1 class="text-bolder font-bold mb-5 text-2xl text-[#016262]">
-        Our partners
-    </h1>
-</div>
-<!-- required classes: overflow-hidden  -->
-<div class="overflow-hidden mx-auto py-2 bg-gray-100">
-    <!--  required classes: marquee inline-flex max-w-full  -->
-    <ul class="marquee py-3 inline-flex space-x-4 whitespace-nowrap max-w-full" x-data="Marquee({ speed: 0.5, spaceX: 4 })">
-        <li class="flex-shrink-0">
-            <img src="{{ asset('img/partners/scholasticas.png') }}" alt="pccr" class="max-h-20 w-auto">
-        </li>
-        <li class="flex-shrink-0">
-            <img src="{{ asset('img/partners/pccr.png') }}" alt="pccr" class="max-h-20 w-auto">
-        </li>
-        <li class="flex-shrink-0">
-            <img src="{{ asset('img/partners/studentCouncil.png') }}" alt="studentCouncil"
-                class="max-h-20 w-auto">
-        </li>
-        <li class="flex-shrink-0">
-            <img src="{{ asset('img/partners/nuFairview.png') }}" alt="nuFairview" class="max-h-20 w-auto">
-        </li>
-        <li class="flex-shrink-0">
-            <img src="{{ asset('img/partners/xavierSchool.png') }}" alt="xavierSchool" class="max-h-20 w-auto">
-        </li>
-        <li class="flex-shrink-0">
-            <img src="{{ asset('img/partners/coaAteneo.png') }}" alt="coaAteneo" class="max-h-20 w-auto">
-        </li>
-    </ul>
-</div>
 
+        @keyframes scrolling {
+            0% {
+                transform: translateX(0);
+            }
 
-<script>
-    const debounce = (func, wait, immediate = true) => {
-        let timeout
-        return () => {
-            const context = this
-            const args = arguments
-            const callNow = immediate && !timeout
-            clearTimeout(timeout)
-            timeout = setTimeout(function() {
-                timeout = null
-                if (!immediate) {
-                    func.apply(context, args)
-                }
-            }, wait)
-            if (callNow) func.apply(context, args)
+            100% {
+                transform: translateX(calc(-1 * var(--marquee-width)));
+            }
         }
-    }
+    </style>
+    <div class="flex justify-center mb-[10px] mt-20">
+        <h1 class="text-bolder font-bold mb-5 text-2xl text-[#016262]">
+            Our partners
+        </h1>
+    </div>
+    <!-- required classes: overflow-hidden  -->
+    <div class="overflow-hidden mx-auto py-2 bg-gray-100">
+        <!--  required classes: marquee inline-flex max-w-full  -->
+        <ul class="marquee py-3 inline-flex space-x-4 whitespace-nowrap max-w-full" x-data="Marquee({ speed: 0.5, spaceX: 4 })">
+            <li class="flex-shrink-0">
+                <img src="{{ asset('img/partners/scholasticas.png') }}" alt="pccr" class="max-h-20 w-auto">
+            </li>
+            <li class="flex-shrink-0">
+                <img src="{{ asset('img/partners/pccr.png') }}" alt="pccr" class="max-h-20 w-auto">
+            </li>
+            <li class="flex-shrink-0">
+                <img src="{{ asset('img/partners/studentCouncil.png') }}" alt="studentCouncil"
+                    class="max-h-20 w-auto">
+            </li>
+            <li class="flex-shrink-0">
+                <img src="{{ asset('img/partners/nuFairview.png') }}" alt="nuFairview" class="max-h-20 w-auto">
+            </li>
+            <li class="flex-shrink-0">
+                <img src="{{ asset('img/partners/xavierSchool.png') }}" alt="xavierSchool" class="max-h-20 w-auto">
+            </li>
+            <li class="flex-shrink-0">
+                <img src="{{ asset('img/partners/coaAteneo.png') }}" alt="coaAteneo" class="max-h-20 w-auto">
+            </li>
+        </ul>
+    </div>
 
-    /**
-     * Append the child element and wait for the parent's
-     * dimensions to be recalculated
-     * See https://stackoverflow.com/a/66172042/11784757
-     */
-    const appendChildAwaitLayout = (parent, element) => {
-        return new Promise((resolve, _) => {
-            const resizeObserver = new ResizeObserver((entries, observer) => {
-                observer.disconnect()
-                resolve(entries)
-            })
-            resizeObserver.observe(element)
-            parent.appendChild(element)
-        })
-    }
 
-    document.addEventListener('alpine:init', () => {
-        Alpine.data(
-            'Marquee',
-            ({
-                speed = 1,
-                spaceX = 0,
-                dynamicWidthElements = false
-            }) => ({
-                dynamicWidthElements,
-                async init() {
-                    if (this.dynamicWidthElements) {
-                        const images = this.$el.querySelectorAll('img')
-                        // If there are any images, make sure they are loaded before
-                        // we start cloning them, since their width might be dynamically
-                        // calculated
-                        if (images) {
-                            await Promise.all(
-                                Array.from(images).map(image => {
-                                    return new Promise((resolve, _) => {
-                                        if (image.complete) {
-                                            resolve()
-                                        } else {
-                                            image.addEventListener('load', () => {
-                                                resolve()
-                                            })
-                                        }
-                                    })
-                                })
-                            )
-                        }
+    <script>
+        const debounce = (func, wait, immediate = true) => {
+            let timeout
+            return () => {
+                const context = this
+                const args = arguments
+                const callNow = immediate && !timeout
+                clearTimeout(timeout)
+                timeout = setTimeout(function() {
+                    timeout = null
+                    if (!immediate) {
+                        func.apply(context, args)
                     }
+                }, wait)
+                if (callNow) func.apply(context, args)
+            }
+        }
 
-                    // Store the original element so we can restore it on screen resize later
-                    this.originalElement = this.$el.cloneNode(true)
-                    const originalWidth = this.$el.scrollWidth + spaceX * 4
-                    // Required for the marquee scroll animation 
-                    // to loop smoothly without jumping 
-                    this.$el.style.setProperty('--marquee-width', originalWidth + 'px')
-                    this.$el.style.setProperty(
-                        '--marquee-time',
-                        ((1 / speed) * originalWidth) / 100 + 's'
-                    )
-                    this.resize()
-                    // Make sure the resize function can only be called once every 100ms
-                    // Not strictly necessary but stops lag when resizing window a bit
-                    window.addEventListener('resize', debounce(this.resize.bind(this), 100))
-                },
-                async resize() {
-                    // Reset to original number of elements
-                    this.$el.innerHTML = this.originalElement.innerHTML
+        /**
+         * Append the child element and wait for the parent's
+         * dimensions to be recalculated
+         * See https://stackoverflow.com/a/66172042/11784757
+         */
+        const appendChildAwaitLayout = (parent, element) => {
+            return new Promise((resolve, _) => {
+                const resizeObserver = new ResizeObserver((entries, observer) => {
+                    observer.disconnect()
+                    resolve(entries)
+                })
+                resizeObserver.observe(element)
+                parent.appendChild(element)
+            })
+        }
 
-                    // Keep cloning elements until marquee starts to overflow
-                    let i = 0
-                    while (this.$el.scrollWidth <= this.$el.clientWidth) {
+        document.addEventListener('alpine:init', () => {
+            Alpine.data(
+                'Marquee',
+                ({
+                    speed = 1,
+                    spaceX = 0,
+                    dynamicWidthElements = false
+                }) => ({
+                    dynamicWidthElements,
+                    async init() {
                         if (this.dynamicWidthElements) {
-                            // If we don't give this.$el time to recalculate its dimensions
-                            // when adding child nodes, the scrollWidth and clientWidth won't
-                            // change, thus resulting in this while loop looping forever
-                            await appendChildAwaitLayout(
-                                this.$el,
-                                this.originalElement.children[i].cloneNode(true)
-                            )
-                        } else {
-                            this.$el.appendChild(
-                                this.originalElement.children[i].cloneNode(true)
-                            )
+                            const images = this.$el.querySelectorAll('img')
+                            // If there are any images, make sure they are loaded before
+                            // we start cloning them, since their width might be dynamically
+                            // calculated
+                            if (images) {
+                                await Promise.all(
+                                    Array.from(images).map(image => {
+                                        return new Promise((resolve, _) => {
+                                            if (image.complete) {
+                                                resolve()
+                                            } else {
+                                                image.addEventListener('load', () => {
+                                                    resolve()
+                                                })
+                                            }
+                                        })
+                                    })
+                                )
+                            }
                         }
-                        i += 1
-                        i = i % this.originalElement.childElementCount
-                    }
 
-                    // Add another (original element count) of clones so the animation
-                    // has enough elements off-screen to scroll into view
-                    let j = 0
-                    while (j < this.originalElement.childElementCount) {
-                        this.$el.appendChild(this.originalElement.children[i].cloneNode(true))
-                        j += 1
-                        i += 1
-                        i = i % this.originalElement.childElementCount
-                    }
-                },
-            })
-        )
-    })
+                        // Store the original element so we can restore it on screen resize later
+                        this.originalElement = this.$el.cloneNode(true)
+                        const originalWidth = this.$el.scrollWidth + spaceX * 4
+                        // Required for the marquee scroll animation 
+                        // to loop smoothly without jumping 
+                        this.$el.style.setProperty('--marquee-width', originalWidth + 'px')
+                        this.$el.style.setProperty(
+                            '--marquee-time',
+                            ((1 / speed) * originalWidth) / 100 + 's'
+                        )
+                        this.resize()
+                        // Make sure the resize function can only be called once every 100ms
+                        // Not strictly necessary but stops lag when resizing window a bit
+                        window.addEventListener('resize', debounce(this.resize.bind(this), 100))
+                    },
+                    async resize() {
+                        // Reset to original number of elements
+                        this.$el.innerHTML = this.originalElement.innerHTML
 
-    Alpine.start()
-</script>
+                        // Keep cloning elements until marquee starts to overflow
+                        let i = 0
+                        while (this.$el.scrollWidth <= this.$el.clientWidth) {
+                            if (this.dynamicWidthElements) {
+                                // If we don't give this.$el time to recalculate its dimensions
+                                // when adding child nodes, the scrollWidth and clientWidth won't
+                                // change, thus resulting in this while loop looping forever
+                                await appendChildAwaitLayout(
+                                    this.$el,
+                                    this.originalElement.children[i].cloneNode(true)
+                                )
+                            } else {
+                                this.$el.appendChild(
+                                    this.originalElement.children[i].cloneNode(true)
+                                )
+                            }
+                            i += 1
+                            i = i % this.originalElement.childElementCount
+                        }
+
+                        // Add another (original element count) of clones so the animation
+                        // has enough elements off-screen to scroll into view
+                        let j = 0
+                        while (j < this.originalElement.childElementCount) {
+                            this.$el.appendChild(this.originalElement.children[i].cloneNode(true))
+                            j += 1
+                            i += 1
+                            i = i % this.originalElement.childElementCount
+                        }
+                    },
+                })
+            )
+        })
+
+        Alpine.start()
+    </script>
+
 
 
 
@@ -584,7 +596,7 @@
 
                 <!-- Navigation buttons -->
                 <button id="prev"
-                    class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white p-3 rounded-3xl hover:bg-gray-600 focus:outline-none sm:left-4">
+                    class="opacity-40 absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white p-3 rounded-3xl hover:bg-gray-600 focus:outline-none sm:left-4">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
@@ -593,7 +605,7 @@
                 </button>
 
                 <button id="next"
-                    class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white p-3 rounded-3xl hover:bg-gray-600 focus:outline-none sm:right-4">
+                    class="opacity-40 absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white p-3 rounded-3xl hover:bg-gray-600 focus:outline-none sm:right-4">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
