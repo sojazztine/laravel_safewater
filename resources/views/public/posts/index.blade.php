@@ -1,11 +1,5 @@
 <x-public-layout>
 
-
-
-
-
-
-
     <div class="px-4 sm:px-6 md:px-10 lg:px-20 mt-10 md:mt-20">
         <h1 class="text-black my-6 md:my-10 font-semibold text-xl md:text-2xl">Recent Blog posts</h1>
 
@@ -14,23 +8,24 @@
             @foreach ($recentPosts as $index => $post)
 
             @if ($index == 0)
-           
-                <a href="{{ route('public.post.showBlog', $post->id) }}" class="flex flex-col md:col-span-1 md:row-span-2 items-center">
-                    <img src="{{ Storage::url($post->image) }}"  alt=""
-                        class="rounded-xl mb-4  object-cover w-[200px]">
-                    <div class="px-2 md:px-4">
-                        <h1 class="text-sm text-gray-500 mb-2">{{ $post->publisher }} • {{$post->created_at->format('F d, Y')}}</h1>
-                        <h2 class="text-lg md:text-xl font-semibold text-black mb-3">{{ $post->title }}</h2>
-                        <p class="text-black text-justify text-sm md:text-base">{{ $post->description }}</p>
-                    </div>
-                </a>       
-       
-         
+
+                 <a href="{{ route('public.post.showBlog', $post->id) }}" class="flex md:flex-col md:col-span-1 md:row-span-2 ">
+                     <img src="{{ Storage::url($post->image) }}"  alt=""
+                         class="rounded-xl mb-4 object-cover md:w-[550px] h-[200px] w-1/2 mr-2">
+                     <div class="px-2 md:px-4">
+                         <h1 class="text-sm text-gray-500 mb-2">{{ $post->publisher }} • {{$post->created_at->format('F d, Y')}}</h1>
+                         <h2 class="text-lg md:text-xl font-semibold text-black mb-3">{{ $post->title }}</h2>
+                         <p class="text-black text-justify text-sm md:text-base">{{ $post->description }}</p>
+                     </div>
+                 </a>
+
+
+
             @elseif($index == 1)
 
             <a href="{{ route('public.post.showBlog', $post->id) }}" class="flex flex-col sm:flex-row items-start gap-4 md:col-span-1 md:row-span-1">
-                <img src="{{ Storage::url($post->image) }}" class="w-[200px]" alt=""
-                    class="rounded-xl w-full sm:w-1/2 object-cover">
+                <img src="{{ Storage::url($post->image) }}" alt=""
+                    class="rounded-xl  w-1/2  object-cover md:w-[300px] h-[200px]">
                 <div class="flex flex-col justify-start">
                     <h1 class="text-sm text-gray-500 mb-2">{{ $post->publisher }} • {{ $post->created_at->format('F d, Y') }} </h1>
                     <h2 class="text-lg md:text-xl font-semibold text-black mb-3">{{ $post->title }}</h2>
@@ -40,8 +35,8 @@
 
             @elseif($index == 2)
             <a href="{{ route('public.post.showBlog', $post->id) }}" class="flex flex-col sm:flex-row items-start gap-4 md:col-span-1 md:row-span-1">
-                <img src="{{ Storage::url($post->image) }}" class="w-[200px]" alt=""
-                    class="rounded-xl sm:w-1/2 object-cover">
+                <img src="{{ Storage::url($post->image) }}"  alt=""
+                    class="rounded-xl w-1/2 object-cover md:w-[300px] h-[200px]">
                 <div class="flex flex-col justify-start">
                     <h1 class="text-sm text-gray-500 mb-2">{{$post->publisher}} • {{ $post->created_at->format('F d,Y') }}</h1>
                     <h2 class="text-lg md:text-xl font-semibold text-black mb-3">{{ $post->title }}</h2>
@@ -51,8 +46,8 @@
 
         @else
             <a href="{{ route('public.post.showBlog', $post->id) }}" class="flex flex-col sm:flex-row items-start gap-4 md:col-span-2 md:row-span-1">
-                <img src=" {{Storage::url($post->image)}}" class="w-[200px]"  alt=""
-                    class="rounded-xl w-full sm:w-1/3 object-cover">
+                <img src=" {{Storage::url($post->image)}}"   alt=""
+                    class=" md:w-[700px] h-[200px] rounded-xl  w-[490px] object-cover ">
                 <div class="flex flex-col justify-start w-full sm:w-2/3">
                     <h1 class="text-sm text-gray-500 mb-2">{{ $post->publisher }} • {{ $post->created_at->format('F d, Y') }} </h1>
                     <h2 class="text-lg md:text-xl font-semibold text-black mb-3">{{ $post->title }}</h2>
