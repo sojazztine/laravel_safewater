@@ -8,9 +8,10 @@
             justify-content: space-between !important;
         }
     </style>
-<div class="">
-    <div class="flex justify-end">
-        <a href="{{ route('posts.create') }}" class=" mr-10 bg-green-700 text-white rounded-md px-5 py-2">+ Add new post</a>
+<div class="block w-[98%] mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow-sm mb-5  mt-[50px] ">
+    <div class="flex justify-between">
+        <h1 class="text-[#016262] text-lg font-bold">List of Blog</h1>
+        <a href="{{ route('posts.create') }}" class="mr-2 bg-green-700 text-white rounded-md px-5 py-2">+ Add new post</a>
     </div>
     <table id="search-table">
         <thead>

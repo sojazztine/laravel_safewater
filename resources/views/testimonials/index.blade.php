@@ -8,70 +8,71 @@
             justify-content: space-between !important;
         }
     </style>
-<div class="">
-    <div class="flex justify-end">
-        <a href="{{ route('testimonials.create')}}" class=" mr-10 bg-green-700 text-white rounded-md px-5 py-2">+ Add new testimonial</a>
+    <div class="block w-[98%] mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow-sm mb-5  mt-[50px]">
+        <div class="flex justify-between font-bold">
+            <h1 class="text-lg text-[#016262]">List of Testimonials</h1>
+            <a href="{{ route('testimonials.create')}}" class=" mr-2 bg-green-700 text-white rounded-md px-5 py-2">+ Add new testimonial</a>
+        </div>
+        <table id="search-table">
+            <thead>
+                <tr>
+                    <th>
+                        <span class="flex items-center">
+                            Id
+                        </span>
+                    </th>
+                    <th>
+                        <span class="flex items-center">
+                            Name
+                        </span>
+                    </th>
+                    <th>
+                        <span class="flex items-center">
+                            Company
+                        </span>
+                    </th>
+                    <th class="">
+                        <span class="flex items-center">
+                            Content
+                        </span>
+                    </th>
+                    <th>
+                        <span class="flex items-center">
+                            Date
+                        </span>
+                    </th>
+                    <th>
+                        <span class="flex items-center">
+                            Action
+                        </span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($testimonials as $testimonial )
+                <tr>
+                    <td class="font-medium text-gray-900 whitespace-nowrap ">{{ $testimonial-> id}}</td>
+                    <td style="overflow-wrap:anywhere;">{{ $testimonial-> name }}</td>
+                    <td style="overflow-wrap:anywhere;">{{ $testimonial-> company }}</td>
+                    <td style="overflow-wrap:anywhere;">{{ $testimonial-> content }}</td>
+                    <td>{{ $testimonial-> created_at}}</td>
+                    <td>
+                        <div class="flex">
+                            <a href=" {{ route('testimonials.edit', $testimonial->id)}}" class=" py-2 px-8 rounded-md bg-green-700 text-white mr-5">Edit</a>
+                            <form action="{{ route('testimonials.delete', $testimonial->id) }}" method="POST" class="delete_form">
+                                @csrf
+                                @method('delete')
+                                <button class="py-2 px-8 rounded-md bg-red-600 text-white">Delete</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                @endforeach
+
+
+            </tbody>
+        </table>
     </div>
-    <table id="search-table">
-        <thead>
-            <tr>
-                <th>
-                    <span class="flex items-center">
-                        Id
-                    </span>
-                </th>
-                <th>
-                    <span class="flex items-center">
-                        Name
-                    </span>
-                </th>
-                <th>
-                    <span class="flex items-center">
-                        Company
-                    </span>
-                </th>
-                <th class="">
-                    <span class="flex items-center">
-                        Content
-                    </span>
-                </th>
-                <th>
-                    <span class="flex items-center">
-                        Date
-                    </span>
-                </th>
-                <th>
-                    <span class="flex items-center">
-                        Action
-                    </span>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($testimonials as $testimonial )
-            <tr>
-                <td class="font-medium text-gray-900 whitespace-nowrap ">{{ $testimonial-> id}}</td>
-                <td style="overflow-wrap:anywhere;">{{ $testimonial-> name }}</td>
-                <td style="overflow-wrap:anywhere;">{{ $testimonial-> company }}</td>
-                <td style="overflow-wrap:anywhere;">{{ $testimonial-> content }}</td>
-                <td>{{ $testimonial-> created_at}}</td>
-                <td>
-                    <div class="flex">
-                        <a href=" {{ route('testimonials.edit', $testimonial->id)}}" class=" py-2 px-8 rounded-md bg-green-700 text-white mr-5">Edit</a>
-                        <form action="{{ route('testimonials.delete', $testimonial->id) }}" method="POST" class="delete_form">
-                            @csrf
-                            @method('delete')
-                            <button class="py-2 px-8 rounded-md bg-red-600 text-white">Delete</button>
-                        </form>
-                    </div>
-                </td>
-            </tr>
-            @endforeach
-
-
-        </tbody>
-    </table>
-</div>
 
 
     <script>

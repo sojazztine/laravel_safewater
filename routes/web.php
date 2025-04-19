@@ -82,6 +82,7 @@ Route::delete('/inquiries/{id}', [InquiryController::class, 'delete'])->name('in
 Route::get('/landingPage', [LandingPageController::class, 'index'])->name('landingPage.index');
 Route::get('/landigPage/create', [LandingPageController::class, 'create'])->name('landingPage.create');
 Route::post('/landingPage/store', [LandingPageController::class, 'store'])->name('landingPage.store');
+Route::get('landingPage/{id}/edit', [LandingPageController::class, 'edit'])->name('landingPage.edit');
 Route::delete('/landingPage/{id}', [LandingPageController::class, 'delete'])->name('landingPage.delete');
 
 //Route for Hero description and heading

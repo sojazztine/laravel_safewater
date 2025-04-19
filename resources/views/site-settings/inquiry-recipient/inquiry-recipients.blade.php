@@ -1,7 +1,7 @@
 <x-sidebar-layout>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3/dist/style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3"></script>
-    
+
     <style>
         .datatable-selector{
             display: flex !important;
@@ -10,7 +10,8 @@
         }
     </style>
     <x-tab-settings-layout></x-tab-settings-layout>
-    @if(session('success'))
+    <div class="block w-[94%] mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow-sm mt-5">
+        @if(session('success'))
         <div id="alert-3" class="flex items-center p-4 mb-4 text-green-800 rounded-lg bg-green-50 " role="alert">
             <svg class="shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
@@ -28,43 +29,46 @@
         </div>
     @endif
 
-    <div class="flex justify-end">
-        <a href="{{ route('inquiry-recipients.create')}}" class=" mr-10 bg-green-700 text-white rounded-md px-5 py-2">+ Add Recipient</a>
+    <div class="flex justify-between">
+        <h1 class="text-lg font-bold text-[#016262]">Recipient List</h1>
+        <a href="{{ route('inquiry-recipients.create')}}" class=" mr-2 bg-green-700 text-white rounded-md px-5 py-2">+ Add Recipient</a>
     </div>
-    <table id="search-table">
-        <thead>
-            <tr>
-                <th>
-                    <span class="flex items-center">
-                        Recipients
-                    </span>
-                </th>
-                <th>
-                    <span class="flex items-center">
-                        Action
-                    </span>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($recipients as $recipient )
-            <tr>
-                <td style="overflow-wrap:anywhere;">{{$recipient}}</td>
-                <td>
-                    <div class="flex">
-                        <form action="{{ route('inquiry-recipients.delete', $recipient) }}" method="POST" class="delete_form">
-                            @csrf
-                            @method('delete')
-                            <button class="py-2 px-8 rounded-md bg-red-600 text-white">Delete</button>
-                        </form>
-                    </div>
-                </td>
-            </tr>
-            @endforeach
+        <table id="search-table">
+            <thead>
+                <tr>
+                    <th>
+                        <span class="flex items-center">
+                            Recipients
+                        </span>
+                    </th>
+                    <th>
+                        <span class="flex items-center">
+                            Action
+                        </span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($recipients as $recipient )
+                <tr>
+                    <td style="overflow-wrap:anywhere;">{{$recipient}}</td>
+                    <td>
+                        <div class="flex">
+                            <form action="{{ route('inquiry-recipients.delete', $recipient) }}" method="POST" class="delete_form">
+                                @csrf
+                                @method('delete')
+                                <button class="py-2 px-8 rounded-md bg-red-600 text-white">Delete</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                @endforeach
 
 
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
+
 
     <script>
         if (document.querySelectorAll("search-table") && typeof simpleDatatables.DataTable !== 'undefined') {
@@ -105,6 +109,6 @@
     </script>
 
 
-  
+
 
 </x-sidebar-layout>

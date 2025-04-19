@@ -30,6 +30,11 @@ class LandingPageController extends Controller
 
     }
 
+    public function edit(string $id){
+        $landingPage = LandingPage::findOrFail($id);
+        return view('landingPage.edit' ,compact('landingPage'));
+}
+
     public function delete(string $id){
         LandingPage::where('id', $id)->delete();
         return view('landingPage.index');
