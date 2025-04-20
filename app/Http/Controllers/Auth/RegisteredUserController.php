@@ -17,6 +17,10 @@ class RegisteredUserController extends Controller
     /**
      * Display the registration view.
      */
+    public function index(){
+        $users = User::select('id', 'name', 'email')->get();
+    return view('user-management.index', compact('users'));
+    }
     public function create(): View
     {
         return view('auth.register');
