@@ -40,6 +40,11 @@
 
                     <th>
                         <span class="flex items-center">
+                            Status
+                        </span>
+                    </th>
+                    <th>
+                        <span class="flex items-center">
                             Action
                         </span>
                     </th>
@@ -52,6 +57,7 @@
                     <td style="overflow-wrap:anywhere;"> {{ $partner->company_name }}</td>
                     <td style="overflow-wrap:anywhere;">{{ $partner->image }}</td>
                     <td style="overflow-wrap:anywhere;">{{ $partner->description }}</td>
+                    <td style="overflow-wrap:anywhere;">{{$partner->is_active ? 'Active' : 'Inactive'}}</td>
                     <td>
                         <div class="flex">
                             <a href="{{ route('partner-management.edit', $partner->id) }}" class=" py-2 px-8 rounded-md bg-green-700 text-white mr-5">Edit</a>

@@ -30,13 +30,13 @@ class PublicController extends Controller
         $app_title = $siteSettings?->app_title;
         $app_subtitle = $siteSettings?->app_subtitle;
         $latestTestimonialImages = Testimonial::select('image')->limit(3)->latest()->get();
-        $partner_images = Partner::select('image')->get();
+        $partner_images = Partner::select('image')->where('is_active', 1)->get();
 
         $testimonials = Testimonial::select('name', 'company', 'content', 'image')->latest()->get();
 
         return view('public.index', [
             'landingPages' => $landingPages,
-            'latestTestimonialsImage' => $latestTestimonialImages,
+            'latestTestimonialImages' => $latestTestimonialImages,
             'testimonials' => $testimonials,
             'total_sachets' => $total_sachets,
             'logo' => $logo,
