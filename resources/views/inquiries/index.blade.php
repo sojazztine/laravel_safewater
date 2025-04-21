@@ -8,87 +8,90 @@
             justify-content: space-between !important;
         }
     </style>
-<div class="">
-    {{-- <div class="flex justify-end">
-        <a href="" class=" mr-10 bg-green-700 text-white rounded-md px-5 py-2">+ Add new post</a>
-    </div> --}}
-    <table id="search-table">
-        <thead>
-            <tr>
-                <th>
-                    <span class="flex items-center">
-                        Id
-                    </span>
-                </th>
-                <th>
-                    <span class="flex items-center">
-                        First Name
-                    </span>
-                </th>
-                <th>
-                    <span class="flex items-center">
-                        Last Name
-                    </span>
-                </th>
-                <th>
-                    <span class="flex items-center">
-                        Company Name
-                    </span>
-                </th>
-                <th>
-                    <span class="flex items-center">
-                        Email
-                    </span>
-                </th>
-                <th>
-                    <span class="flex items-center">
-                        Message
-                    </span>
-                </th>
-                <th>
-                    <span class="flex items-center">
-                        Date
-                    </span>
-                </th>
-                <th>
-                    <span class="flex items-center">
-                        Action
-                    </span>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($inquiries as $inquiry )
-            <tr>
-                <td class="font-medium text-gray-900 whitespace-nowrap ">{{$inquiry->id}}</td>
-                <td style="overflow-wrap:anywhere;">{{{$inquiry->first_name}}}</td>
-                <td style="overflow-wrap:anywhere;">{{$inquiry->last_name}}</td>
-                <td style="overflow-wrap:anywhere;">{{$inquiry->company_name}}</td>
-                <td style="overflow-wrap:anywhere;">{{$inquiry->email}}</td>
-                <td class="w-96">
-                    <div class="max-h-[100px] overflow-y-auto break-words">
-                        {{$inquiry->message}}
-                    </div>
-                </td>
-                <td>{{$inquiry->created_at->format('F d, Y') }}</td>
+    <div class="block w-[98%] mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow-sm mb-5 mt-[50px]">
+        <div>
+            <h1 class="text-lg font-bold text-[#016262]">List of Inquiries</h1>
+        </div>
+        {{-- <div class="flex justify-end">
+            <a href="" class=" mr-10 bg-green-700 text-white rounded-md px-5 py-2">+ Add new post</a>
+        </div> --}}
+        <table id="search-table">
+            <thead>
+                <tr>
+                    <th>
+                        <span class="flex items-center">
+                            Id
+                        </span>
+                    </th>
+                    <th>
+                        <span class="flex items-center">
+                            First Name
+                        </span>
+                    </th>
+                    <th>
+                        <span class="flex items-center">
+                            Last Name
+                        </span>
+                    </th>
+                    <th>
+                        <span class="flex items-center">
+                            Company Name
+                        </span>
+                    </th>
+                    <th>
+                        <span class="flex items-center">
+                            Email
+                        </span>
+                    </th>
+                    <th>
+                        <span class="flex items-center">
+                            Message
+                        </span>
+                    </th>
+                    <th>
+                        <span class="flex items-center">
+                            Date
+                        </span>
+                    </th>
+                    <th>
+                        <span class="flex items-center">
+                            Action
+                        </span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($inquiries as $inquiry )
+                <tr>
+                    <td class="font-medium text-gray-900 whitespace-nowrap ">{{$inquiry->id}}</td>
+                    <td style="overflow-wrap:anywhere;">{{{$inquiry->first_name}}}</td>
+                    <td style="overflow-wrap:anywhere;">{{$inquiry->last_name}}</td>
+                    <td style="overflow-wrap:anywhere;">{{$inquiry->company_name}}</td>
+                    <td style="overflow-wrap:anywhere;">{{$inquiry->email}}</td>
+                    <td class="w-96">
+                        <div class="max-h-[100px] overflow-y-auto break-words">
+                            {{$inquiry->message}}
+                        </div>
+                    </td>
+                    <td>{{$inquiry->created_at->format('F d, Y') }}</td>
 
-                <td>
-                    <div class="flex">
-                        {{-- <a href="" class=" py-2 px-8 rounded-md bg-green-700 text-white mr-5">Edit</a> --}}
-                        <form action="{{ route('inquiries.delete', $inquiry->id) }}" method="POST" class="delete_form">
-                            @csrf
-                            @method('delete')
-                            <button class="py-2 px-8 rounded-md bg-red-600 text-white">Delete</button>
-                        </form>
-                    </div>
-                </td>
-            </tr>
-            @endforeach
+                    <td>
+                        <div class="flex">
+                            {{-- <a href="" class=" py-2 px-8 rounded-md bg-green-700 text-white mr-5">Edit</a> --}}
+                            <form action="{{ route('inquiries.delete', $inquiry->id) }}" method="POST" class="delete_form">
+                                @csrf
+                                @method('delete')
+                                <button class="py-2 px-8 rounded-md bg-red-600 text-white">Delete</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                @endforeach
 
 
-        </tbody>
-    </table>
-</div>
+            </tbody>
+        </table>
+    </div>
 
 
     <script>

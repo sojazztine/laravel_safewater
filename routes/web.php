@@ -1,8 +1,6 @@
 <?php
-use App\Http\Controllers\ApiController;
-use App\Http\Controllers\EcobinLoginLinkController;
-use App\Http\Controllers\EcobinRegisterLinkController;
-use App\Http\Controllers\HeroHeadingController;
+
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\InquiryController;
 use App\Http\Controllers\PostController;
 use App\Models\Post;
@@ -12,8 +10,9 @@ use App\Models\Inquiry;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\SiteSettingController;
-use App\Models\LandingPage;
+use App\Http\Controllers\UserController;
 use App\Models\Testimonial;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 //Route for interface
 
@@ -26,8 +25,8 @@ Route::get('about', [PublicController::class, 'aboutPage'])->name('public.about-
 Route::get('solution', [PublicController::class, 'solutionPage'])->name('public.solution');
 Route::get('solution/community-collection', [PublicController::class, 'communityCollection'])->name('public.solutions.community-collection');
 Route::get('solution/restore-boards', [PublicController::class, 'restoreBoards'])->name('public.solutions.restore-boards');
-Route::get('solution/restore-furniture',[PublicController::class, 'restoreFurniture'])->name('public.solutions.restore-furniture');
-Route::get('solution/restore-classroom',[PublicController::class, 'restoreClassroom'])->name('public.solutions.restore-classroom');
+Route::get('solution/restore-furniture', [PublicController::class, 'restoreFurniture'])->name('public.solutions.restore-furniture');
+Route::get('solution/restore-classroom', [PublicController::class, 'restoreClassroom'])->name('public.solutions.restore-classroom');
 
 Route::get('contact', [PublicController::class, 'contactPage'])->name('public.contactUs');
 Route::get('contact/faq', [PublicController::class, 'faqPage'])->name('public.contact.faq');
@@ -45,7 +44,8 @@ Route::get('/dashboard', function () {
     $total_post = Post::count();
     $total_testimonials = Testimonial::count();
     $total_inquiries  = Inquiry::count();
-    return view('dashboard', compact('total_post', 'total_testimonials', 'total_inquiries'));
+    $total_user = User::count();
+    return view('dashboard', compact('total_post', 'total_testimonials', 'total_inquiries', 'total_user'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -61,7 +61,6 @@ Route::post('/posts/store', [PostController::class, 'store'])->name('posts.store
 Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('posts.edit'); //open speicific post
 Route::put('/posts/{id}', [PostController::class, 'update'])->name('posts.update'); //update a post
 Route::delete('/posts/{id}', [PostController::class, 'delete'])->name('posts.delete'); //delete post
-// Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
 
 //Route for testminoials
 Route::get('/testimonials', [TestimonialController::class, 'index'])->name('testimonials.index');
@@ -82,12 +81,8 @@ Route::delete('/inquiries/{id}', [InquiryController::class, 'delete'])->name('in
 Route::get('/landingPage', [LandingPageController::class, 'index'])->name('landingPage.index');
 Route::get('/landigPage/create', [LandingPageController::class, 'create'])->name('landingPage.create');
 Route::post('/landingPage/store', [LandingPageController::class, 'store'])->name('landingPage.store');
+Route::get('landingPage/{id}/edit', [LandingPageController::class, 'edit'])->name('landingPage.edit');
 Route::delete('/landingPage/{id}', [LandingPageController::class, 'delete'])->name('landingPage.delete');
-
-//Route for Hero description and heading
-// Route::get('/heroHeading', [HeroHeadingController::class, 'index'])->name('heroHeading.index');
-// Route::get('/heroHeading/{id}/edit', [HeroHeadingController::class, 'edit'])->name('heroHeading.edit');
-// Route::put('/heroHeading/{id}', [HeroHeadingController::class, 'update'])->name('heroHeading.update');
 
 
 //Route for site settings
@@ -107,7 +102,15 @@ Route::put('/site-settings/{id}/external-links', [SiteSettingController::class, 
 
 //Route for inquiry recipeints
 Route::get('/site-settings/inquiry-recipients', [SiteSettingController::class, 'inquiryRecipients'])->name('inquiry-recipients.index');
-Route::get('/site-settings/inquiry-recipients/create',[SiteSettingController::class, 'createInquiryRecipeints'])->name('inquiry-recipients.create');
-Route::post('/site-settings/inquiry-recipients/store' ,[SiteSettingController::class, 'storeInquiryRecipients'])->name('inquiry-recipients.store');
-Route::delete('/site-settings/{id}',[SiteSettingController::class,'deleteInquiryRecipients'])->name('inquiry-recipients.delete');
-require __DIR__.'/auth.php';
+Route::get('/site-settings/inquiry-recipients/create', [SiteSettingController::class, 'createInquiryRecipeints'])->name('inquiry-recipients.create');
+Route::post('/site-settings/inquiry-recipients/store', [SiteSettingController::class, 'storeInquiryRecipients'])->name('inquiry-recipients.store');
+Route::delete('/site-settings/{id}', [SiteSettingController::class, 'deleteInquiryRecipients'])->name('inquiry-recipients.delete');
+
+//Route for user management
+Route::get('user-management', [UserController::class, 'index'])->name('user-management.index');
+Route::get('user-management/create', [UserController::class, 'create'])->name('user-management.create');
+Route::post('user-management/store', [UserController::class, 'store'])->name('user-management.store');
+Route::delete('user-management/{id}', [UserController::class, 'delete'])->name('user-management.delete');
+Route::get('user-management/{id}/edit', [UserController::class, 'edit'])->name('user-management.edit');
+Route::put('user-management/{id}', [UserController::class, 'update'])->name('user-management.update');
+require __DIR__ . '/auth.php';
