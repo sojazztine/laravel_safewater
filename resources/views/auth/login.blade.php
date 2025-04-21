@@ -7,19 +7,23 @@
 
         <div class="mb-10 flex flex-col justify-center items-center">
             <h1 class="text-4xl font-semibold text-gray-700 mb-2">Log in</h1>
-            <p class="text-gray-700 text-md">Please Enter your Account details</p>
+            <p class="text-gray-700 text-md">Please enter your account details.</p>
         </div>
 
         <!-- Email Address -->
         <div>
-            <x-input-label for="email" :value="__('Email*')" />
+            <x-input-label for="email">
+                {{ __('Email') }}<span class="text-red-500">*</span>
+            </x-input-label>            
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
         <!-- Password -->
         <div class="mt-4">
-            <x-input-label for="password" :value="__('Password*')" />
+            <x-input-label for="password">
+                {{ __('Password') }}<span class="text-red-500">*</span>
+            </x-input-label>            
 
             <x-text-input id="password" class="block mt-1 w-full"
                             type="password"
