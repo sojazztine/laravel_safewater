@@ -12,6 +12,7 @@ use App\Http\Controllers\PublicController;
 use App\Http\Controllers\SiteSettingController;
 use App\Http\Controllers\UserController;
 use App\Models\Testimonial;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 //Route for interface
 
@@ -43,7 +44,8 @@ Route::get('/dashboard', function () {
     $total_post = Post::count();
     $total_testimonials = Testimonial::count();
     $total_inquiries  = Inquiry::count();
-    return view('dashboard', compact('total_post', 'total_testimonials', 'total_inquiries'));
+    $total_user = User::count();
+    return view('dashboard', compact('total_post', 'total_testimonials', 'total_inquiries', 'total_user'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -108,4 +110,7 @@ Route::delete('/site-settings/{id}', [SiteSettingController::class, 'deleteInqui
 Route::get('user-management', [UserController::class, 'index'])->name('user-management.index');
 Route::get('user-management/create', [UserController::class, 'create'])->name('user-management.create');
 Route::post('user-management/store', [UserController::class, 'store'])->name('user-management.store');
+Route::delete('user-management/{id}', [UserController::class, 'delete'])->name('user-management.delete');
+Route::get('user-management/{id}/edit', [UserController::class, 'edit'])->name('user-management.edit');
+Route::put('user-management/{id}', [UserController::class, 'update'])->name('user-management.update');
 require __DIR__ . '/auth.php';

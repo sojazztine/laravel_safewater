@@ -32,11 +32,11 @@
                         </span>
                     </th>
 
-                    {{-- <th>
+                     <th>
                         <span class="flex items-center">
                             Action
                         </span>
-                    </th> --}}
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -45,16 +45,16 @@
                     <td class="font-medium text-gray-900 whitespace-nowrap ">{{ $user->id }}</td>
                     <td style="overflow-wrap:anywhere;"> {{ $user->name }}</td>
                     <td style="overflow-wrap:anywhere;">{{ $user->email }}</td>
-                    {{-- <td>
+                    <td>
                         <div class="flex">
-                            <a href=" " class=" py-2 px-8 rounded-md bg-green-700 text-white mr-5">Edit</a>
-                            <form action="" method="POST" class="delete_form">
+                            <a href="{{ route('user-management.edit', $user->id) }}" class=" py-2 px-8 rounded-md bg-green-700 text-white mr-5">Edit</a>
+                            <form action="{{ route('user-management.delete', $user->id) }}" method="POST" class="delete_form">
                                 @csrf
                                 @method('delete')
                                 <button class="py-2 px-8 rounded-md bg-red-600 text-white">Delete</button>
                             </form>
                         </div>
-                    </td> --}}
+                    </td>
                 </tr>
                 @endforeach
 
