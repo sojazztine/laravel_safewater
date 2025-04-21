@@ -394,7 +394,7 @@
                         <img src="{{ Storage::url($partner_image->image) }}" alt="partner_image" class="max-h-20 w-auto">
                     </li>
                 @endforeach
-            </ul>
+        </ul>
         @else
             <p class="flex justify-center">No data found</p>
         @endif
