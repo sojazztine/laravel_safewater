@@ -9,7 +9,7 @@ class PartnerController extends Controller
 {
     public function index()
     {
-        $partners = Partner::select('id', 'company_name', 'image', 'description')->get();
+        $partners = Partner::select('id', 'company_name', 'image', 'description')->latest()->get();
         return view('partner-management.index', compact('partners'));
     }
 
