@@ -391,7 +391,7 @@
             <li class="flex-shrink-0">
                 <img src="{{ asset('img/partners/scholasticas.png') }}" alt="pccr" class="max-h-20 w-auto">
             </li>
-            <li class="flex-shrink-0">
+            {{-- <li class="flex-shrink-0">
                 <img src="{{ asset('img/partners/pccr.png') }}" alt="pccr" class="max-h-20 w-auto">
             </li>
             <li class="flex-shrink-0">
@@ -406,7 +406,7 @@
             </li>
             <li class="flex-shrink-0">
                 <img src="{{ asset('img/partners/coaAteneo.png') }}" alt="coaAteneo" class="max-h-20 w-auto">
-            </li>
+            </li> --}}
         </ul>
     </div>
 
@@ -480,8 +480,8 @@
                         // Store the original element so we can restore it on screen resize later
                         this.originalElement = this.$el.cloneNode(true)
                         const originalWidth = this.$el.scrollWidth + spaceX * 4
-                        // Required for the marquee scroll animation 
-                        // to loop smoothly without jumping 
+                        // Required for the marquee scroll animation
+                        // to loop smoothly without jumping
                         this.$el.style.setProperty('--marquee-width', originalWidth + 'px')
                         this.$el.style.setProperty(
                             '--marquee-time',
