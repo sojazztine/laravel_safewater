@@ -16,9 +16,10 @@
         }
     </style>
 
-    <div class="">
-        <div class="flex justify-end mb-4">
-            <a href="{{ route('landingPage.create')}}" class="mr-10 bg-green-700 text-white rounded-md px-5 py-2">+ Add new image</a>
+    <div class="block w-[98%] mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow-sm mb-5 mt-[50px]">
+        <div class="flex justify-between">
+            <h1 class="text-lg- text-[#016262] font-bold">List of Hero image</h1>
+            <a href="{{ route('landingPage.create')}}" class="mr-2 bg-green-700 text-white rounded-md px-5 py-2">+ Add new image</a>
         </div>
 
         <table id="search-table" class="table-auto w-full border-collapse">
@@ -43,6 +44,7 @@
                         <td>
                             <div class="flex">
                                 <!-- Delete Form with Confirmation -->
+                                <a href="{{ route('landingPage.edit', $landingPage->id) }}" class=" py-2 px-8 rounded-md bg-green-700 text-white mr-5">Edit</a>
                                 <form action="{{ route('landingPage.delete', $landingPage->id) }}" method="POST" class="delete_form">
                                     @csrf
                                     @method('delete')

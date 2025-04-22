@@ -387,11 +387,19 @@
     <!-- required classes: overflow-hidden  -->
     <div class="overflow-hidden mx-auto py-2 bg-gray-100">
         <!--  required classes: marquee inline-flex max-w-full  -->
-        <ul class="marquee py-3 inline-flex space-x-4 whitespace-nowrap max-w-full" x-data="Marquee({ speed: 0.5, spaceX: 4 })">
-            <li class="flex-shrink-0">
-                <img src="{{ asset('img/partners/scholasticas.png') }}" alt="pccr" class="max-h-20 w-auto">
-            </li>
-            <li class="flex-shrink-0">
+        @if($partner_images->isNotEmpty())
+            <ul class="marquee py-3 inline-flex space-x-4 whitespace-nowrap max-w-full" x-data="Marquee({ speed: 0.5, spaceX: 4 })">
+                @foreach($partner_images as $partner_image)
+                    <li class="flex-shrink-0">
+                        <img src="{{ Storage::url($partner_image->image) }}" alt="partner_image" class="max-h-20 w-auto">
+                    </li>
+                @endforeach
+        </ul>
+        @else
+            <p class="flex justify-center">No data found</p>
+        @endif
+
+            {{-- <li class="flex-shrink-0">
                 <img src="{{ asset('img/partners/pccr.png') }}" alt="pccr" class="max-h-20 w-auto">
             </li>
             <li class="flex-shrink-0">
@@ -406,8 +414,9 @@
             </li>
             <li class="flex-shrink-0">
                 <img src="{{ asset('img/partners/coaAteneo.png') }}" alt="coaAteneo" class="max-h-20 w-auto">
-            </li>
-        </ul>
+            </li> --}}
+
+
     </div>
 
 
@@ -480,8 +489,8 @@
                         // Store the original element so we can restore it on screen resize later
                         this.originalElement = this.$el.cloneNode(true)
                         const originalWidth = this.$el.scrollWidth + spaceX * 4
-                        // Required for the marquee scroll animation 
-                        // to loop smoothly without jumping 
+                        // Required for the marquee scroll animation
+                        // to loop smoothly without jumping
                         this.$el.style.setProperty('--marquee-width', originalWidth + 'px')
                         this.$el.style.setProperty(
                             '--marquee-time',
