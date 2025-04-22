@@ -144,12 +144,12 @@
 
 
     <!-- The Circular Journey -->
-    <div class="flex items-center justify-center my-4 mt-[100px]">
-        <div class="w-1/4 border-t-2 border-[#016262]"></div>
-        <span class="px-4 text-[#016262] font-bold text-4xl text-center mb-10">The Circular Journey</span>
-        <div class="w-1/4 border-t-2 border-[#016262]"></div>
+    <div class="flex items-center justify-center my-4 mt-[100px] px-5 sm:px-20">
+        <div class="w-[100%] border-t-2 border-[#016262]"></div>
+        <span class="w-[100%] px-4 text-[#016262] font-bold text-4xl text-center mb-10">The Circular Journey</span>
+        <div class="w-[100%] border-t-2 border-[#016262]"></div>
     </div>
-    <div class="flex lg:flex-row flex-col justify-center items-center gap-[5vw]">
+    <div class="flex lg:flex-row flex-col justify-center items-center gap-[5vw] px-5 sm:px-20">
 
         <div class="flex flex-col items-center relative mb-10">
             <img src="img/img-index/throwAway.png" alt="Trash Icon" class="md:mt-11">
@@ -226,9 +226,9 @@
 
 
     <!-- SMART ECOBIN -->
-    <div class="flex justify-center items-center mt-[80px]">
+    <div class="flex justify-center items-center mt-[80px] ">
         <div
-            class="flex flex-col md:flex-row items-center justify-center border-t border-b border-[#51A5BE] w-[90%] md:w-[80%] mx-auto px-4">
+            class="flex flex-col md:flex-row items-center justify-center border-t border-b border-[#51A5BE] w-[90%] md:w-[90%] mx-auto px-5">
             <div class="w-full md:w-1/2 flex justify-center mb-10 md:mb-0">
                 <img src="img/img-index/restoreMachine.png" alt="" class="max-w-full h-auto">
             </div>
@@ -249,7 +249,7 @@
                         Now</a>
                 </div>
                 <h1 class="text-2xl text-[#016262] mt-10 font-semibold">Visit our SEB Mall Locations</h1>
-                <p class="text-[#016262]">Visit our SEB Mall Locations Near You!</p>
+                <p class="text-[#016262] mb-10 sm:mb-0">Visit our SEB Mall Locations Near You!</p>
             </div>
         </div>
     </div>
@@ -288,7 +288,7 @@
 
 
     <!-- SACHETS COUNTER -->
-    <div class="flex flex-col lg:flex-row justify-center items-center mt-[90px] px-4 lg:px-0">
+    <div class="flex flex-col lg:flex-row justify-center items-center mt-[90px] px-5 sm:px-20">
         <div class="lg:pe-40 text-center lg:text-left">
             <h1 class="text-[#016262] text-3xl sm:text-4xl font-semibold leading-14 mb-5">
                 Amount of Sachets Collected
@@ -317,7 +317,7 @@
 
 
     <!-- JOIN THE MOVEMENT -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 items-center justify-center mt-40 px-6 lg:px-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 items-center justify-center mt-10 sm:mt-40 px-6 lg:px-20">
         <!-- Left Section -->
         <div class="flex flex-col items-center text-center mb-10 lg:mb-0">
             <img src="img/img-index/presenting.png" alt="Presenting Image" class="mb-10">
@@ -387,11 +387,19 @@
     <!-- required classes: overflow-hidden  -->
     <div class="overflow-hidden mx-auto py-2 bg-gray-100">
         <!--  required classes: marquee inline-flex max-w-full  -->
-        <ul class="marquee py-3 inline-flex space-x-4 whitespace-nowrap max-w-full" x-data="Marquee({ speed: 0.5, spaceX: 4 })">
-            <li class="flex-shrink-0">
-                <img src="{{ asset('img/partners/scholasticas.png') }}" alt="pccr" class="max-h-20 w-auto">
-            </li>
-            <li class="flex-shrink-0">
+        @if($partner_images->isNotEmpty())
+            <ul class="marquee py-3 inline-flex space-x-4 whitespace-nowrap max-w-full" x-data="Marquee({ speed: 0.5, spaceX: 4 })">
+                @foreach($partner_images as $partner_image)
+                    <li class="flex-shrink-0">
+                        <img src="{{ Storage::url($partner_image->image) }}" alt="partner_image" class="max-h-20 w-auto">
+                    </li>
+                @endforeach
+        </ul>
+        @else
+            <p class="flex justify-center">No data found</p>
+        @endif
+
+            {{-- <li class="flex-shrink-0">
                 <img src="{{ asset('img/partners/pccr.png') }}" alt="pccr" class="max-h-20 w-auto">
             </li>
             <li class="flex-shrink-0">
@@ -406,8 +414,9 @@
             </li>
             <li class="flex-shrink-0">
                 <img src="{{ asset('img/partners/coaAteneo.png') }}" alt="coaAteneo" class="max-h-20 w-auto">
-            </li>
-        </ul>
+            </li> --}}
+
+
     </div>
 
 
@@ -480,8 +489,8 @@
                         // Store the original element so we can restore it on screen resize later
                         this.originalElement = this.$el.cloneNode(true)
                         const originalWidth = this.$el.scrollWidth + spaceX * 4
-                        // Required for the marquee scroll animation 
-                        // to loop smoothly without jumping 
+                        // Required for the marquee scroll animation
+                        // to loop smoothly without jumping
                         this.$el.style.setProperty('--marquee-width', originalWidth + 'px')
                         this.$el.style.setProperty(
                             '--marquee-time',

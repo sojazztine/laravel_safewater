@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestimonialController;
 use App\Models\Inquiry;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\SiteSettingController;
 use App\Http\Controllers\UserController;
@@ -113,4 +114,12 @@ Route::post('user-management/store', [UserController::class, 'store'])->name('us
 Route::delete('user-management/{id}', [UserController::class, 'delete'])->name('user-management.delete');
 Route::get('user-management/{id}/edit', [UserController::class, 'edit'])->name('user-management.edit');
 Route::put('user-management/{id}', [UserController::class, 'update'])->name('user-management.update');
+
+//Route for partner management
+Route::get('/partner-management', [PartnerController::class, 'index'])->name('partner-management.index');
+Route::get('/partner-management/create', [PartnerController::class, 'create'])->name('partner-management.create');
+Route::post('/partner-management/store', [PartnerController::class, 'store'])->name('partner-management.store');
+Route::get('/partner-management/{id}/edit', [PartnerController::class, 'edit'])->name('partner-management.edit');
+Route::put('/partner-management/{id}', [PartnerController::class, 'update'])->name('partner-management.update');
+Route::delete('/partner-management/{id}', [PartnerController::class, 'delete'])->name('partner-management.delete');
 require __DIR__ . '/auth.php';

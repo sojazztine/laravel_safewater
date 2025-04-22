@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\HeroHeading;
 use App\Models\LandingPage;
+use App\Models\Partner;
 use App\Models\Post;
 use App\Models\SiteSetting;
 use App\Models\Testimonial;
@@ -14,10 +15,11 @@ use Illuminate\Support\Str;
 
 class PublicController extends Controller
 {
-    public function index() {
+    public function index()
+    {
 
         $total_sachets = $this->getTotalSachetCount();
-        
+
         $landingPages = LandingPage::select('image')->get();
         $siteSettings = SiteSetting::select('logo', 'app_title', 'app_subtitle', 'web_login_link', 'web_register_link')->first();
         $logo = $siteSettings?->logo;
@@ -28,6 +30,7 @@ class PublicController extends Controller
         $app_title = $siteSettings?->app_title;
         $app_subtitle = $siteSettings?->app_subtitle;
         $latestTestimonialImages = Testimonial::select('image')->limit(3)->latest()->get();
+        $partner_images = Partner::select('image')->get();
 
         $testimonials = Testimonial::select('name', 'company', 'content', 'image')->latest()->get();
 
@@ -37,10 +40,11 @@ class PublicController extends Controller
             'testimonials' => $testimonials,
             'total_sachets' => $total_sachets,
             'logo' => $logo,
-            'app_title'=> $app_title,
+            'app_title' => $app_title,
             'app_subtitle' => $app_subtitle,
             'web_login_link' => $web_login_link,
-            'web_register_link' => $web_register_link
+            'web_register_link' => $web_register_link,
+            'partner_images' => $partner_images
 
         ]);
     }
@@ -49,42 +53,52 @@ class PublicController extends Controller
     {
         return view('public.about-us');
     }
-    public function solutionPage(){
+    public function solutionPage()
+    {
         return view('public.solution');
     }
-    public function communityCollection(){
+    public function communityCollection()
+    {
         return view('public.solutions.community-collection');
     }
-    public function restoreBoards(){
+    public function restoreBoards()
+    {
         return view('public.solutions.restore-boards');
     }
-    public function restoreFurniture(){
+    public function restoreFurniture()
+    {
         return view('public.solutions.restore-furniture');
     }
-    public function restoreClassroom(){
+    public function restoreClassroom()
+    {
         return view('public.solutions.restore-classroom');
     }
 
-    public function contactPage(){
+    public function contactPage()
+    {
         return view('public.contactUs');
     }
-    public function faqPage(){
+    public function faqPage()
+    {
         return view('public.contact.faq');
     }
 
-    public function blogPage(){
-        $recentPosts= Post::latest()->get();
+    public function blogPage()
+    {
+        $recentPosts = Post::latest()->get();
         $posts = Post::paginate(6);
         return view('public.posts.index', compact('posts', 'recentPosts'));
     }
 
-    public function showBlog(string $id){
+    public function showBlog(string $id)
+    {
         $posts = Post::latest()->paginate(3);
         $post = Post::findOrFail($id);
         return view('public.posts.show', ['post' => $post, 'posts' => $posts]);
     }
 
-    private function getTotalSachetCount() {
+    private function getTotalSachetCount()
+    {
         $total_sachets = 0;
 
         $data = [];
@@ -99,7 +113,7 @@ class PublicController extends Controller
             $data = [];
         }
 
-        if( count($data) ) {
+        if (count($data)) {
             $total_sachets = $data['data']['total_sachets'];
         }
 
