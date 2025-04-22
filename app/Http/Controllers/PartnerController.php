@@ -9,7 +9,7 @@ class PartnerController extends Controller
 {
     public function index()
     {
-        $partners = Partner::select('id', 'company_name', 'image', 'description')->latest()->get();
+        $partners = Partner::select('id', 'company_name', 'image', 'description', 'is_active')->latest()->get();
         return view('partner-management.index', compact('partners'));
     }
 
@@ -23,9 +23,9 @@ class PartnerController extends Controller
         $validated = $request->validate([
             'company_name' => ['required'],
             'image' => ['required', 'image'],
-            'description' => ['required']
+            'description' => ['required'],
+            'is_active' => ['required']
         ]);
-
         if ($request->hasFile('image')) {
             $path = $request->file('image')->store('partners', 'public');
             $validated['image'] = $path;
@@ -48,7 +48,8 @@ class PartnerController extends Controller
         $validated = $request->validate([
             'company_name' => ['required'],
             'image' => ['required', 'image'],
-            'description' => ['required']
+            'description' => ['required'],
+            'is_active' => ['required']
         ]);
 
 

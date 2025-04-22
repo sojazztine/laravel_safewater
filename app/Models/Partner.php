@@ -9,6 +9,7 @@ class Partner extends Model
     protected $fillable = [
         'company_name',
         'image',
-        'description'
+        'description',
+        'is_active'
     ];
 }
