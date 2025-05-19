@@ -27,6 +27,9 @@ return [
         'role' => Spatie\Permission\Models\Role::class,
 
     ],
+    'defaults' => [
+        'guard_name' => 'web',
+    ],
 
     'table_names' => [
 
