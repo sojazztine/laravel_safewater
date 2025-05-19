@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
+
 
 class UserController extends Controller
 {
@@ -26,6 +28,7 @@ class UserController extends Controller
             'email' => ['required', 'email'],
             'password' => ['required']
         ]);
+        $validated['password'] = bcrypt($validated['password']);
 
         $user = User::create($validated);
         return redirect(route('user-management.index'))->with('success', 'user add successfully');
