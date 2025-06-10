@@ -8,16 +8,14 @@
             justify-content: space-between !important;
         }
     </style>
-    <div class="block w-[98%] mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow-sm mb-5 mt-[50px]">
-        <div>
-            <h1 class="text-lg font-bold text-[#016262]">List of Inquiries</h1>
-        </div>
-        {{-- <div class="flex justify-end">
-            <a href="" class=" mr-10 bg-green-700 text-white rounded-md px-5 py-2">+ Add new post</a>
-        </div> --}}
-        <table id="search-table">
-            <thead>
-                <tr>
+
+    <x-table
+        title="List of Inquiries"
+
+
+    >
+        <x-slot:thead>
+              <tr>
                     <th>
                         <span class="flex items-center">
                             Id
@@ -59,9 +57,9 @@
                         </span>
                     </th>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach ($inquiries as $inquiry )
+        </x-slot:thead>
+
+         @foreach ($inquiries as $inquiry )
                 <tr>
                     <td class="font-medium text-gray-900 whitespace-nowrap ">{{$inquiry->id}}</td>
                     <td style="overflow-wrap:anywhere;">{{{$inquiry->first_name}}}</td>
@@ -89,49 +87,39 @@
                 @endforeach
 
 
-            </tbody>
-        </table>
-    </div>
+    </x-table>
 
 
     <script>
-        if (document.querySelectorAll("search-table") && typeof simpleDatatables.DataTable !== 'undefined') {
-            const dataTable = new simpleDatatables.DataTable("#search-table", {
-                searchable: true,
-                sortable: false
-            });
-        }
+        document.addEventListener('DOMContentLoaded', function () {
+            const table = document.querySelector("#search-table");
+            if (table && typeof simpleDatatables !== 'undefined') {
+                new simpleDatatables.DataTable(table, {
+                    searchable: true,
+                    sortable: false
+                });
+            }
 
-            // Select all forms with the 'delete_form' class
-        document.querySelectorAll(".delete_form").forEach(form => {
-            form.addEventListener('submit', function (e) {
-                e.preventDefault(); // Prevent form from submitting immediately
+            document.querySelectorAll(".delete_form").forEach(form => {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
 
-                // Show SweetAlert confirmation dialog
-                Swal.fire({
-                    title: "Delete",
-                    text: "You won't be able to revert this!",
-                    icon: "warning",
-                    showCancelButton: true,
-                    confirmButtonText: "Yes, Delete it",
-                    cancelButtonText: "No"
-                }).then((result) => {
-                    if (result.isConfirmed) {  // Check if 'Yes' was clicked
-                        Swal.fire({
-                            title: "Deleted",
-                            text: "Post has been deleted",
-                            icon: "success"
-                        }).then(() => {
-                            this.submit();  // Submit the form to delete the post after the success alert
-                        });
-                    }
+                    Swal.fire({
+                        title: "Delete",
+                        text: "You won't be able to revert this!",
+                        icon: "warning",
+                        showCancelButton: true,
+                        confirmButtonText: "Yes, Delete it",
+                        cancelButtonText: "No"
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            this.submit();
+                        }
+                    });
                 });
             });
         });
-
-
     </script>
-
 
 
 </x-sidebar-layout>
