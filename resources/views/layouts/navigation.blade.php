@@ -73,6 +73,47 @@
             </x-responsive-nav-link>
         </div>
 
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('posts.index')" :active="request()->routeIs('posts.index')">
+                {{ __('Blog') }}
+            </x-responsive-nav-link>
+        </div>
+
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('testimonials.index')" :active="request()->routeIs('testimonials.index')">
+                {{ __('Testimonial') }}
+            </x-responsive-nav-link>
+        </div>
+
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('inquiries.index')" :active="request()->routeIs('inquiries.index')">
+                {{ __('Inquiries') }}
+            </x-responsive-nav-link>
+        </div>
+
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('landingPage.index')" :active="request()->routeIs('landingPage.index')">
+                {{ __('Hero Image') }}
+            </x-responsive-nav-link>
+        </div>
+
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('user-management.index')" :active="request()->routeIs('user-management.index')">
+                {{ __('User Administration') }}
+            </x-responsive-nav-link>
+        </div>
+
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('partner-management.index')" :active="request()->routeIs('partner-management.index')">
+                {{ __('Partner Manager') }}
+            </x-responsive-nav-link>
+        </div>
+
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('site-settings.index')" :active="request()->routeIs('site-settings.index')">
+                {{ __('Settings') }}
+            </x-responsive-nav-link>
+        </div>
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="px-4">

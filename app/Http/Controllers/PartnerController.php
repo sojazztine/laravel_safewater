@@ -47,7 +47,7 @@ class PartnerController extends Controller
         $data = Partner::findOrFail($id);
         $validated = $request->validate([
             'company_name' => ['required'],
-            'image' => ['required', 'image'],
+            'image' => ['image'],
             'description' => ['required'],
             'is_active' => ['required']
         ]);

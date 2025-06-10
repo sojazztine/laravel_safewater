@@ -17,9 +17,9 @@
     <x-table
         title="List of Hero image"
         addUrl="{{ route('landingPage.create') }}"
-        text= "image"
+        text="image"
     >
-        <x-slot:thead">
+        <x-slot:thead>
             <tr>
                 <th class="px-4 py-2">Id</th>
                 <th class="px-4 py-2">Title</th>

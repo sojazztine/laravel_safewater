@@ -55,7 +55,7 @@
             const image = document.getElementById('image').value;
             const description = document.getElementById('description').value;
 
-            if(company_name === "" || image === ""|| description === ""){
+            if(company_name === "" || description === ""){
                 Swal.fire({
                     title: 'Please fill in the content!',
                     text: 'The content field cannot be empty.',

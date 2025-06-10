@@ -380,7 +380,6 @@
         }
     </style>
 
-        @empty($partner_images)
             <section>
                 <div class="flex justify-center mb-[10px] mt-20">
                     <h1 class="text-bolder font-bold mb-5 text-2xl text-[#016262]">
@@ -545,7 +544,6 @@
                     Alpine.start()
                 </script>
             </section>
-        @endempty
 
 
 

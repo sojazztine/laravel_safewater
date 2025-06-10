@@ -1,7 +1,7 @@
 <x-app-layout class="z-100">
 
     <div class="">
-        <div class="ml-[255px]">
+        <div class="sm:ml-[255px] ">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
 
             </div>

@@ -2,14 +2,14 @@
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3/dist/style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+{{--
     <style>
         .datatable-selector {
             display: flex !important;
             width: 70px !important;
             justify-content: space-between !important;
         }
-    </style>
+    </style> --}}
 
     <x-table
         title="List of Partners"
